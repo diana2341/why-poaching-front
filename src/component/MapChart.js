@@ -1,14 +1,9 @@
-import React, { memo } from "react";
+import React, { memo, useState,useEffect } from "react";
 import {
   ComposableMap,
   Geographies,
   Geography,
-  Sphere,
   Marker,
-
-  ZoomableGroup
-
-
 } from "react-simple-maps";
 
 const geoUrl =
@@ -22,36 +17,83 @@ const geoUrl =
       return Math.round(num / 100) / 10 + "K";
     }
   };
-  const markers = [
-    {
-      markerOffset: -30,
-      name: "Buenos Aires",
-      coordinates: [-58.3816, -34.6037]
-    },
-    { markerOffset: 15, name: "La Paz", coordinates: [-68.1193, -16.4897] },
-    { markerOffset: 15, name: "Brasilia", coordinates: [-47.8825, -15.7942] },
-    { markerOffset: 15, name: "Santiago", coordinates: [-70.6693, -33.4489] },
-    { markerOffset: 15, name: "Bogota", coordinates: [-74.0721, 4.711] },
-    { markerOffset: 15, name: "Quito", coordinates: [-78.4678, -0.1807] },
-    { markerOffset: -30, name: "Georgetown", coordinates: [-58.1551, 6.8013] },
-    { markerOffset: -30, name: "Asuncion", coordinates: [-57.5759, -25.2637] },
-    { markerOffset: 15, name: "Paramaribo", coordinates: [-55.2038, 5.852] },
-    { markerOffset: 15, name: "Montevideo", coordinates: [-56.1645, -34.9011] },
-    { markerOffset: 15, name: "Caracas", coordinates: [-66.9036, 10.4806] },
-    { markerOffset: 15, name: "Lima", coordinates: [-77.0428, -12.0464] }
+  const animals=[{coordinates:[]}]
+  const rhino = [
+    { coordinates: [18.423300, -33.918861]},
+    { coordinates: [18.4929993, -22.967062]},
+    {  coordinates: [31.053028, -17.824858] },
+    {  coordinates: [37.9083264, 0.1768696 ] },
   ];
-const MapChart = ( {setTooltipContent} ) => {
-  return (
-    <ComposableMap data-tip="" projectionConfig={{ scale: 80 }}>
-      <Sphere stroke="#ADD8E6" strokeWidth={2} fill="#ADD8E6	"/>
-      {/* <ZoomableGroup zoom={1}> */}
+  // longtitude/lattitude
+  const elephant = [
+    { coordinates: [77.216721, 28.644800    ]},
+    { coordinates: [80.7718, 7.8731]},
+    {  markerOffset: 26, name: "Asian Elephants",coordinates: [100.9925, 15.8700] },
+    {  coordinates: [19.5687, 2.3185 ] },
+    { markerOffset: 15, name: "African Elephants", coordinates: [18.423300, -33.918861 ] },
+  ];
+  const tiger = [
+    { coordinates: [108.2772, 14.0583]},//vietnam
+    { coordinates: [104.9910, 12.5657]},//cambodia
+    {  coordinates: [78.9629, 20.5937] },//india
+    {  coordinates: [90.4336, 27.5142 ] },//bhutan
+    { coordinates: [100.9925, 15.8700 ] },//thailand
+    { coordinates: [113.9213,0.7893 ] },//indonesia
+    { coordinates: [102.4955, 19.8563 ] },//laos
+    { coordinates: [104.1954, 35.8617] },//china
+    { coordinates: [101.9758, 4.2105] },//malasyia
+    { coordinates: [105.3188, 61.5240 ] },//russia
+    { coordinates: [84.1240, 28.3949] },//nepal
+    { coordinates: [95.9560, 21.9162] },//myanmar
 
+  ];
+  const gorilla = [
+    { coordinates: [ 29.8739, 1.9403]},//rwanda
+    { coordinates: [32.2903, 1.3733]},//uganda
+    {  coordinates: [15.8277, 0.2280] },//republic of congo coordinates
+    {  coordinates: [19.5687, 2.3185 ] },//central africa
+    { coordinates: [2.4604, 13.5317 ] },//western africa
+    { coordinates: [10.2679,1.6508 ] },//equatorial guinea
+    { coordinates: [13.234444, -8.838333    ] },//angola 
+    { coordinates: [12.3547, 7.3697] },//cameroon
+    { coordinates: [20.9394, 6.6111] },//central african republic coordinates
+    { coordinates: [11.6094, 0.8037] },//gabon
+    { coordinates: [21.7587, 4.0383] },//democratic republic of congo coordinates
+
+  ];
+  const lemurs = [
+    { coordinates: [ 46.8344597, -18.7792678 ]},//Madagascar
+ 
+
+  ];
+ 
+const MapChart = ( {setTooltipContent} ) => {
+  const [locations,setLocations]=useState([])
+  useEffect(() => {
+    const fetchLocations=()=>{
+      fetch('http://localhost:4000/locations')
+      .then(resp=>resp.json())
+      .then(data=>{
+        data.map(locations=>{
+                setLocations({ locations: locations })
+  
+        })
+      })
+    }
+fetchLocations()
+// console.log(locations)
+  });
+
+  return (
+    <div className="Map">
+
+    <ComposableMap data-tip="" projectionConfig={{ scale: 120 }}>
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map(geo =>
              <Geography
-            //   key={geo.rsmKey} geography={geo} fill="#228B22"
-              
+             stroke="white"
+             strokeOpacity="0.02"
               key={geo.rsmKey}
               geography={geo}
               onMouseEnter={() => {
@@ -80,31 +122,20 @@ const MapChart = ( {setTooltipContent} ) => {
         }
         
       </Geographies>
-      {/* </ZoomableGroup> */}
-      {/* {markers.map(({ name, coordinates, markerOffset }) => (
-        <Marker key={name} coordinates={coordinates}>
-          <g
-            fill="none"
-            stroke="#FF5533"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            transform="translate(-12, -24)"
-          >
-            <circle cx="12" cy="10" r="3" />
-            <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
-          </g>
-          <text
-            textAnchor="middle"
-            y={markerOffset}
-            style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
-          >
-            {name}
-          </text>
-        </Marker>
-      ))} */}
-
+      {tiger.map(({ name, coordinates, markerOffset }) => (
+           <Marker key={name} coordinates={coordinates}>
+           <circle  r={1} fill="#F00" stroke="#F00" strokeWidth={1} />
+           <text
+             textAnchor="middle"
+             y={markerOffset}
+             style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
+           >
+             {name}
+           </text>
+         </Marker>
+      ))}
     </ComposableMap>
+    </div>
   );
 };
 

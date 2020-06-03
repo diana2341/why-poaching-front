@@ -1,9 +1,92 @@
+*
+{
+  margin: 0;
+  padding: 0;
+} 
+
 html body{ 
-  background: url(https://i.pinimg.com/originals/ee/25/42/ee254213e8382ec076eed9f681f17353.png) no-repeat center center fixed; 
+  background: url(https://cluecentre.com/wp-content/uploads/2018/06/1920x1080-french-sky-blue-solid-color-background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  
 
 }
+.Map{
+margin-top: -24em;
+margin-left: -40em;
+z-index: -999;
+
+
+}
+
+.headlines{
+  position: absolute;
+  margin-top: 15em;
+  text-align: center;
+  margin-left: 34em;
+  z-index: 999;
+  font-family: 'Dosis', sans-serif;
+  font-size: 2em;
+
+
+}
+@import url(https://fonts.googleapis.com/css?family=Dosis:300,400);
+.animal-list{
+  position: absolute;
+  margin-top: 38em;
+  margin-left: 80em;
+  z-index: 999;
+ 
+
+
+}
+
+.box-text{
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-family: 'Dosis', sans-serif;
+  -webkit-transform: translate(-50%,-50%);
+
+}
+.box-text:after,
+.box-text:before {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1.5em;
+  width: 100%;
+  margin-top: 1px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.75s, transform 0.75s;
+	
+}
+
+.box-text:before {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+.box-text:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.box-text:hover:after,
+.box-text:hover:before {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
