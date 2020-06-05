@@ -1,0 +1,56 @@
+span{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+ul{
+    position:fixed;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    margin:0;
+    padding:0;
+    z-index: 1;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow-y:scroll ;
+    
+
+}
+#container div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#container div#about{
+background:red;
+}
+#container div#why{
+    background:blue;
+    }
+ #container div#help{
+background:green;
+ }
+ #container div#watch{
+    background:yellow;
+    }
+#container div#purple{
+ background:purple;
+ }
+ .btn{
+     position: fixed;
+     margin-top: -10em;
+     
+ }
+ /* chart */
+ .chart{
+    position: relative;
+     top:-30em;
+     width: 30;
+     height: 10;
+     left:9%
+ }

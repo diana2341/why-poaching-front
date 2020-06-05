@@ -1,10 +1,12 @@
-import React, { memo, useState,useEffect } from "react";
+import React, { memo, useState,useEffect} from "react";
 import {
   ComposableMap,
   Geographies,
   Geography,
   Marker,
 } from "react-simple-maps";
+import AnmialList from "./AnimalList";
+
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
@@ -17,75 +19,90 @@ const geoUrl =
       return Math.round(num / 100) / 10 + "K";
     }
   };
-  const animals=[{coordinates:[]}]
-  const rhino = [
-    { coordinates: [18.423300, -33.918861]},
-    { coordinates: [18.4929993, -22.967062]},
-    {  coordinates: [31.053028, -17.824858] },
-    {  coordinates: [37.9083264, 0.1768696 ] },
-  ];
-  // longtitude/lattitude
-  const elephant = [
-    { coordinates: [77.216721, 28.644800    ]},
-    { coordinates: [80.7718, 7.8731]},
-    {  markerOffset: 26, name: "Asian Elephants",coordinates: [100.9925, 15.8700] },
-    {  coordinates: [19.5687, 2.3185 ] },
-    { markerOffset: 15, name: "African Elephants", coordinates: [18.423300, -33.918861 ] },
-  ];
-  const tiger = [
-    { coordinates: [108.2772, 14.0583]},//vietnam
-    { coordinates: [104.9910, 12.5657]},//cambodia
-    {  coordinates: [78.9629, 20.5937] },//india
-    {  coordinates: [90.4336, 27.5142 ] },//bhutan
-    { coordinates: [100.9925, 15.8700 ] },//thailand
-    { coordinates: [113.9213,0.7893 ] },//indonesia
-    { coordinates: [102.4955, 19.8563 ] },//laos
-    { coordinates: [104.1954, 35.8617] },//china
-    { coordinates: [101.9758, 4.2105] },//malasyia
-    { coordinates: [105.3188, 61.5240 ] },//russia
-    { coordinates: [84.1240, 28.3949] },//nepal
-    { coordinates: [95.9560, 21.9162] },//myanmar
 
-  ];
-  const gorilla = [
-    { coordinates: [ 29.8739, 1.9403]},//rwanda
-    { coordinates: [32.2903, 1.3733]},//uganda
-    {  coordinates: [15.8277, 0.2280] },//republic of congo coordinates
-    {  coordinates: [19.5687, 2.3185 ] },//central africa
-    { coordinates: [2.4604, 13.5317 ] },//western africa
-    { coordinates: [10.2679,1.6508 ] },//equatorial guinea
-    { coordinates: [13.234444, -8.838333    ] },//angola 
-    { coordinates: [12.3547, 7.3697] },//cameroon
-    { coordinates: [20.9394, 6.6111] },//central african republic coordinates
-    { coordinates: [11.6094, 0.8037] },//gabon
-    { coordinates: [21.7587, 4.0383] },//democratic republic of congo coordinates
-
-  ];
-  const lemurs = [
-    { coordinates: [ 46.8344597, -18.7792678 ]},//Madagascar
  
+const MapChart = (props) => {
+  const [lemurs,setLemurs]=useState([])
+  const [tigers,setTigers]=useState([])
+  const [elephants,setElephants]=useState([])
+  const [gorillas,setGorillas]=useState([])
+  const [rhinos,setRhinos]=useState([])
+  const [orangatan,setOrangatan]=useState([])
+  const [animal,setAnimal]=useState([])
+  const [show,setShow]=useState(0)
 
-  ];
- 
-const MapChart = ( {setTooltipContent} ) => {
-  const [locations,setLocations]=useState([])
-  useEffect(() => {
-    const fetchLocations=()=>{
-      fetch('http://localhost:4000/locations')
-      .then(resp=>resp.json())
-      .then(data=>{
-        data.map(locations=>{
-                setLocations({ locations: locations })
+  const [filter,setFilter]=useState([])
+
+
+  const mapFilter=(event)=>{
   
-        })
-      })
+    if(event.target.id==="Tiger"){
+       setFilter(tigers) 
+      setShow(1)
     }
-fetchLocations()
-// console.log(locations)
-  });
+    if(event.target.id==="Elephant"){
+       setFilter(elephants)
+       setShow(2)
 
+    }
+    if(event.target.id==="Gorilla"){
+       setFilter(gorillas)
+       setShow(3)
+
+    }
+    if(event.target.id==="Lemur"){
+       setFilter(lemurs)
+       setShow(4)
+
+    }
+    if(event.target.id==="Rhino"){
+       setFilter(rhinos)
+       setShow(5)
+
+    }
+    if(event.target.id==="Orangutan"){
+       setFilter(orangatan)
+       setShow(6)
+
+    }
+   }
+
+
+    useEffect(() => {
+      const fetchData = async () => {
+        await fetch(
+          'http://localhost:4000/locations',
+        )
+        .then(resp=>resp.json())
+          .then(data=>{ 
+                setTigers( data.filter(location=>  location.animal_id===1).map(l=>{return {coordinates:[l.longtitude ,l.latitude]}}))
+                setElephants( data.filter(location=>  location.animal_id===2).map(l=>{return {coordinates:[l.longtitude ,l.latitude]}}))
+                setGorillas( data.filter(location=>  location.animal_id===3).map(l=>{return {coordinates:[l.longtitude ,l.latitude]}}))
+                setLemurs( data.filter(location=>  location.animal_id===4).map(l=>{return {coordinates:[l.longtitude ,l.latitude]}}))
+                setRhinos( data.filter(location=>  location.animal_id===5).map(l=>{return {coordinates:[l.longtitude ,l.latitude]}}))
+                setOrangatan( data.filter(location=>  location.animal_id===6).map(l=>{return {coordinates:[l.longtitude ,l.latitude]}}))
+          })
+      };
+      const fetchAnimals = async () => {
+        await fetch(
+          'http://localhost:4000/animals',
+        )
+        .then(resp=>resp.json())
+          .then(data=>{ 
+                setAnimal(data)
+              
+          })
+      };
+      fetchData();
+      fetchAnimals()
+
+    }, []);
   return (
-    <div className="Map">
+    <>
+  <AnmialList routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
+    <div  className="Map">
+}
+
 
     <ComposableMap data-tip="" projectionConfig={{ scale: 120 }}>
       <Geographies geography={geoUrl}>
@@ -98,10 +115,10 @@ fetchLocations()
               geography={geo}
               onMouseEnter={() => {
                 const { NAME, POP_EST } = geo.properties;
-                setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                props.setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
               }}
               onMouseLeave={() => {
-                setTooltipContent("");
+                props.setTooltipContent("");
               }}
               style={{
                 default: {
@@ -122,8 +139,8 @@ fetchLocations()
         }
         
       </Geographies>
-      {tiger.map(({ name, coordinates, markerOffset }) => (
-           <Marker key={name} coordinates={coordinates}>
+      {filter.map(({ name, coordinates, markerOffset ,index}) => (
+           <Marker key={index} coordinates={coordinates}>
            <circle  r={1} fill="#F00" stroke="#F00" strokeWidth={1} />
            <text
              textAnchor="middle"
@@ -136,6 +153,8 @@ fetchLocations()
       ))}
     </ComposableMap>
     </div>
+    
+    </>
   );
 };
 
