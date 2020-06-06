@@ -16,15 +16,15 @@ ul{
 #container{
     width: 100%;
     height: 100vh;
-    scroll-behavior: smooth;
-    overflow-y:scroll ;
+    /* scroll-behavior: smooth; */
+    /* overflow-y:scroll ; */
     
 
 }
 #container div{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 #container div#about{
 background:red;
@@ -48,9 +48,7 @@ background:green;
  }
  /* chart */
  .chart{
-    position: relative;
-     top:-30em;
-     width: 30;
-     height: 10;
-     left:9%
+    position: absolute;
+    top:30%
+    
  }
