@@ -9,15 +9,17 @@ import {
   export default class graph extends PureComponent {
     static jsfiddleUrl = 'https://jsfiddle.net/alidingling/7j5bbbum/';
     state={
-      tiger:[]
+      tiger:[],
+      elephants:[],
+      rhinos:[],
+      gorillas:[]
     }
     componentDidMount(){
       fetch(`http://localhost:4000/statistics`)
       .then(resp=>resp.json())
       .then(data=>{
-data.map(tigs=>{
-  this.setState({tiger:tigs})
-})          
+       data.filter(stat=>  stat.animal_id===1).map(l=>{ {this.setState({tiger:l})}})
+
       })
     
     }
@@ -26,25 +28,25 @@ data.map(tigs=>{
       {console.log(this.state.tiger)}
       const data = [
         {
-          name: '1900', uv: this.state.tiger.amount1, pv: 2400, amt: 2400,
+          name: this.state.tiger.year1, uv: this.state.tiger.amount1, pv: 2400, amt: 2400,
         },
         {
-          name: '1925', uv: 90000, pv: 1398, amt: 2210,
+          name: this.state.tiger.year2, uv: 90000, pv: 1398, amt: 2210,
         },
         {
-          name: '1950', uv: 40000, pv: 9800, amt: 2290,
+          name: this.state.tiger.year3, uv: 40000, pv: 9800, amt: 2290,
         },
         {
-          name: '1975', uv: 32000, pv: 3908, amt: 2000,
+          name: this.state.tiger.year4, uv: 32000, pv: 3908, amt: 2000,
         },
         {
-          name: '2000', uv: 5000, pv: 4800, amt: 2181,
+          name: this.state.tiger.year5, uv: 5000, pv: 4800, amt: 2181,
         },
         {
-          name: '2016', uv: 4000, pv: 3800, amt: 2500,
+          name: this.state.tiger.year6, uv: 4000, pv: 3800, amt: 2500,
         },
         {
-          name: '2020', uv: 3800, pv: 4300, amt: 2100,
+          name: this.state.tiger.year7, uv: 3800, pv: 4300, amt: 2100,
         },
       ];
       
