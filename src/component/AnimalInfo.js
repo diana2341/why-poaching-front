@@ -61,7 +61,7 @@ export default class AnimalInfo extends React.Component{
  
             <section>
 
-                <h1> l{this.state.animal.name}</h1>
+                <h1> {this.state.animal.name}</h1>
                 
             </section>
  
