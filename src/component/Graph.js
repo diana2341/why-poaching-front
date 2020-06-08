@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 
 
   export default class graph extends PureComponent {
-    static jsfiddleUrl = 'https://jsfiddle.net/alidingling/rnywhbu8/';
 
    
     

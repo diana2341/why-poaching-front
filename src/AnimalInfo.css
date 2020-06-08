@@ -674,5 +674,9 @@ line-height: 1.6;
  .right {
 text-align: right;
 }
+/* carousel */
 
- 
+ /*           {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
+            <li class="carousel__item"><img src={img.image_url} alt=""/></li> :"")} */
+            
+           

@@ -13,8 +13,7 @@ export default class AnimalInfo extends React.Component{
       rhinos:[],
       gorillas:[],
       filter:[],
-        img:[]
-
+      img:[]
 
     }
     componentDidMount(){
@@ -23,21 +22,31 @@ export default class AnimalInfo extends React.Component{
         .then(data=>{
             this.setState({animal:data})
         })
-        fetch(`http://localhost:4000/images`)
+        fetch(`http://localhost:4000/statistics`)
         .then(resp=>resp.json())
         .then(data=>{
-         data.map(img=>  img.animal_id==this.props.routerProps.match.params.id?this.setState({img:img}):console.log(img.animal_id===this.props.routerProps.match.params.id))
+         data.filter(stat=>  stat.animal_id===1).map(stat=>{ {this.setState({tiger:stat})}})
+         data.filter(stat=>  stat.animal_id===2).map(stat=>{ {this.setState({elephants:stat})}})
+         data.filter(stat=>  stat.animal_id===3).map(stat=>{ {this.setState({gorillas:stat})}})
+         data.filter(stat=>  stat.animal_id===5).map(stat=>{ {this.setState({rhinos:stat})}})
+  
+        })
+         fetch(`http://localhost:4000/images`)
+        .then(resp=>resp.json())
+        .then(data=>{
+            this.setState({img:data})
+        //  data.map(img=>  img.animal_id==this.props.routerProps.match.params.id?this.setState({img:img}):console.log(img.animal_id===this.props.routerProps.match.params.id))
       
 
   
         })
         
+
     }
     
 
     render(){
-        console.log(this.state.img)
-
+ 
         const statFilter=()=>{
          
             console.log("works",this.state.filter)
@@ -114,6 +123,9 @@ export default class AnimalInfo extends React.Component{
             <section>
             
                 <h1>{this.state.animal.causes}</h1>
+                {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
+           <img src={img.image_url} alt=""/> :"")} 
+	
                 
             </section>
  
