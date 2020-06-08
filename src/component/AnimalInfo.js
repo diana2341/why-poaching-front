@@ -12,7 +12,10 @@ export default class AnimalInfo extends React.Component{
       elephants:[],
       rhinos:[],
       gorillas:[],
-      filter:[]
+      filter:[],
+        img:[]
+
+
     }
     componentDidMount(){
         fetch(`http://localhost:4000/animals/${this.props.routerProps.match.params.id}`)
@@ -20,21 +23,21 @@ export default class AnimalInfo extends React.Component{
         .then(data=>{
             this.setState({animal:data})
         })
-        fetch(`http://localhost:4000/statistics`)
+        fetch(`http://localhost:4000/images`)
         .then(resp=>resp.json())
         .then(data=>{
-         data.filter(stat=>  stat.animal_id===1).map(stat=>{ {this.setState({tiger:stat})}})
-         data.filter(stat=>  stat.animal_id===2).map(stat=>{ {this.setState({elephants:stat})}})
-         data.filter(stat=>  stat.animal_id===3).map(stat=>{ {this.setState({gorillas:stat})}})
-         data.filter(stat=>  stat.animal_id===5).map(stat=>{ {this.setState({rhinos:stat})}})
+         data.map(img=>  img.animal_id==this.props.routerProps.match.params.id?this.setState({img:img}):console.log(img.animal_id===this.props.routerProps.match.params.id))
+      
+
   
         })
         
-
     }
     
 
     render(){
+        console.log(this.state.img)
+
         const statFilter=()=>{
          
             console.log("works",this.state.filter)
