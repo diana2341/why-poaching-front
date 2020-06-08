@@ -145,11 +145,11 @@ export default class AnimalInfo extends React.Component{
             </section>
  
             <section>
-            {this.props.routerProps.match.params.id==4? 
+            {this.props.routerProps.match.params.id==6? 
                 <img src={orangutan} alt="chart"/> 
 
                             :
-                this.props.routerProps.match.params.id==6?
+                this.props.routerProps.match.params.id==4?
                 null:
                  <Graph routerProps={this.props.routerProps} state={this.state}/>
 
