@@ -88,7 +88,7 @@ export default class AnimalInfo extends React.Component{
  
             <section>
 
-                <Graph/>
+                <Graph routerProps={this.props.routerProps}/>
                 
             </section>
  

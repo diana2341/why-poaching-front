@@ -49,7 +49,8 @@ background:green;
  /* chart */
  .chart{
     position: absolute;
-    top:30%
+    top:30%;
+    margin-left: 4%;
     
  }
  /* slides */
