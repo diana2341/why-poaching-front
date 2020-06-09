@@ -48,8 +48,8 @@ background:green;
  }
  /* chart */
  .chart{
-    position: absolute;
-    top:30%;
+    /* position: absolute; */
+    top:50%;
     margin-left: 4%;
     
  }
@@ -156,6 +156,7 @@ height: 100%;
 nav.prevnext {
 top: auto;
 bottom: 1rem;
+z-index: 999;
 }
 }
  #progress {
@@ -201,6 +202,7 @@ width: 0%;
 
  #s1:target ~ .prevnext li.starter {
 display: none;
+left:10%
 }
  #s1:target ~ .prevnext li[class*="p1"] {
 display: block;
@@ -253,9 +255,11 @@ display: none;
  #s2:target ~ .prevnext li[class*="p2"] {
 display: block;
 float: left;
+
 }
  #s2:target ~ .prevnext li[class*="p2"] a:after {
 content: "Prev";
+
 }
  #s2:target ~ .prevnext li[class*="n2"] {
 display: block;
@@ -264,6 +268,26 @@ float: right;
  #s2:target ~ .prevnext li[class*="n2"] a:after {
 content: "Next";
 }
+/* @media (min-width: 600px) {
+
+.p2,.p3n1{
+    position: absolute;
+    margin-left:-160%;
+    margin-top:-15%
+
+}
+}
+@media (min-width: 600px) {
+
+.p4n2,.p5n3{
+    position: absolute;
+
+    margin-left:220%;
+    margin-top:-15%
+
+ 
+}
+} */
  #s3:target ~ main section {
 opacity: 0;
 }
@@ -430,10 +454,7 @@ section:nth-child(6) {
 left: 500%;
 }
 }
- .thumbs li:nth-child(6) a {
-background-image: url(https://cdn.pixabay.com/photo/2018/01/22/05/53/forest-waterfall-3098200_1280.jpg);
-background-color: #6f8a3c;
-}
+ 
  #s6:target ~ #background {
 background-image: url(https://cdn.pixabay.com/photo/2018/01/22/05/53/forest-waterfall-3098200_1280.jpg);
 background-color: #6f8a3c;
@@ -491,12 +512,6 @@ background-color: #05160d91;
 width: 100%;
 }
 
- #s7:target ~ .thumbs li:nth-child(7) a {
-opacity: 1;
-width: 80px;
-height: 60px;
-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
-}
  #s7:target ~ .prevnext li.starter {
 display: none;
 }
@@ -555,7 +570,9 @@ text-align: right;
 /* carousel */
 .slide-container {
   width: 60%;
-  margin: auto; }
+  margin: auto; 
+}
+  
  
 h3 {
   text-align: center; }
@@ -566,6 +583,7 @@ h3 {
   justify-content: center;
   background-size: cover;
   height: 400px;
+
 }
  
 .each-slide span {
@@ -573,6 +591,7 @@ h3 {
   font-size: 20px;
   background: #efefef;
   text-align: center;
+
 }
  
 .each-fade {
@@ -699,4 +718,8 @@ h3 {
 
       
 
+  }
+  .line{
+      border:solid thin;
+    width: 36%;
   }

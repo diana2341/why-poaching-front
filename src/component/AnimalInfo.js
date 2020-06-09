@@ -114,11 +114,11 @@ let a=this.state.animal.help+ ''
 
         <nav className="prevnext" role="presentation">
         <ul>
-            <li className="p2"><a href="#s1" accessKey="1" ></a></li>
-            <li className="p3n1 starter"><a href="#s2" accessKey="2" ></a></li>
+            <li  className="p2"><a href="#s1" accessKey="1" ></a></li>
+            <li onClick={statFilter}className="p3n1 starter"><a href="#s2" accessKey="2" ></a></li>
             <li className="p4n2"><a href="#s3" accessKey="3" ></a></li>
             <li  className="p5n3"><a href="#s4" accessKey="4" ></a></li>
-            <li onClick={statFilter} className="p6n4"><a href="#s5" accessKey="5" ></a></li>
+            <li  className="p6n4"><a href="#s5" accessKey="5" ></a></li>
             <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
             <li className="n6"><a href="#s7" accessKey="7" ></a></li>
         </ul>
@@ -166,7 +166,8 @@ let a=this.state.animal.help+ ''
                 <p>{this.state.animal.causes}</p>
                 
          
-           
+         
+            <br/>  <br/>  <br/>
            <div className="slide-container">
         <Zoom {...zoomOutProperties}>
        {this.state.img.filter(img=>img.animal_id==this.props.routerProps.match.params.id).map(img=> 
@@ -178,39 +179,39 @@ let a=this.state.animal.help+ ''
  
             <section className="help">
                 <h1>How can you help {this.state.animal.name}'s</h1><br/>
-       {a.split('.').map(line => <p>-{line}</p> )}
+       {a.split('.').map(line => <li className="line">{line}.</li> )}
 
  
                 
             </section>
  
             <section>
-                <iframe src={this.state.animal.video_url}
+                {this.props.routerProps.match.params.id==6? 
+                    <img className="oc"src={orangutan} alt="chart"/> 
+
+                                :
+                    this.props.routerProps.match.params.id==4?
+                    null:
+                    <Graph routerProps={this.props.routerProps} state={this.state}/>
+
+                }
+            </section>
+ 
+            <section>
+               <iframe src={this.state.animal.video_url}
                  frameBorder='0'
                  allow='autoplay; encrypted-media'
                  allowFullScreen
                  title='video'
-                />     
-            </section>
- 
-            <section>
-            {this.props.routerProps.match.params.id==6? 
-                <img className="oc"src={orangutan} alt="chart"/> 
-
-                            :
-                this.props.routerProps.match.params.id==4?
-                null:
-                 <Graph routerProps={this.props.routerProps} state={this.state}/>
-
-            }
-                
+                />   
+         
                 
             </section>
  
             <section>
             
                 <h1>Section 6</h1>
-                
+           
             </section>
             
         </main>
