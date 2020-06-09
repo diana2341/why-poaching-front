@@ -1,6 +1,9 @@
 import React from 'react'
 import '../AnimalInfo.css';
 import Graph from './Graph'
+import { Zoom } from 'react-slideshow-image';
+
+
 
 
 
@@ -46,7 +49,17 @@ export default class AnimalInfo extends React.Component{
     
 
     render(){
- 
+        
+        const zoomOutProperties = {
+            // duration: 5000,
+            // transitionDuration: 500,
+            // infinite: true,
+            // indicators: true,
+            // scale: 0.4,
+            arrows: true,
+            autoplay:false
+          }
+                  
         const statFilter=()=>{
          
             console.log("works",this.state.filter)
@@ -116,22 +129,29 @@ export default class AnimalInfo extends React.Component{
  
             <section>
 
-                <h1> {this.state.animal.name}</h1>
+                <h1 className="animal-name"> {this.state.animal.name}</h1>
                 
             </section>
  
-            <section>
-            
-                <h1>{this.state.animal.causes}</h1>
-                {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
-           <img src={img.image_url} alt=""/> :"")} 
-	
+            <section className="causes">
+    
+        <h1>Why is the {this.state.animal.name} being poached? </h1><br/>
+                <p>{this.state.animal.causes}</p>
                 
-            </section>
- 
-            <section>
+         
+           
+           <div className="slide-container">
+        <Zoom {...zoomOutProperties}>
+       {this.state.img.map((img,index)=>  img.animal_id==this.props.routerProps.match.params.id?
+        <img className="img" key={index} style={{width: "100%"}}src={img.image_url} alt=""/> :"")} 
+        </Zoom>
+      </div>
 
-                <h1>{this.state.animal.help}</h1>
+            </section>
+ 
+            <section className="help">
+                <h1>How can you help {this.state.animal.name}'s</h1>
+                <p>{this.state.animal.help}</p>
                 
             </section>
  

@@ -225,11 +225,11 @@ left: 0%;
 }
 }
  .thumbs li:nth-child(1) a {
-background-image: url(http://lorempixel.com/g/400/150/city/1/);
+background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg);
 background-color: #736826;
 }
  #s1:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/1/);
+background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg);
 background-color: #736826;
 }
  #s1:target ~ #progress {
@@ -287,11 +287,11 @@ left: 100%;
 }
 }
  .thumbs li:nth-child(2) a {
-background-image: url(http://lorempixel.com/g/400/150/city/2/);
+background-image: url(https://static.seattletimes.com/wp-content/uploads/2020/03/AFRICA_PARKS_DRILLING_5-1560x1040.jpg);
 background-color: #3c7326;
 }
  #s2:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/2/);
+background-image: url(https://static.seattletimes.com/wp-content/uploads/2020/03/AFRICA_PARKS_DRILLING_5-1560x1040.jpg);
 background-color: #3c7326;
 }
  #s2:target ~ #progress {
@@ -349,12 +349,12 @@ left: 200%;
 }
 }
  .thumbs li:nth-child(3) a {
-background-image: url(http://lorempixel.com/g/400/150/city/3/);
-background-color: #267352;
+background-image: url(https://www.thewanderinglens.com/wp-content/uploads/2019/12/Jabulani-South-Africa-52.jpg);
+background-color: #265773;
 }
  #s3:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/3/);
-background-color: #267352;
+background-image: url(https://www.thewanderinglens.com/wp-content/uploads/2019/12/Jabulani-South-Africa-52.jpg);
+background-color: #265773;
 }
  #s3:target ~ #progress {
 width: 33.3333333333%;
@@ -411,12 +411,12 @@ left: 300%;
 }
 }
  .thumbs li:nth-child(4) a {
-background-image: url(http://lorempixel.com/g/400/150/city/4/);
-background-color: #265273;
+background-image: url(https://di262mgurvkjm.cloudfront.net/6e76a690-cf73-43b9-87e7-b3841642dde3/N07490-Pano-FR-01_uxga.jpg);
+background-color: #163b5a;
 }
  #s4:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/4/);
-background-color: #265273;
+background-image: url(https://di262mgurvkjm.cloudfront.net/6e76a690-cf73-43b9-87e7-b3841642dde3/N07490-Pano-FR-01_uxga.jpg);
+background-color: #163b5a;
 }
  #s4:target ~ #progress {
 width: 50%;
@@ -473,11 +473,11 @@ left: 400%;
 }
 }
  .thumbs li:nth-child(5) a {
-background-image: url(http://lorempixel.com/g/400/150/city/5/);
+background-image: url(https://cdn.kimkim.com/files/a/content_articles/featured_photos/12e052c43a886029ecabb97637a4a631baf15a69/big-80d5cb90c5cb159fb896cd4617058b6f.jpg);
 background-color: #3c2673;
 }
  #s5:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/5/);
+background-image: url(https://cdn.kimkim.com/files/a/content_articles/featured_photos/12e052c43a886029ecabb97637a4a631baf15a69/big-80d5cb90c5cb159fb896cd4617058b6f.jpg);
 background-color: #3c2673;
 }
  #s5:target ~ #progress {
@@ -535,12 +535,12 @@ left: 500%;
 }
 }
  .thumbs li:nth-child(6) a {
-background-image: url(http://lorempixel.com/g/400/150/city/6/);
-background-color: #732668;
+background-image: url(https://i.redd.it/et8n7wxtren41.jpg);
+background-color: #6f8a3c;
 }
  #s6:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/6/);
-background-color: #732668;
+background-image: url(https://i.redd.it/et8n7wxtren41.jpg);
+background-color: #6f8a3c;
 }
  #s6:target ~ #progress {
 width: 83.3333333333%;
@@ -597,12 +597,12 @@ left: 600%;
 }
 }
  .thumbs li:nth-child(7) a {
-background-image: url(http://lorempixel.com/g/400/150/city/7/);
-background-color: #732626;
+background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+background-color: #05160d91;
 }
  #s7:target ~ #background {
-background-image: url(http://lorempixel.com/g/400/150/city/7/);
-background-color: #732626;
+background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+background-color: #05160d91;
 }
  #s7:target ~ #progress {
 width: 100%;
@@ -637,12 +637,12 @@ float: right;
 content: "Next";
 }
  #background {
-background-image: url(http://lorempixel.com/g/400/150/city/1/);
-background-color: #637326;
+background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg);
+background-color: #447464;
 background-blend-mode: multiply;
 background-position: center;
 background-size: cover;
-filter: blur(10px);
+filter: blur(2px);
 position: fixed;
 z-index: -1;
 transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
@@ -675,8 +675,83 @@ line-height: 1.6;
 text-align: right;
 }
 /* carousel */
+.slide-container {
+    width: 70%;
+    margin: auto; }
+   
+  h3 {
+    text-align: center; }
+   
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 300px;
+  }
+   
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+   
+  .each-fade {
+    display: flex;
+  }
+   
+  .each-fade .image-container {
+    width: 75%;
+    overflow: hidden;
+  }
+   
+  .each-fade .image-container img {
+    width: 100%;
+  }
+   
+  .each-fade h2 {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: #adceed;
+  }
 
  /*           {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
             <li class="carousel__item"><img src={img.image_url} alt=""/></li> :"")} */
             
-           
+/* page edit overall */
+.animal-name{
+    position: absolute;
+    left:50%
+}
+.img {
+  
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+  }
+  .causes,.help{
+      position: absolute;
+      border:solid white;
+      max-width: 70%;
+      height: auto;
+      text-align: center;
+      margin-left:15%;
+      padding: 25px;
+
+  }
+  iframe{
+      position: absolute;
+      left: 25%;
+      bottom: 40%;
+      width:40%;
+      height:40%;
+      box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);
+
+
+      
+
+  }
