@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,ResponsiveContainer} from 'recharts';
 import PropTypes from 'prop-types';
@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 
 
-  export default class graph extends PureComponent {
+  export default class graph extends Component {
 
    
     

@@ -50,6 +50,7 @@ export default class AnimalInfo extends React.Component{
 
     render(){
         
+        
         const zoomOutProperties = {
             // duration: 5000,
             // transitionDuration: 500,
@@ -142,8 +143,8 @@ export default class AnimalInfo extends React.Component{
            
            <div className="slide-container">
         <Zoom {...zoomOutProperties}>
-       {this.state.img.map((img,index)=>  img.animal_id==this.props.routerProps.match.params.id?
-        <img className="img" key={index} style={{width: "100%"}}src={img.image_url} alt=""/> :"")} 
+       {this.state.img.filter(img=>img.animal_id==this.props.routerProps.match.params.id).map(img=> 
+        <img className="img" key={img.id} style={{width: "100%"}}src={img.image_url} alt=""/> )} 
         </Zoom>
       </div>
 
