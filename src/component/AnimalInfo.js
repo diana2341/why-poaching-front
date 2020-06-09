@@ -96,8 +96,7 @@ export default class AnimalInfo extends React.Component{
 
 
 
-
-
+let a=this.state.animal.help+ ''
 
         return(
             <>
@@ -125,17 +124,7 @@ export default class AnimalInfo extends React.Component{
         </ul>
         </nav>
 
-        <nav className="thumbs" aria-label="table of contents">
-        <ul>
-            <li><a href="#s1" ></a></li>
-            <li><a href="#s2"></a></li>
-            <li><a href="#s3" ></a></li>
-            <li><a href="#s4"></a></li>
-            <li><a href="#s5" ></a></li>
-            <li><a href="#s6" ></a></li>
-            {/* <li><a href="#s7"></a></li> */}
-        </ul>
-        </nav>
+      
 
         <main role="main">
  
@@ -188,8 +177,10 @@ export default class AnimalInfo extends React.Component{
             </section>
  
             <section className="help">
-                <h1>How can you help {this.state.animal.name}'s</h1>
-                <p>{this.state.animal.help}</p>
+                <h1>How can you help {this.state.animal.name}'s</h1><br/>
+       {a.split('.').map(line => <p>-{line}</p> )}
+
+ 
                 
             </section>
  
