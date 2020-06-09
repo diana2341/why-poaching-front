@@ -192,8 +192,7 @@ left: 0%;
 
  #s1:target ~ #background {
 /* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
-background-image: url(https://c.pxhere.com/images/eb/0b/6c5f4bb5f46423d124737477c467-1594712.jpg);
-
+background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 background-color: #383318;
 }
  #s1:target ~ #progress {
@@ -343,18 +342,7 @@ background-color: #163b5a;
  #s4:target ~ #progress {
 width: 50%;
 }
- #s4:target ~ .thumbs li:first-child a {
-opacity: 0.5;
-width: 40px;
-height: 30px;
-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0);
-}
- #s4:target ~ .thumbs li:nth-child(4) a {
-opacity: 1;
-width: 80px;
-height: 60px;
-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.1);
-}
+
  #s4:target ~ .prevnext li.starter {
 display: none;
 }
@@ -527,8 +515,8 @@ float: right;
 content: "Next";
 }
  #background {
-/* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
-background-color: #383318;
+background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+/* background-color: #383318; */
 background-blend-mode: multiply;
 background-position: center;
 background-size: cover;
