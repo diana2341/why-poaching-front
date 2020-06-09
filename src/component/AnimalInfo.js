@@ -87,6 +87,17 @@ export default class AnimalInfo extends React.Component{
       }
           } 
         let orangutan=require("../img/orangutan2.png")
+        let front=require("../img/face3.png")
+        let frontigert=require("../img/tigs2.png")
+        let elephantfront=require("../img/elephant.png")
+        let rhinofront=require("../img/rhino.png")
+        let gorillafront=require("../img/gorilla.png")
+        let lemurfront=require("../img/lemur.png")
+
+
+
+
+
 
         return(
             <>
@@ -131,6 +142,32 @@ export default class AnimalInfo extends React.Component{
             <section>
 
                 <h1 className="animal-name"> {this.state.animal.name}</h1>
+                {this.props.routerProps.match.params.id==1?
+                  <img className="facetiger"src={frontigert} alt="chart"/>
+                  :
+                  this.props.routerProps.match.params.id==2?
+                 <img className="elephant"src={elephantfront} alt="chart"/>  
+                 :
+                 this.props.routerProps.match.params.id==3?
+                 <img className="gorilla"src={gorillafront} alt="chart"/> 
+                 :
+                 this.props.routerProps.match.params.id==4?
+                <img className="lemur"src={lemurfront} alt="chart"/> 
+                :
+                this.props.routerProps.match.params.id==5?
+                <img className="rhino"src={rhinofront} alt="chart"/> 
+                :
+                this.props.routerProps.match.params.id==6?
+                <img className="face"src={front} alt="chart"/>  
+                :null
+            
+            }
+
+
+
+
+
+
                 
             </section>
  
