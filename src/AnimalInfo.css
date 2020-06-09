@@ -676,48 +676,48 @@ text-align: right;
 }
 /* carousel */
 .slide-container {
-    width: 70%;
-    margin: auto; }
-   
-  h3 {
-    text-align: center; }
-   
-  .each-slide > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 300px;
-  }
-   
-  .each-slide span {
-    padding: 20px;
-    font-size: 20px;
-    background: #efefef;
-    text-align: center;
-  }
-   
-  .each-fade {
-    display: flex;
-  }
-   
-  .each-fade .image-container {
-    width: 75%;
-    overflow: hidden;
-  }
-   
-  .each-fade .image-container img {
-    width: 100%;
-  }
-   
-  .each-fade h2 {
-    width: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    background: #adceed;
-  }
+  width: 70%;
+  margin: auto; }
+ 
+h3 {
+  text-align: center; }
+ 
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+ 
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+ 
+.each-fade {
+  display: flex;
+}
+ 
+.each-fade .image-container {
+  width: 75%;
+  overflow: hidden;
+}
+ 
+.each-fade .image-container img {
+  width: 100%;
+}
+ 
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
 
  /*           {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
             <li class="carousel__item"><img src={img.image_url} alt=""/></li> :"")} */
