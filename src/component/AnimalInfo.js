@@ -133,7 +133,7 @@ export default class AnimalInfo extends React.Component{
             <li><a href="#s4"></a></li>
             <li><a href="#s5" ></a></li>
             <li><a href="#s6" ></a></li>
-            <li><a href="#s7"></a></li>
+            {/* <li><a href="#s7"></a></li> */}
         </ul>
         </nav>
 
@@ -204,7 +204,7 @@ export default class AnimalInfo extends React.Component{
  
             <section>
             {this.props.routerProps.match.params.id==6? 
-                <img src={orangutan} alt="chart"/> 
+                <img className="oc"src={orangutan} alt="chart"/> 
 
                             :
                 this.props.routerProps.match.params.id==4?

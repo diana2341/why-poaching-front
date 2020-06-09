@@ -351,11 +351,11 @@ left: 200%;
 }
 }
  .thumbs li:nth-child(3) a {
-background-image: url(https://www.thewanderinglens.com/wp-content/uploads/2019/12/Jabulani-South-Africa-52.jpg);
+background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg);
 background-color: #265773;
 }
  #s3:target ~ #background {
-background-image: url(https://www.thewanderinglens.com/wp-content/uploads/2019/12/Jabulani-South-Africa-52.jpg);
+background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg);
 background-color: #265773;
 }
  #s3:target ~ #progress {
@@ -475,12 +475,12 @@ left: 400%;
 }
 }
  .thumbs li:nth-child(5) a {
-background-image: url(https://cdn.kimkim.com/files/a/content_articles/featured_photos/12e052c43a886029ecabb97637a4a631baf15a69/big-80d5cb90c5cb159fb896cd4617058b6f.jpg);
-background-color: #3c2673;
+    background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+    background-color: #05160d91;
 }
  #s5:target ~ #background {
-background-image: url(https://cdn.kimkim.com/files/a/content_articles/featured_photos/12e052c43a886029ecabb97637a4a631baf15a69/big-80d5cb90c5cb159fb896cd4617058b6f.jpg);
-background-color: #3c2673;
+    background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+    background-color: #05160d91;
 }
  #s5:target ~ #progress {
 width: 66.6666666667%;
@@ -537,11 +537,11 @@ left: 500%;
 }
 }
  .thumbs li:nth-child(6) a {
-background-image: url(https://i.redd.it/et8n7wxtren41.jpg);
+background-image: url(https://cdn.pixabay.com/photo/2018/01/22/05/53/forest-waterfall-3098200_1280.jpg);
 background-color: #6f8a3c;
 }
  #s6:target ~ #background {
-background-image: url(https://i.redd.it/et8n7wxtren41.jpg);
+background-image: url(https://cdn.pixabay.com/photo/2018/01/22/05/53/forest-waterfall-3098200_1280.jpg);
 background-color: #6f8a3c;
 }
  #s6:target ~ #progress {
@@ -644,7 +644,7 @@ background-color: #383318;
 background-blend-mode: multiply;
 background-position: center;
 background-size: cover;
-filter: blur(2px);
+filter: blur(1px);
 position: fixed;
 z-index: -1;
 transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
@@ -795,6 +795,12 @@ h3 {
     height: 300px;
     width: 400px;
     overflow: hidden;
+  }
+  .oc{
+    height: auto;
+    width: 50%;
+    overflow: hidden;
+    margin-left: 50%;
   }
   .causes,.help{
       position: absolute;
