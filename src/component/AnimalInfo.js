@@ -198,7 +198,7 @@ let basic=this.state.animal.basic_info+''
                 
             </section>
  
-            <section>
+            <section className="help">
                 {this.props.routerProps.match.params.id==6? 
                 <>
                   <h1 className="stat-title">statistical information</h1>

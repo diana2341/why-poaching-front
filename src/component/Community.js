@@ -31,10 +31,7 @@ export default class Community extends React.Component{
                     <option value="elephant">Elephant</option>
                 </select>
                 </label>
-                    <label>
-                        Username:
-                    <input value={this.state.username} onChange={this.handleChange}type="text" name="username" />
-                    </label>
+   
                     <label>
                         comment:
                     <textarea value={this.state.comment} onChange={this.handleChange}type="text" name="comment" />
