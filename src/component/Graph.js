@@ -62,11 +62,11 @@ TriangleBar.propTypes = {
   
       return (
         <>
-        <div className="chart"style={{ width: '80%', height: 400 }}>
+        <div className="chart"style={{ width: '50%', height: 300 }}>
           <ResponsiveContainer>
             <AreaChart
-        width={500}
-        height={400}
+        width={400}
+        height={300}
         data={data}
         margin={{
           top: 10, right: 30, left: 0, bottom: 0,

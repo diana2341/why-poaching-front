@@ -46,13 +46,7 @@ background:green;
      margin-top: -10em;
      
  }
- /* chart */
- .chart{
-    /* position: absolute; */
-    top:50%;
-    margin-left: 4%;
-    
- }
+
  /* slides */
  @import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic|Inconsolata);
  main {
@@ -243,7 +237,7 @@ left: 100%;
 
  #s2:target ~ #background {
 background-image: url(https://static.seattletimes.com/wp-content/uploads/2020/03/AFRICA_PARKS_DRILLING_5-1560x1040.jpg);
-background-color: #3c7326;
+background-color: #3c73268f;
 }
  #s2:target ~ #progress {
 width: 16.6666666667%;
@@ -312,7 +306,9 @@ left: 200%;
 }
  
  #s3:target ~ #background {
-background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg);
+/* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
+background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+
 background-color: #265773;
 }
  #s3:target ~ #progress {
@@ -382,7 +378,7 @@ display: block;
 float: right;
 }
  #s4:target ~ .prevnext li[class*="n4"] a:after {
-content: "Next";
+content: " Map";
 }
  #s5:target ~ main section {
 opacity: 0;
@@ -622,7 +618,13 @@ h3 {
 /* page edit overall */
 .animal-name{
     position: absolute;
-    left:50%
+    /* left:15%; */
+    top:20%;
+    text-decoration: underline ;
+    animation: fade-letters 1.5s forwards;
+    animation-delay: 2s;
+    opacity: 0
+
 }
 .face{
     height: auto;
@@ -633,7 +635,12 @@ h3 {
     border-radius:27% ;
     opacity: 0.6;
 
+
     /* border: 1px solid #000000; */
+
+}
+.face,.facetiger,.lemur,.gorilla,.rhino,.elephant{
+  animation: fade 5s;
 
 }
 .facetiger{
@@ -696,6 +703,7 @@ h3 {
     width: 50%;
     overflow: hidden;
     margin-left: 50%;
+    margin-top:12%
   }
   .causes,.help{
       position: absolute;
@@ -709,8 +717,8 @@ h3 {
   }
   iframe{
       position: absolute;
-      left: 25%;
-      bottom: 40%;
+      left: 2%;
+      bottom: 5.5%;
       width:40%;
       height:40%;
       box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);
@@ -719,7 +727,76 @@ h3 {
       
 
   }
-  .line{
-      border:solid thin;
-    width: 36%;
+  .how{
+    position: absolute;
+    left:5%;
+    top:10%
+
   }
+  .line{
+      /* border:solid thin; */
+    width: 36%;
+    margin-top:9%
+  }
+   /* chart */
+ .chart{
+  position: absolute;
+  top:30%;
+  margin-left: 50%;
+  
+}
+/* logos */
+.logos{
+width:100px;
+height:100px;
+
+/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+ object-fit:scale-down;
+}
+/* organizations  */
+.scroll{
+position: absolute;
+/* border:solid black; */
+overflow:auto;
+width: 40%;
+height:50%;
+top: 10%;
+left: 50%;
+
+}
+.graph-info{
+  position: absolute;
+  width: 40%;
+  height:50%;  
+  top:20%;
+  left:5%
+
+}
+.stat-title{
+  position: absolute;
+  left:10%;
+  bottom:90%
+
+}
+.basic-info{
+  position: absolute;
+  top:25%;
+  /* left: 10%; */
+  overflow:auto;
+width: 70%;
+height:60%;
+animation: fade-letters 1.5s forwards;
+    animation-delay: 2s;
+    opacity: 0
+}
+@keyframes fade{
+  0%{opacity: 0;}
+}
+@keyframes fade-letters{
+  0% { left: 0;opacity: 0;}
+  100%{    left:10%;opacity: 1  }
+
+
+}
+
+

@@ -16,7 +16,8 @@ export default class AnimalInfo extends React.Component{
       rhinos:[],
       gorillas:[],
       filter:[],
-      img:[]
+      img:[],
+      organizations:[]
 
     }
     componentDidMount(){
@@ -38,18 +39,23 @@ export default class AnimalInfo extends React.Component{
         .then(resp=>resp.json())
         .then(data=>{
             this.setState({img:data})
-        //  data.map(img=>  img.animal_id==this.props.routerProps.match.params.id?this.setState({img:img}):console.log(img.animal_id===this.props.routerProps.match.params.id))
       
 
   
         })
-        
+        fetch(`http://localhost:4000/organizations`)
+        .then(resp=>resp.json())
+        .then(data=>{
+            this.setState({organizations:data})
+      
 
+  
+        })
     }
     
 
     render(){
-        
+
         
         const zoomOutProperties = {
             // duration: 5000,
@@ -97,6 +103,7 @@ export default class AnimalInfo extends React.Component{
 
 
 let a=this.state.animal.help+ ''
+let basic=this.state.animal.basic_info+''
 
         return(
             <>
@@ -106,8 +113,8 @@ let a=this.state.animal.help+ ''
         <a id="s3" title="Section 3 Anchor" className="s"></a>
         <a id="s4" title="Section 4 Anchor" className="s"></a>
         <a id="s5" title="Section 5 Anchor" className="s"></a>
-        <a id="s6" title="Section 6 Anchor" className="s"></a>
-        <a id="s7" title="Section 7 Anchor" className="s"></a>
+        {/* <a id="s6" title="Section 6 Anchor" className="s"></a>
+        <a id="s7" title="Section 7 Anchor" className="s"></a> */}
 
         <div id="progress"></div>
         <div id="background"></div>
@@ -115,12 +122,12 @@ let a=this.state.animal.help+ ''
         <nav className="prevnext" role="presentation">
         <ul>
             <li  className="p2"><a href="#s1" accessKey="1" ></a></li>
-            <li onClick={statFilter}className="p3n1 starter"><a href="#s2" accessKey="2" ></a></li>
+            <li className="p3n1 starter"><a href="#s2" accessKey="2" ></a></li>
             <li className="p4n2"><a href="#s3" accessKey="3" ></a></li>
-            <li  className="p5n3"><a href="#s4" accessKey="4" ></a></li>
-            <li  className="p6n4"><a href="#s5" accessKey="5" ></a></li>
-            <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
-            <li className="n6"><a href="#s7" accessKey="7" ></a></li>
+            <li onClick={statFilter} className="p5n3"><a href="#s4" accessKey="4" ></a></li>
+            <li  className="p6n4" onClick={()=>{this.props.routerProps.history.push(`/map`)}}><a href="#s5" accessKey="5" ></a></li>
+            {/* <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
+            <li className="n6"><a href="#s7" accessKey="7" ></a></li> */}
         </ul>
         </nav>
 
@@ -131,6 +138,7 @@ let a=this.state.animal.help+ ''
             <section>
 
                 <h1 className="animal-name"> {this.state.animal.name}</h1>
+
                 {this.props.routerProps.match.params.id==1?
                   <img className="facetiger"src={frontigert} alt="chart"/>
                   :
@@ -151,6 +159,7 @@ let a=this.state.animal.help+ ''
                 :null
             
             }
+                            <p className="basic-info">{basic.split('/').map(line => <li className="line">{line}</li> )}</p>
 
 
 
@@ -178,41 +187,59 @@ let a=this.state.animal.help+ ''
             </section>
  
             <section className="help">
-                <h1>How can you help {this.state.animal.name}'s</h1><br/>
+                <h1 className="how">How can you help {this.state.animal.name}'s</h1><br/>
        {a.split('.').map(line => <li className="line">{line}.</li> )}
+       <div className="scroll">
+       <h1>organizations helping {this.state.animal.name}'s</h1><br/>
+       {this.state.organizations.filter(organization=>organization.animal_id==this.props.routerProps.match.params.id).map(img=> 
+      <> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </>)} 
 
- 
+        </div>
                 
             </section>
  
             <section>
                 {this.props.routerProps.match.params.id==6? 
-                    <img className="oc"src={orangutan} alt="chart"/> 
+                <>
+                  <h1 className="stat-title">statistical information</h1>
 
+                    <img className="oc"src={orangutan} alt="chart"/>
+                    <p className="graph-info">Both Borneo and Sumatran orangutans populations have declined. A century ago their population was estimated at 230,000 orangutans in total. The Bornean orangutan population is now estimated to 104,700 and the Sumatran about 7,500 , this orangutan species is critically Endangered.There was another species of orangutan introduced in November, 2017. The Tapanuli orangutan that had a number of 800 individual apes and  is the most endangered of all great apes.</p> 
+                </>
                                 :
                     this.props.routerProps.match.params.id==4?
                     null:
-                    <Graph routerProps={this.props.routerProps} state={this.state}/>
+                    <>
+                 <h1 className="stat-title">statistical information</h1>
 
+                <p className="graph-info">{this.state.filter.info}</p>
+                    <Graph routerProps={this.props.routerProps} state={this.state}/>
+                    </>
                 }
-            </section>
- 
-            <section>
-               <iframe src={this.state.animal.video_url}
+                  <iframe src={this.state.animal.video_url}
                  frameBorder='0'
                  allow='autoplay; encrypted-media'
                  allowFullScreen
                  title='video'
-                />   
-         
-                
+                /> 
             </section>
  
-            <section>
+            {/* <section> */}
+               {/* <iframe src={this.state.animal.video_url}
+                 frameBorder='0'
+                 allow='autoplay; encrypted-media'
+                 allowFullScreen
+                 title='video'
+                />    */}
+         
+                
+            {/* </section> */}
+ 
+            {/* <section>
             
                 <h1>Section 6</h1>
            
-            </section>
+            </section> */}
             
         </main>
             </>
