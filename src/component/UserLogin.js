@@ -26,6 +26,16 @@ export default class UserLogin extends React.Component{
     render(){
         return(
             <>
+             <form onSubmit={this.handleSubmit}>
+                 <label>
+                   Username:
+                  <input value={this.state.username} onChange={this.handleChange}type="text" name="username" />
+                 </label>
+                 <input type="submit" value="Submit" />
+
+            </form>
+
+            
             <form onSubmit={this.handleSubmit}>
                  <label>
                    Username:

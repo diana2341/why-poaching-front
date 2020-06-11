@@ -160,3 +160,106 @@ z-index: -999;
   box-shadow: -3px 3px #2163428e, -2px 2px #2163428e, -1px 1px #2163428e;
   border: 1px solid #2163428e;
 }
+.box{
+  position: absolute;
+  border:solid white;
+  width: 80%;
+  height: 90%;
+  /* height: auto; */
+  /* text-align: center; */
+  margin-left:15%;
+  /* padding: 40%; */
+  /* padding-bottom: 40%; */
+  /* overflow: scroll; */
+  top:7%;
+  z-index: 1;
+
+
+}
+.comment-sec{
+  /* display: grid;
+  grid-template-columns: auto ;
+  z-index: 1; */
+
+
+  
+}
+.comment-box{
+  position: fixed;
+  margin-left:22%;
+ margin-top: 8%;
+ border: solid white;
+ width: 35%;
+ height: 73%;
+ /* text-align: center; */
+
+ 
+ overflow: scroll;
+ z-index: 1;
+
+
+} 
+/* .topic{
+    word-spacing: 30px;
+
+
+} */
+.form{
+  position: absolute;
+  left:20%;
+  top:20%;
+  z-index: 999;
+
+
+}
+input,select,textarea{
+  background-color: transparent;
+  border: none;
+
+  border-bottom: 2px solid white;
+  outline: none; 
+  resize: none;
+  z-index: 999;
+  color: white;
+
+
+}
+
+.community{
+  position: absolute;
+  margin-top: 6%;
+  left:49%;
+  z-index: 1;
+  
+}
+#bg{
+  background-image: url(https://i.pinimg.com/originals/3a/bb/f3/3abbf3389d66b6995de002ac7fa70052.jpg);
+  background-color: #3d3610;
+background-blend-mode: multiply;
+background-position: center;
+background-size: cover;
+/* filter: blur(1px); */
+position: fixed;
+z-index: -1;
+transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
+top: -20px;
+right: -20px;
+bottom: -20px;
+left: -20px;
+z-index: -999;
+}
+.s-btn{
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  width: 40%;
+  height: 20%;
+  border-color: white;
+  left: 10%
+}
+.select{
+  position: absolute;
+  left: 556%;
+  top:2%
+}
+
