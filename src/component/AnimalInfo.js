@@ -2,6 +2,8 @@ import React from 'react'
 import '../AnimalInfo.css';
 import Graph from './Graph'
 import { Zoom } from 'react-slideshow-image';
+import MenuPop from './MenuPop'
+
 
 
 
@@ -52,6 +54,15 @@ export default class AnimalInfo extends React.Component{
   
         })
     }
+    reveal=(event)=>{
+       if( event.target.className==="reveal")
+        document.getElementsByClassName("slide-container")[0].style.filter='none'
+        document.getElementsByClassName("reveal")[0].style.display='none'
+        document.getElementsByClassName("eye")[0].style.display='none'
+        document.getElementsByClassName("sensitive")[0].style.display='none'
+
+
+    }
     
 
     render(){
@@ -99,6 +110,8 @@ export default class AnimalInfo extends React.Component{
         let rhinofront=require("../img/rhino.png")
         let gorillafront=require("../img/gorilla.png")
         let lemurfront=require("../img/lemur.png")
+        let eye=require("../img/eye.png")
+
 
 
 
@@ -107,6 +120,8 @@ let basic=this.state.animal.basic_info+''
 
         return(
             <>
+                    <MenuPop/>
+
             
         <a id="s1" title="Section 1 Anchor" className="s"></a>
         <a id="s2" title="Section 2 Anchor" className="s"></a>
@@ -125,7 +140,7 @@ let basic=this.state.animal.basic_info+''
             <li className="p3n1 starter"><a href="#s2" accessKey="2" ></a></li>
             <li className="p4n2"><a href="#s3" accessKey="3" ></a></li>
             <li onClick={statFilter} className="p5n3"><a href="#s4" accessKey="4" ></a></li>
-            <li  className="p6n4" onClick={()=>{this.props.routerProps.history.push(`/map`)}}><a href="#s5" accessKey="5" ></a></li>
+            {/* <li  className="p6n4" onClick={()=>{this.props.routerProps.history.push(`/map`)}}><a href="#s5" accessKey="5" ></a></li> */}
             {/* <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
             <li className="n6"><a href="#s7" accessKey="7" ></a></li> */}
         </ul>
@@ -182,8 +197,11 @@ let basic=this.state.animal.basic_info+''
        {this.state.img.filter(img=>img.animal_id==this.props.routerProps.match.params.id).map(img=> 
         <img className="img" key={img.id} style={{width: "100%"}}src={img.image_url} alt=""/> )} 
         </Zoom>
+     
       </div>
-
+      <img className="eye"src={eye} alt=""/>
+      <p className="sensitive">Sensitive Content</p>
+   <button onClick={this.reveal}className="reveal"> See Photos</button>
             </section>
  
             <section className="help">

@@ -9,6 +9,8 @@ import {
   Route,
 } from "react-router-dom";
 import UserLogin from "./component/UserLogin";
+import MenuPop from './component/MenuPop'
+
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
 }
 
   return (
+    <>
+    {/* <MenuPop/> */}
     <Router>
 
   <Route exact path='/map' render={ (routerProps)=><MapChart routerProps={routerProps} setTooltipContent={setContent} />}/>
@@ -37,6 +41,7 @@ function App() {
       <Route exact path='/community' render={(routerprops)=><Community routerProps={routerprops}/>}/>
 
     </Router>
+    </>
 
   );
 }

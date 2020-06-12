@@ -1,4 +1,6 @@
 import React from 'react'
+import MenuPop from './MenuPop'
+
 
 export default class Community extends React.Component{
     state={
@@ -67,6 +69,8 @@ export default class Community extends React.Component{
        post= post.sort((a, b) => a.created_at.localeCompare(b.created_at))
         return(
             <>
+             <MenuPop/>
+
             <div id="bg"></div>
                 <h1 className="community">Community</h1>
 
@@ -75,7 +79,7 @@ export default class Community extends React.Component{
                 <form onSubmit={this.handleSubmit}>
                 
                     <label>   Choose topic:</label><br/>
-                 <select name="animal"value={this.state.animal} onChange={this.handleChange}>
+                 <select required name="animal"value={this.state.animal} onChange={this.handleChange}>
                     <option >select</option>
                     <option value="gorilla">Gorilla</option>
                     <option value="tiger">Tiger</option>

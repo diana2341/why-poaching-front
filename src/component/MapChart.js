@@ -6,6 +6,8 @@ import {
   Marker,
 } from "react-simple-maps";
 import AnmialList from "./AnimalList";
+import MenuPop from './MenuPop'
+
 
 
 const geoUrl =
@@ -109,7 +111,10 @@ const MapChart = (props) => {
 
     }, []);
   return (
+
     <>
+        <MenuPop/>
+
   <AnmialList routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
     <div  className="Map">
 }
@@ -133,7 +138,7 @@ const MapChart = (props) => {
               }}
               style={{
                 default: {
-                  fill: "#66a266",
+                  fill: "#034930",
                   outline: "none"
                 },
                 hover: {

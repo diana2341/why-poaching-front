@@ -26,21 +26,21 @@ ul{
     width: 100%;
     height: 100vh;
 }
-#container div#about{
+/* #container div#about{
 background:red;
-}
-#container div#why{
+} */
+/* #container div#why{
     background:blue;
-    }
- #container div#help{
+    } */
+ /* #container div#help{
 background:green;
- }
- #container div#watch{
+ } */
+ /* #container div#watch{
     background:yellow;
-    }
-#container div#purple{
+    } */
+/* #container div#purple{
  background:purple;
- }
+ } */
  .btn{
      position: fixed;
      margin-top: -10em;
@@ -567,8 +567,42 @@ text-align: right;
 .slide-container {
   width: 60%;
   margin: auto; 
+  filter: blur(10px);
+
+
 }
-  
+.eye{
+  position: relative;
+bottom:15em;
+left:2%;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+
+}
+.reveal{
+  position: relative;
+  left: 3%;
+  bottom:13em;
+  background-color: transparent;
+  width: 30%;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-top-color: white;
+  color: white;
+  z-index: 999;
+  outline: none; 
+  cursor: pointer;
+  font-weight: 600;
+
+}
+.sensitive{
+  position: relative;
+  left: 2%;
+  top:-15em;
+  color: rgb(160, 158, 158);
+}
  
 h3 {
   text-align: center; }
@@ -579,6 +613,7 @@ h3 {
   justify-content: center;
   background-size: cover;
   height: 400px;
+  
 
 }
  
@@ -587,20 +622,24 @@ h3 {
   font-size: 20px;
   background: #efefef;
   text-align: center;
+  
 
 }
  
 .each-fade {
   display: flex;
+  
 }
  
 .each-fade .image-container {
   width: 75%;
   overflow: hidden;
+  
 }
  
 .each-fade .image-container img {
   width: 100%;
+  
 }
  
 .each-fade h2 {
@@ -610,6 +649,7 @@ h3 {
   align-items: center;
   margin: 0;
   background: #adceed;
+  
 }
 
  /*           {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
@@ -618,7 +658,7 @@ h3 {
 /* page edit overall */
 .animal-name{
     position: absolute;
-    /* left:15%; */
+    left: 105%;
     top:20%;
     text-decoration: underline ;
     animation: fade-letters 1.5s forwards;
@@ -630,7 +670,7 @@ h3 {
     height: auto;
     width: 300px;
     /* overflow: hidden;  */
-    margin-left:40%;
+    margin-left:30%;
     margin-top: 10%;
     border-radius:27% ;
     opacity: 0.6;
@@ -647,7 +687,7 @@ h3 {
     height: auto;
     width: 350px;
     /* overflow: hidden;  */
-    margin-left:40%;
+    margin-left:30%;
     margin-top: 10%;
     opacity: 0.5;
    
@@ -657,7 +697,7 @@ h3 {
     height: auto;
     width: 450px;
     /* overflow: hidden;  */
-    margin-left:35%;
+    margin-left:30%;
     margin-top: 5%;
     opacity: 0.7;
    
@@ -667,9 +707,9 @@ h3 {
     height: auto;
     width: 450px;
     /* overflow: hidden;  */
-    margin-left:35%;
+    margin-left:30%;
     margin-top: 5%;
-    opacity: 0.6;
+    opacity: 0.47;
     border-radius: 35%;
    
 
@@ -678,7 +718,7 @@ h3 {
     height: auto;
     width: 450px;
     /* overflow: hidden;  */
-    margin-left:35%;
+    margin-left:30%;
     margin-top: 5%;
     opacity: 0.6;
     border-radius: 25%;
@@ -687,10 +727,10 @@ h3 {
     height: auto;
     width: 350px;
     /* overflow: hidden;  */
-    margin-left:35%;
-    margin-top: 5%;
+    margin-left:30%;
+    margin-top: 7%;
     opacity: 0.49;
-    border-radius: 5%;
+    border-radius: 0%;
 }
 .img {
   
@@ -730,13 +770,13 @@ h3 {
   .how{
     position: absolute;
     left:5%;
-    top:10%
+    top:8%
 
   }
   .line{
       /* border:solid thin; */
     width: 36%;
-    margin-top:9%
+    margin-top:5%
   }
    /* chart */
  .chart{
@@ -778,23 +818,39 @@ left: 50%;
   bottom:90%
 
 }
+.animal-name{
+  position: absolute;
+  left: 105%;
+  top:20%;
+  text-decoration: underline ;
+  animation: fade-letters-name 1.5s forwards;
+  animation-delay: 1s;
+  opacity: 0
+
+}
 .basic-info{
   position: absolute;
   top:25%;
-  /* left: 10%; */
+  left: 100%;
   overflow:auto;
 width: 70%;
-height:60%;
+height:40%;
 animation: fade-letters 1.5s forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
     opacity: 0
 }
 @keyframes fade{
   0%{opacity: 0;}
 }
 @keyframes fade-letters{
-  0% { left: 0;opacity: 0;}
-  100%{    left:10%;opacity: 1  }
+  0% { left: 100;opacity: 0;}
+  100%{    left:70%;opacity: 1  }
+
+
+}
+@keyframes fade-letters-name{
+  0% { left: 100;opacity: 0;}
+  100%{    left:75%;opacity: 1  }
 
 
 }
