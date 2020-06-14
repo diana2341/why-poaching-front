@@ -251,10 +251,12 @@ display: block;
 float: left;
 
 }
+/*  */
  #why:target ~ .prevnext li[class*="p2"] a:after {
 content: "Prev";
 
 }
+
  #why:target ~ .prevnext li[class*="n2"] {
 display: block;
 float: right;
@@ -322,9 +324,12 @@ display: none;
 display: block;
 float: left;
 }
- #show-to-help3:target ~ .prevnext li[class*="p3"] a:after {
-content: "Prev";
+ #show-to-help:target ~ .prevnext li[class*="p3"] a:after {
+content: "Prevb";
 }
+#how-to-help:target ~ .prevnext li[class*="p3n1"] a:after {
+  content: "Prev";
+  }
  #how-to-help:target ~ .prevnext li[class*="n3"] {
 display: block;
 float: right;
@@ -354,6 +359,7 @@ section:nth-child(4) {
 left: 300%;
 }
 }
+
 
  #statistics:target ~ #background {
 background-image: url(https://di262mgurvkjm.cloudfront.net/6e76a690-cf73-43b9-87e7-b3841642dde3/N07490-Pano-FR-01_uxga.jpg);
@@ -770,10 +776,10 @@ h3 {
   }
 
   .frame{
-      position: absolute;
-      left: 52%;
-      bottom: -16%;
-      width:40%;
+      position: relative;
+      left: -25%;
+      bottom: -2em;
+      width:50%;
       height:40%;
       box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);
 
@@ -795,8 +801,16 @@ h3 {
    /* chart */
  .chart{
   position: absolute;
-  top:30%;
+  top:15%;
   margin-left: 50%;
+  
+}
+.t-news{
+  position: absolute;
+  top:70%;
+  left:40%;
+  text-decoration: underline;
+  
   
 }
 /* logos */
@@ -813,9 +827,18 @@ position: absolute;
 /* border:solid black; */
 overflow:auto;
 width: 40%;
-height:50%;
+height:80%;
 top: 10%;
 left: 50%;
+
+}
+.p2,.p3n1 {
+  position: relative;
+  left:-32em
+}
+.p4n2,.p5n3{
+  position: relative;
+  left:230%
 
 }
 .graph-info{
@@ -828,8 +851,9 @@ left: 50%;
 }
 .stat-title{
   position: absolute;
-  left:10%;
-  bottom:90%
+  left:14%;
+  bottom:94%;
+  text-decoration: underline;
 
 }
 .animal-name{
@@ -882,6 +906,20 @@ height:100px;
   border-spacing: 10px; /*Optional*/
 
 }
+.news-border-orangutan{
+  position: relative;
+bottom: 430px;
+width: 80%;
+}
+.o-news{
+  position: relative; 
+  left: -10em;
+  
+  
+}
+.rest{
+  top:3.6em
+}
 
 .news-box{
   /* cursor: pointer; */
@@ -893,21 +931,30 @@ color: black;
  background-image: url(https://previews.123rf.com/images/korolyok/korolyok1803/korolyok180300133/98408508-old-grunge-newspaper-paper-texture-background-blurred-vintage-newspaper-background-aged-blur-paper-t.jpg);
 }
 .news-border{
-  max-width: 100%;
+  max-width: 80%;
 
-  margin-left:1%;
+  margin-left:8%;
   padding: 25px;
 overflow: scroll;
-margin-top: 90%;
+margin-top: 50%;
 
 }
+.t-t{
+  text-decoration: underline;
+}
+.poach{
+  position: relative;
+  left: -30%;
+  width: 40%;
+  height: 14em;
+}
 .news-border-2{
-  max-width: 100%;
+  max-width: 70%;
 
-  margin-left:1%;
+  margin-left:50%;
   padding: 25px;
 overflow: scroll;
-margin-top: 60%;
+margin-top: -13em;
 }
 .news-border-orangutan{
   max-width: 100%;
@@ -920,5 +967,189 @@ margin-top: 50%;
 .text{
   color:black
 }
+/* particless */
+/* html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+} */
+/* @media (min-width: 420px) and (min-height: 350px) {
+  html, body {
+    font-size: 30px;
+ }
+}
+@media (min-width: 620px) and (min-height: 450px) {
+  html, body {
+    font-size: 40px;
+ }
+}
+@media (min-width: 768px) and (min-height: 530px) {
+  html, body {
+    font-size: 50px;
+ }
+} */
+/* body {
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1524312966005-030e396636fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc9f2082a75f7ca6757803125fb4277a&auto=format&fit=crop&w=1350&q=80") center/cover no-repeat rgba(183, 167, 143, 0.89);
+  background-blend-mode: multiply;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+} */
+.container {
+  width: 9rem;
+  height: 10rem;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: end;
+  opacity: 0;
+  animation: fade-letters-headlines 1.5s forwards;
+  animation-delay: 2s;}
 
 
+@keyframes rotate {
+  0% {
+    transform: rotate(25deg);
+ }
+  50% {
+    transform: rotate(-25deg);
+ }
+  100% {
+    transform: rotate(25deg);
+ }
+}
+.butterfly-rotate {
+  position: absolute;
+  width: 2.5rem;
+  top: 0.5rem;
+  right: 0;
+  animation: rotate 3s -2.25s ease-in-out infinite;
+}
+@keyframes box-move {
+  0% {
+    transform: translateX(-1rem);
+ }
+  50% {
+    transform: translateX(1.4rem);
+ }
+  100% {
+    transform: translateX(-1rem);
+ }
+}
+.butterfly-box {
+  animation: box-move 3s ease-in-out infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateY(0.2rem);
+ }
+  100% {
+    transform: translateY(0.6rem);
+ }
+}
+.butterfly {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: move 4s infinite alternate;
+  opacity: 0.8;
+}
+.butterfly .main {
+  width: 0.3rem;
+  height: 0.6rem;
+  margin: 0 0.1rem 0.35rem;
+  box-sizing: border-box;
+  border-top: 0.6rem solid #000;
+  border-left: 0.15rem solid transparent;
+  border-bottom: 0;
+  border-right: 0.15rem solid transparent;
+  opacity: 0.7;
+}
+.butterfly .wing {
+  width: 0.8rem;
+  height: 1.4rem;
+  position: relative;
+  opacity: 1;
+}
+.butterfly .wing::before, .butterfly .wing::after {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+}
+.butterfly .wing-right {
+  transform-origin: left center;
+  transform: rotateY(75deg);
+  animation: flap 0.45s ease-in-out infinite;
+}
+.butterfly .wing-right::before {
+  border-left: 0;
+  border-right: 0.8rem solid rgb(194, 97, 32);
+  border-bottom: 0.4rem solid transparent;
+  border-top: 0.6rem solid transparent;
+}
+.butterfly .wing-right::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-right: 0;
+  border-left: 0.5rem solid rgba(230, 210, 96, 1);
+  border-bottom: 0.3rem solid transparent;
+  border-top: 0.3rem solid transparent;
+  transform-origin: top left;
+  transform: rotate(-5deg);
+}
+.butterfly .wing-left {
+  transform-origin: right center;
+  transform: rotateY(75deg);
+  animation: flap 0.35s ease-in-out infinite;
+}
+
+.butterfly .wing-left::before {
+  border-right: 0;
+  border-left: 0.8rem solid rgba(194, 97, 32);
+  border-bottom: 0.4rem solid transparent;
+  border-top: 0.6rem solid transparent;
+}
+.butterfly .wing-left::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-left: 0;
+  border-right: 0.5rem solid rgba(230, 210, 96, 1);
+  border-bottom: 0.3rem solid transparent;
+  border-top: 0.3rem solid transparent;
+  transform-origin: top right;
+  transform: rotate(5deg);
+}
+@keyframes flap {
+  0% {
+    transform: rotateY(0deg);
+ }
+  45% {
+    transform: rotateY(75deg);
+ }
+  100% {
+    transform: rotateY(0deg);
+ }
+}
+.two-b{
+  position: relative;
+  left:80%;
+  transform: rotate(60deg);
+
+}
+
+
+.three-b{
+  position: relative;
+  left:80%;
+  top:15em;
+  transform: rotate(250deg);
+
+}
+.four-b{
+  transform: rotate(100deg);
+
+}

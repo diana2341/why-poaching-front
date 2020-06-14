@@ -69,7 +69,7 @@ export default class AnimalInfo extends React.Component{
     
 
     render(){
-        
+        const butterflies=['one-b',"two-b",'three-b','four-b']
         const {Howl, Howler} = require('howler');
         const sound = new Howl({
             src: [beepMp3],
@@ -201,23 +201,24 @@ const style = {
             </section>
  
             <section className="help">
-                <h1 className="how">How can you help {this.state.animal.name}'s</h1><br/>
+                <h1 className="how t-t">How can you help {this.state.animal.name}'s</h1><br/>
        {a.split('.').map(line => <li className="line">{line}.</li> )}
        <div className="scroll">
-       <h1>organizations helping {this.state.animal.name}'s</h1><br/>
+       <h1 className="t-t">organizations helping {this.state.animal.name}'s</h1><br/>
        {this.state.organizations.filter(organization=>organization.animal_id==this.props.routerProps.match.params.id).map(img=> 
       <> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </>)} 
-
+  
         </div>
+        <iframe className="frame"src={this.state.animal.video_url}
+                 frameBorder='0'
+                 allow='autoplay; encrypted-media'
+                 allowFullScreen
+                 title='video'
+                /> 
         {this.props.routerProps.match.params.id==4? 
         <>
-             <iframe className="frame"src={this.state.animal.video_url}
-             frameBorder='0'
-             allow='autoplay; encrypted-media'
-             allowFullScreen
-             title='video'
-            /> 
                <div className="news-border-2">
+               <h1 className="t-t">Recent News related to {this.state.animal.name}'s</h1>
                <div className="news-grid">
                    {this.state.news.map(news=>
                <div className="news-box">
@@ -247,10 +248,13 @@ const style = {
                     <img className="oc"src={orangutan} alt="chart"/>
                     <p className="graph-info">Both Borneo and Sumatran orangutans populations have declined. A century ago their population was estimated at 230,000 orangutans in total. The Bornean orangutan population is now estimated to 104,700 and the Sumatran about 7,500 , this orangutan species is critically Endangered.There was another species of orangutan introduced in November, 2017. The Tapanuli orangutan that had a number of 800 individual apes and  is the most endangered of all great apes.</p> 
                     <h1 className="stat-title">statistical information</h1>
+                    <h1 className="o-news">Recent News related to {this.state.animal.name}'s</h1>
+
                  <div className="news-border-orangutan">
+
                  <div className="news-grid">
                      {this.state.news.map(news=>
-                 <div className="news-box">
+                 <div className="news-box ">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
                  </div>
@@ -267,6 +271,7 @@ const style = {
                     <>
                  <h1 className="stat-title">statistical information</h1>
                  <div className="news-border">
+                     <h1 className="t-news">Recent News related to {this.state.animal.name}'s</h1>
                  <div className="news-grid">
                      {this.state.news.map(news=>
                  <div className="news-box">
@@ -280,16 +285,16 @@ const style = {
                  </div>
                </div>
 
-                <p className="graph-info">{this.state.filter.info}</p>
+                <p className="graph-info rest">{this.state.filter.info}</p>
                     <Graph routerProps={this.props.routerProps} state={this.state}/>
                     </>
                 }
-                  <iframe className="frame"src={this.state.animal.video_url}
+                  {/* <iframe className="frame"src={this.state.animal.video_url}
                  frameBorder='0'
                  allow='autoplay; encrypted-media'
                  allowFullScreen
                  title='video'
-                /> 
+                />  */}
                 <h1></h1>
             </section>
  
@@ -310,7 +315,23 @@ const style = {
            
             </section> */}
             
+            
         </main>
+        {butterflies.map(function(name, index){
+         return    <div class={`container ${name}`}>
+         <div class="butterfly-rotate">
+           <div class="butterfly-box">
+             <div class="butterfly">
+               <div class="wing wing-left"></div>
+               <div class="main"></div>
+               <div class="wing wing-right"></div>
+             </div>
+           </div>    
+         </div>
+         </div>
+                        
+                      })}
+     
             </>
             
         )

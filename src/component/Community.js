@@ -72,6 +72,8 @@ export default class Community extends React.Component{
              <MenuPop/>
 
             <div id="bg"></div>
+
+  
                 <h1 className="community">Community</h1>
 
             <div className="form">

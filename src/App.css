@@ -213,6 +213,8 @@ z-index: -999;
 }
 iframe{
   border-radius: 13px;
+ 
+
 
 
 }
@@ -317,9 +319,10 @@ z-index: -999;
   height: 300px;
   width: 400px;
   overflow: hidden;
+  border-radius: 10px;
 }
 .poach-why{
-  margin-top:-15em;
+  margin-top:-30em;
   margin-left: 50%;
   max-width: 50%;
   height: 50%;
@@ -351,8 +354,8 @@ left: -20px;
 /* z-index: -999; */
 }
 .iframe{
-  position: absolute;
-  left: 2%;
+  position: relative;
+  left: 6%;
   bottom: 2%;
   width:40%;
   height:40%;
