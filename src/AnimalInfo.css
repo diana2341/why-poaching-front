@@ -162,22 +162,22 @@ width: 0%;
 border-bottom: 12px solid rgba(255, 255, 255, 0.2);
 transition: width 1250ms linear;
 }
- #s1:target ~ main section {
+ #information:target ~ main section {
 opacity: 0;
 }
- #s1:target ~ main section:nth-child(1) {
+ #information:target ~ main section:nth-child(1) {
 opacity: 1;
 }
  @media (max-width: 599px) {
-#s1:target ~ main section {
+#information:target ~ main section {
 top: 50%;
 }
-#s1:target ~ main section:nth-child(1) {
+#information:target ~ main section:nth-child(1) {
 top: 0;
 }
 }
  @media (min-width: 600px) {
-#s1:target ~ main {
+#information:target ~ main {
 left: 0%;
 }
 section:nth-child(1) {
@@ -185,49 +185,49 @@ left: 0%;
 }
 }
 
- #s1:target ~ #background {
+ #information:target ~ #background {
 /* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
 background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 background-color: #4d4620;
 }
- #s1:target ~ #progress {
+ #information:target ~ #progress {
 width: 0%;
 }
 
- #s1:target ~ .prevnext li.starter {
+ #information:target ~ .prevnext li.starter {
 display: none;
 left:10%
 }
- #s1:target ~ .prevnext li[class*="p1"] {
+ #information:target ~ .prevnext li[class*="p1"] {
 display: block;
 float: left;
 }
- #s1:target ~ .prevnext li[class*="p1"] a:after {
+ #sinformation1:target ~ .prevnext li[class*="p1"] a:after {
 content: "Prev";
 }
- #s1:target ~ .prevnext li[class*="n1"] {
+ #information:target ~ .prevnext li[class*="n1"] {
 display: block;
 float: right;
 }
- #s1:target ~ .prevnext li[class*="n1"] a:after {
+ #information:target ~ .prevnext li[class*="n1"] a:after {
 content: "Next";
 }
- #s2:target ~ main section {
+ #why:target ~ main section {
 opacity: 0;
 }
- #s2:target ~ main section:nth-child(2) {
+ #why:target ~ main section:nth-child(2) {
 opacity: 1;
 }
  @media (max-width: 599px) {
-#s2:target ~ main section {
+#why:target ~ main section {
 top: 50%;
 }
-#s2:target ~ main section:nth-child(2) {
+#why:target ~ main section:nth-child(2) {
 top: 0;
 }
 }
  @media (min-width: 600px) {
-#s2:target ~ main {
+#why:target ~ main {
 left: -100%;
 }
 section:nth-child(2) {
@@ -235,31 +235,31 @@ left: 100%;
 }
 }
 
- #s2:target ~ #background {
+ #why:target ~ #background {
 background-image: url(https://static.seattletimes.com/wp-content/uploads/2020/03/AFRICA_PARKS_DRILLING_5-1560x1040.jpg);
 background-color: #3c73268f;
 }
- #s2:target ~ #progress {
+ #why:target ~ #progress {
 width: 16.6666666667%;
 }
 
- #s2:target ~ .prevnext li.starter {
+ #why:target ~ .prevnext li.starter {
 display: none;
 }
- #s2:target ~ .prevnext li[class*="p2"] {
+ #why:target ~ .prevnext li[class*="p2"] {
 display: block;
 float: left;
 
 }
- #s2:target ~ .prevnext li[class*="p2"] a:after {
+ #why:target ~ .prevnext li[class*="p2"] a:after {
 content: "Prev";
 
 }
- #s2:target ~ .prevnext li[class*="n2"] {
+ #why:target ~ .prevnext li[class*="n2"] {
 display: block;
 float: right;
 }
- #s2:target ~ .prevnext li[class*="n2"] a:after {
+ #why:target ~ .prevnext li[class*="n2"] a:after {
 content: "Next";
 }
 /* @media (min-width: 600px) {
@@ -282,22 +282,22 @@ content: "Next";
  
 }
 } */
- #s3:target ~ main section {
+ #how-to-help:target ~ main section {
 opacity: 0;
 }
- #s3:target ~ main section:nth-child(3) {
+ #how-to-help:target ~ main section:nth-child(3) {
 opacity: 1;
 }
  @media (max-width: 599px) {
-#s3:target ~ main section {
+#how-to-help:target ~ main section {
 top: 50%;
 }
-#s3:target ~ main section:nth-child(3) {
+#how-to-help:target ~ main section:nth-child(3) {
 top: 0;
 }
 }
  @media (min-width: 600px) {
-#s3:target ~ main {
+#how-to-help:target ~ main {
 left: -200%;
 }
 section:nth-child(3) {
@@ -305,49 +305,49 @@ left: 200%;
 }
 }
  
- #s3:target ~ #background {
+ #how-to-help:target ~ #background {
 /* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
 background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
 
 background-color: #265773;
 }
- #s3:target ~ #progress {
+ #how-to-help:target ~ #progress {
 width: 33.3333333333%;
 }
 
- #s3:target ~ .prevnext li.starter {
+ #how-to-help:target ~ .prevnext li.starter {
 display: none;
 }
- #s3:target ~ .prevnext li[class*="p3"] {
+ #how-to-help:target ~ .prevnext li[class*="p3"] {
 display: block;
 float: left;
 }
- #s3:target ~ .prevnext li[class*="p3"] a:after {
+ #show-to-help3:target ~ .prevnext li[class*="p3"] a:after {
 content: "Prev";
 }
- #s3:target ~ .prevnext li[class*="n3"] {
+ #how-to-help:target ~ .prevnext li[class*="n3"] {
 display: block;
 float: right;
 }
- #s3:target ~ .prevnext li[class*="n3"] a:after {
+ #how-to-help:target ~ .prevnext li[class*="n3"] a:after {
 content: "Next";
 }
- #s4:target ~ main section {
+ #statistics:target ~ main section {
 opacity: 0;
 }
- #s4:target ~ main section:nth-child(4) {
+ #statistics:target ~ main section:nth-child(4) {
 opacity: 1;
 }
  @media (max-width: 599px) {
-#s4:target ~ main section {
+#statistics:target ~ main section {
 top: 50%;
 }
-#s4:target ~ main section:nth-child(4) {
+#statistics:target ~ main section:nth-child(4) {
 top: 0;
 }
 }
  @media (min-width: 600px) {
-#s4:target ~ main {
+#statistics:target ~ main {
 left: -300%;
 }
 section:nth-child(4) {
@@ -355,29 +355,29 @@ left: 300%;
 }
 }
 
- #s4:target ~ #background {
+ #statistics:target ~ #background {
 background-image: url(https://di262mgurvkjm.cloudfront.net/6e76a690-cf73-43b9-87e7-b3841642dde3/N07490-Pano-FR-01_uxga.jpg);
 background-color: #163b5a;
 }
- #s4:target ~ #progress {
+ #statistics:target ~ #progress {
 width: 50%;
 }
 
- #s4:target ~ .prevnext li.starter {
+ #statistics:target ~ .prevnext li.starter {
 display: none;
 }
- #s4:target ~ .prevnext li[class*="p4"] {
+ #statistics:target ~ .prevnext li[class*="p4"] {
 display: block;
 float: left;
 }
- #s4:target ~ .prevnext li[class*="p4"] a:after {
+ #statistics:target ~ .prevnext li[class*="p4"] a:after {
 content: "Prev";
 }
- #s4:target ~ .prevnext li[class*="n4"] {
+ #statistics:target ~ .prevnext li[class*="n4"] {
 display: block;
 float: right;
 }
- #s4:target ~ .prevnext li[class*="n4"] a:after {
+ #statistics:target ~ .prevnext li[class*="n4"] a:after {
 content: " Map";
 }
  #s5:target ~ main section {
@@ -747,18 +747,32 @@ h3 {
   }
   .causes,.help{
       position: absolute;
-      border:solid white;
+      /* border:solid rgb(92, 89, 89); */
       max-width: 70%;
-      height: auto;
+      height: 90%;
       text-align: center;
       margin-left:15%;
       padding: 25px;
+      margin-top: 3%;
 
   }
-  iframe{
+  
+  .causes{
+    background-color: rgba(17, 17, 17, 0.699);
+        border-radius: 15px;
+
+
+  }
+  .help{
+    background-color: rgba(175, 170, 170, 0.185);
+    border-radius: 15px;
+
+  }
+
+  .frame{
       position: absolute;
-      left: 2%;
-      bottom: -7%;
+      left: 52%;
+      bottom: -16%;
       width:40%;
       height:40%;
       box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);
@@ -853,6 +867,58 @@ animation: fade-letters 1.5s forwards;
   100%{    left:75%;opacity: 1  }
 
 
+}
+.news-img{
+  width:260px;
+height:100px;
+ object-fit:scale-down;
+ margin-left:-15%
+}
+.news-grid{
+  position: relative;
+  display: table;
+  width: 100%; /*Optional*/
+  table-layout: fixed; /*Optional*/
+  border-spacing: 10px; /*Optional*/
+
+}
+
+.news-box{
+  /* cursor: pointer; */
+  display: table-cell;
+color: black;
+  border: solid;
+ width: 200px;
+ max-height: 150%;
+ background-image: url(https://previews.123rf.com/images/korolyok/korolyok1803/korolyok180300133/98408508-old-grunge-newspaper-paper-texture-background-blurred-vintage-newspaper-background-aged-blur-paper-t.jpg);
+}
+.news-border{
+  max-width: 100%;
+
+  margin-left:1%;
+  padding: 25px;
+overflow: scroll;
+margin-top: 90%;
+
+}
+.news-border-2{
+  max-width: 100%;
+
+  margin-left:1%;
+  padding: 25px;
+overflow: scroll;
+margin-top: 60%;
+}
+.news-border-orangutan{
+  max-width: 100%;
+
+  margin-left:1%;
+  padding: 25px;
+overflow: scroll;
+margin-top: 50%;
+}
+.text{
+  color:black
 }
 
 

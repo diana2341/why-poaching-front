@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Buda:300');
 *
 {
   margin: 0;
   padding: 0;
+  font-family: 'Buda';
+
 } 
+
+.p-i:first-letter { 
+  color: #1d5820;
+  float: left;
+  font-size: 75px;
+  line-height: 60px;
+  padding: 0 8px;
+}
 
 html body{ 
   /* background: url(https://cluecentre.com/wp-content/uploads/2018/06/1920x1080-french-sky-blue-solid-color-background.jpg) no-repeat center center fixed;  */
@@ -116,13 +127,14 @@ z-index: -999;
   position: absolute;
 	width: 235px;
 	margin: 30px auto 0 auto;
-	border-radius: 4px;
+	border-radius: 15px;
 	border: 1px solid #23262a21;
 	background: #2f313648;
 	display: flex;
   flex-direction: column;
   margin-top:-10em;
-  margin-left:-41em
+  margin-left:-41em;
+  background-image: url(https://image.freepik.com/free-photo/fern-leaves-dark-background-jungle-dense-dark-green-fern-leaves-garden-night-nature-abstract-background-fern-tropical-forest-exotic-plant_33867-774.jpg);
 
 }
 
@@ -133,7 +145,8 @@ z-index: -999;
 	justify-content: center;
 	align-items: center;
 	background: #2022258f;
-	color: #fff;
+  color: #fff;
+  border-radius: 11px;
 }
 
 .profilecard .me .avatar {
@@ -168,14 +181,15 @@ z-index: -999;
 .why-btn{
   width: auto;
   height: 2em;
-  background-color: #2a9c638e;
-  border-color: #2163428e;
+  color: white;
+  background-color: #153827b7;
+  border-color: #17472f8e;
   box-shadow: -3px 3px #2163428e, -2px 2px #2163428e, -1px 1px #2163428e;
   border: 1px solid #2163428e;
 }
 .box{
   position: absolute;
-  border:solid white;
+  border:solid rgba(255, 255, 255, 0.171);
   width: 80%;
   height: 90%;
   /* height: auto; */
@@ -184,7 +198,7 @@ z-index: -999;
   /* padding: 40%; */
   /* padding-bottom: 40%; */
   /* overflow: scroll; */
-  top:7%;
+  /* top:7%; */
   z-index: 1;
 
 
@@ -197,14 +211,26 @@ z-index: -999;
 
   
 }
+iframe{
+  border-radius: 13px;
+
+
+}
+hr{
+  background-color:rgba(255, 255, 255, 0.267);
+height: 1.5px;
+
+border: none;
+}
 .comment-box{
   position: fixed;
-  margin-left:22%;
- margin-top: 8%;
- border: solid white;
+  margin-left:17%;
+ margin-top: 5%;
+ border: solid rgba(255, 255, 255, 0.267);
  width: 35%;
  height: 73%;
  /* text-align: center; */
+ border-radius: 10px;
 
  
  overflow: scroll;
@@ -271,8 +297,147 @@ z-index: -999;
   left: 10%
 }
 .select{
-  position: absolute;
-  left: 556%;
-  top:2%
+  position: relative;
+  left: 50em;
+  top:-8em
 }
+.poachers,.box{
+  margin-top: 4%;
+  position: absolute;
+  background-color: rgba(109, 107, 107, 0.247);
+  border-radius: 15px;
+    max-width: 70%;
+  height: 80%;
+  text-align: center;
+  margin-left:15%;
+  padding: 25px;
+  overflow-x: scroll;
+}
+.poach-pic{
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+.poach-why{
+  margin-top:-15em;
+  margin-left: 50%;
+  max-width: 50%;
+  height: 50%;
+}
+.one{
+  margin-left:-60%
+}
+.why-p{
+  margin-left: 45%;
+}
+/* .two{
+  position: absolute;
+  margin-top: 25%;
+} */
+.p-b,.l-bg{
+  background-image: url(https://cdn.cnn.com/cnnnext/dam/assets/160916143156-rhino-dehorning-6-super-169.jpg);
+  background-color: #3d3610;
+background-blend-mode: multiply;
+background-position: center;
+background-size: cover;
+/* filter: blur(1px); */
+position: fixed;
+z-index: -1;
+transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
+top: -20px;
+right: -20px;
+bottom: -20px;
+left: -20px;
+/* z-index: -999; */
+}
+.iframe{
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+  width:40%;
+  height:40%;
+  box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);}
+.tiger-link{
+  position: relative;
+top:10%;
+  border:solid transparent;
+  background-color: rgba(0, 0, 0, 0.459);
+  max-width: 40%;
+  overflow: hidden;
 
+}
+.elephant-link{
+  position: relative;
+  border:solid transparent;
+  background-color: rgba(0, 0, 0, 0.459);
+  max-width: 40%;
+  overflow: hidden;
+  left:50%;
+  bottom:44%
+
+
+}
+.gorilla-link{
+  position: relative;
+
+  border:solid transparent;
+  background-color: rgba(0, 0, 0, 0.459);
+  max-width: 40%;
+  overflow: hidden;
+  left:50%;
+  bottom:35%
+
+
+}
+.lemur-link{
+  position: relative;
+  border:solid transparent;
+  background-color: rgba(0, 0, 0, 0.459);
+  max-width: 40%;
+  overflow: hidden;
+  left:-1%;
+  bottom:65%
+
+
+}
+.rhino-link{
+  position: relative;
+
+  border:solid transparent;
+  background-color: rgba(0, 0, 0, 0.459);
+  max-width: 40%;
+  overflow: hidden;
+  bottom:55%;
+  left:-1%;
+
+
+
+}
+.orangutan-link{
+  border:solid transparent;
+  background-color: rgba(0, 0, 0, 0.459);
+  max-width: 40%;
+  overflow: hidden;
+
+
+}
+.linkss{
+  margin-top: 4%;
+  position: absolute;
+  border:solid white;
+  max-width: 80%;
+  height: 80%;
+  text-align: center;
+  /* margin-left:15%; */
+  padding: 25px;
+  overflow: scroll;
+  margin-left: 10%;
+  z-index: 999;
+}
+.l-bg{
+  background-image: url(https://i.pinimg.com/originals/4b/d8/26/4bd8264b4c3eeaeb9b934bcc8b9df38f.jpg);
+
+}
+.r-r{
+  position: relative;
+}

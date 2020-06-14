@@ -3,6 +3,10 @@ import '../AnimalInfo.css';
 import Graph from './Graph'
 import { Zoom } from 'react-slideshow-image';
 import MenuPop from './MenuPop'
+import {Howl, Howler} from 'howler';
+
+import beepMp3 from '../audio/beep.mp3'
+import Speech from 'react-speech';
 
 
 
@@ -12,14 +16,10 @@ import MenuPop from './MenuPop'
 export default class AnimalInfo extends React.Component{
     state={
         animal:[],
-
-      tiger:[],
-      elephants:[],
-      rhinos:[],
-      gorillas:[],
       filter:[],
       img:[],
-      organizations:[]
+      organizations:[],
+      news:[]
 
     }
     componentDidMount(){
@@ -31,10 +31,7 @@ export default class AnimalInfo extends React.Component{
         fetch(`http://localhost:4000/statistics`)
         .then(resp=>resp.json())
         .then(data=>{
-         data.filter(stat=>  stat.animal_id===1).map(stat=>{ {this.setState({tiger:stat})}})
-         data.filter(stat=>  stat.animal_id===2).map(stat=>{ {this.setState({elephants:stat})}})
-         data.filter(stat=>  stat.animal_id===3).map(stat=>{ {this.setState({gorillas:stat})}})
-         data.filter(stat=>  stat.animal_id===5).map(stat=>{ {this.setState({rhinos:stat})}})
+         data.filter(stat=>  stat.animal_id==this.props.routerProps.match.params.id).map(stat=>{ {this.setState({filter:stat})}})
   
         })
          fetch(`http://localhost:4000/images`)
@@ -53,6 +50,12 @@ export default class AnimalInfo extends React.Component{
 
   
         })
+        fetch(`https://newsapi.org/v2/everything?q=${this.props.routerProps.match.params.animal}+poaching&apiKey=d03a4c983eec491297a0525301ec3ec4`)
+        .then(resp=>resp.json())
+        .then(data=>
+            this.setState({news:data.articles})
+    )
+
     }
     reveal=(event)=>{
        if( event.target.className==="reveal")
@@ -66,43 +69,20 @@ export default class AnimalInfo extends React.Component{
     
 
     render(){
+        
+        const {Howl, Howler} = require('howler');
+        const sound = new Howl({
+            src: [beepMp3],
+          });
+        //   Howler.volume(0.5);
 
         
         const zoomOutProperties = {
-            // duration: 5000,
-            // transitionDuration: 500,
-            // infinite: true,
-            // indicators: true,
-            // scale: 0.4,
             arrows: true,
             autoplay:false
           }
                   
-        const statFilter=()=>{
-         
-            console.log("works",this.state.filter)
-            if(this.props.routerProps.match.params.id==1){
-             this.setState({filter:this.state.tiger})
-             console.log("tigers")
-     
-         }
         
-           if(this.props.routerProps.match.params.id==2){
-              this.setState({filter:this.state.elephants})
-              console.log("elephants")
-     
-          }
-          if(this.props.routerProps.match.params.id==3){
-            this.setState({filter:this.state.gorillas})
-            console.log("gorillas")
-     
-        }
-        if(this.props.routerProps.match.params.id==5){
-          this.setState({filter:this.state.rhinos})
-          console.log("rhinos")
-     
-      }
-          } 
         let orangutan=require("../img/orangutan2.png")
         let front=require("../img/face3.png")
         let frontigert=require("../img/tigs2.png")
@@ -117,16 +97,28 @@ export default class AnimalInfo extends React.Component{
 
 let a=this.state.animal.help+ ''
 let basic=this.state.animal.basic_info+''
-
+const style = {
+    play: {
+      button: {
+        width: '28',
+        height: '28',
+        cursor: 'pointer',
+        pointerEvents: 'none',
+        outline: 'none',
+        backgroundColor: 'yellow',
+        border: 'solid 1px rgba(255,255,255,1)',
+        borderRadius: 6
+      },
+    }
+  };
         return(
             <>
-                    <MenuPop/>
+         <MenuPop/>  
+        <a id="information" title="Section 1 Anchor" className="s"></a>
+        <a id="why" title="Section 2 Anchor" className="s"></a>
+        <a id="how-to-help" title="Section 3 Anchor" className="s"></a>
+        <a id="statistics" title="Section 4 Anchor" className="s"></a>
 
-            
-        <a id="s1" title="Section 1 Anchor" className="s"></a>
-        <a id="s2" title="Section 2 Anchor" className="s"></a>
-        <a id="s3" title="Section 3 Anchor" className="s"></a>
-        <a id="s4" title="Section 4 Anchor" className="s"></a>
         <a id="s5" title="Section 5 Anchor" className="s"></a>
         {/* <a id="s6" title="Section 6 Anchor" className="s"></a>
         <a id="s7" title="Section 7 Anchor" className="s"></a> */}
@@ -135,11 +127,13 @@ let basic=this.state.animal.basic_info+''
         <div id="background"></div>
 
         <nav className="prevnext" role="presentation">
-        <ul>
-            <li  className="p2"><a href="#s1" accessKey="1" ></a></li>
-            <li className="p3n1 starter"><a href="#s2" accessKey="2" ></a></li>
-            <li className="p4n2"><a href="#s3" accessKey="3" ></a></li>
-            <li onClick={statFilter} className="p5n3"><a href="#s4" accessKey="4" ></a></li>
+        <ul onMouseOver={()=>sound.play()} >
+            <li  className="p2"><a href="#information" accessKey="1" ></a></li>
+            <li className="p3n1 starter"><a href="#why" accessKey="2" ></a></li>
+            <li className="p4n2"><a href="#how-to-help" accessKey="3" ></a></li>
+            {this.props.routerProps.match.params.id==4? 
+            null:
+            <li  className="p5n3"><a href="#statistics" accessKey="4" ></a></li>}
             {/* <li  className="p6n4" onClick={()=>{this.props.routerProps.history.push(`/map`)}}><a href="#s5" accessKey="5" ></a></li> */}
             {/* <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
             <li className="n6"><a href="#s7" accessKey="7" ></a></li> */}
@@ -174,20 +168,22 @@ let basic=this.state.animal.basic_info+''
                 :null
             
             }
-                            <p className="basic-info">{basic.split('/').map(line => <li className="line">{line}</li> )}</p>
-
-
-
-
-
-
-                
+             <p className="basic-info">{basic.split('/').map(line => <li className="line">{line}</li> )}</p>
+     
             </section>
  
             <section className="causes">
+                <div className="bg-c"></div>
     
         <h1>Why is the {this.state.animal.name} being poached? </h1><br/>
-                <p>{this.state.animal.causes}</p>
+        <Speech 
+ pause={true} 
+ resume={true} 
+ volume="0.1"
+
+  text={this.state.animal.causes}
+  voice="Google UK English Male" />
+                <p className="p-i">{this.state.animal.causes}</p>
                 
          
          
@@ -201,7 +197,7 @@ let basic=this.state.animal.basic_info+''
       </div>
       <img className="eye"src={eye} alt=""/>
       <p className="sensitive">Sensitive Content</p>
-   <button onClick={this.reveal}className="reveal"> See Photos</button>
+   <button onMouseOver={()=>sound.play()}  onClick={this.reveal}className="reveal"> See Photos</button>
             </section>
  
             <section className="help">
@@ -213,33 +209,88 @@ let basic=this.state.animal.basic_info+''
       <> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </>)} 
 
         </div>
-                
+        {this.props.routerProps.match.params.id==4? 
+        <>
+             <iframe className="frame"src={this.state.animal.video_url}
+             frameBorder='0'
+             allow='autoplay; encrypted-media'
+             allowFullScreen
+             title='video'
+            /> 
+               <div className="news-border-2">
+               <div className="news-grid">
+                   {this.state.news.map(news=>
+               <div className="news-box">
+                   <a href={news.url}>  <p className="text">{news.title}</p><br/>
+                    <img className="news-img"src={news.urlToImage} alt=""/></a>
+               </div>
+               
+              
+               
+               )}  
+               </div>
+             </div>
+             </>
+             :''}
+
             </section>
  
             <section className="help">
+            <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
                 {this.props.routerProps.match.params.id==6? 
                 <>
                   <h1 className="stat-title">statistical information</h1>
 
                     <img className="oc"src={orangutan} alt="chart"/>
                     <p className="graph-info">Both Borneo and Sumatran orangutans populations have declined. A century ago their population was estimated at 230,000 orangutans in total. The Bornean orangutan population is now estimated to 104,700 and the Sumatran about 7,500 , this orangutan species is critically Endangered.There was another species of orangutan introduced in November, 2017. The Tapanuli orangutan that had a number of 800 individual apes and  is the most endangered of all great apes.</p> 
+                    <h1 className="stat-title">statistical information</h1>
+                 <div className="news-border-orangutan">
+                 <div className="news-grid">
+                     {this.state.news.map(news=>
+                 <div className="news-box">
+                     <a href={news.url}>  <p className="text">{news.title}</p><br/>
+                      <img className="news-img"src={news.urlToImage} alt=""/></a>
+                 </div>
+                 
+                
+                 
+                 )}  
+                 </div>
+               </div>
                 </>
                                 :
-                    this.props.routerProps.match.params.id==4?
-                    null:
+                    // this.props.routerProps.match.params.id==4?
+                    // "":
                     <>
                  <h1 className="stat-title">statistical information</h1>
+                 <div className="news-border">
+                 <div className="news-grid">
+                     {this.state.news.map(news=>
+                 <div className="news-box">
+                     <a href={news.url}>  <p className="text">{news.title}</p><br/>
+                      <img className="news-img"src={news.urlToImage} alt=""/></a>
+                 </div>
+                 
+                
+                 
+                 )}  
+                 </div>
+               </div>
 
                 <p className="graph-info">{this.state.filter.info}</p>
                     <Graph routerProps={this.props.routerProps} state={this.state}/>
                     </>
                 }
-                  <iframe src={this.state.animal.video_url}
+                  <iframe className="frame"src={this.state.animal.video_url}
                  frameBorder='0'
                  allow='autoplay; encrypted-media'
                  allowFullScreen
                  title='video'
                 /> 
+                <h1></h1>
             </section>
  
             {/* <section> */}
