@@ -10,7 +10,9 @@ export default class menuPop extends React.Component{
     render(){
         const {Howl, Howler} = require('howler');
         const sound = new Howl({
-            src: [beepMp3]
+            src: [beepMp3],
+            volume: 0.10
+
           });
           // Howler.volume(0.7);
 
