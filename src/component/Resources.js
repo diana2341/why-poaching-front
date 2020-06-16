@@ -26,43 +26,46 @@ export default class Resources extends React.Component{
            })
     }
     render(){
+        const name=["Gorilla","Lemur","Elephant","Rhino","Orangutan","Tiger"]
         return(
             <>
                     <MenuPop/>
 
             <div className="l-bg"></div>
-  
+            
             <div className="linkss">
-                <h1>Resources</h1>
+                        {name.map((name,index)=><h1 key={index}className={`${name}-l`}>{name} information</h1>)}
+
+                <h1 className="r-title">Resources</h1>
             {this.state.links.map(link=>
             link.animal_id==1?
             <div className="tiger-link">
-               <p >{link.website}</p> 
+               <a href={link.website}><p >{link.website}</p></a> 
             </div>
             :
             link.animal_id==2?
             <div className="elephant-link">
-               <p >{link.website}</p> 
+               <a href={link.website}><p >{link.website}</p></a> 
             </div>
             :
             link.animal_id==3?
             <div className="gorilla-link">
-               <p >{link.website}</p> 
+               <a href={link.website}><p >{link.website}</p></a> 
             </div>
             :
             link.animal_id==4?
             <div className="lemur-link">
-               <p >{link.website}</p> 
+               <a href={link.website}><p >{link.website}</p></a> 
             </div>
             :
             link.animal_id==5?
             <div className="rhino-link">
-               <p >{link.website}</p> 
+               <a href={link.website}><p >{link.website}</p></a> 
             </div>
             :
             link.animal_id==6?
             <div className="orangutan-link">
-               <p >{link.website}</p> 
+               <a href={link.website}><p >{link.website}</p></a> 
             </div>:''
             
          

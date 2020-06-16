@@ -24,6 +24,7 @@ export default class Poachers extends React.Component{
             <div className="">
             <img className="poach-pic one"src={info.img} alt=""/><br/>
             {/* <img className="poach-pic two"src={info.img2} alt=""/> */}
+            <button className="poach-blur"></button>
             <iframe className="iframe poach"src={"https://www.youtube.com/embed/_nJ5xLvyaJ8"}//fixxxxxx
                  frameBorder='0'
                  allow='autoplay; encrypted-media'

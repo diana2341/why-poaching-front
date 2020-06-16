@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuPop from './MenuPop'
+import  moment from 'moment'
 
 
 export default class Community extends React.Component{
@@ -50,6 +51,9 @@ export default class Community extends React.Component{
     
 
     render(){
+     
+          
+          
         let post=this.state.posts
         if(this.state.sort==="gorillas")
        post= post.filter(posts =>posts.animal==="gorilla")
@@ -67,10 +71,16 @@ export default class Community extends React.Component{
        post= post.sort((a, b) => b.created_at.localeCompare(a.created_at))
        if(this.state.sort==="oldest")
        post= post.sort((a, b) => a.created_at.localeCompare(b.created_at))
+
+      
         return(
             <>
              <MenuPop/>
+            <div id="container-b">
+  <img id="bird" src="https://media.giphy.com/media/3o7TKTEnDK22YfSWwo/giphy.gif" alt=""/>
+  <img id="bird2" src="https://media.giphy.com/media/3o7TKTEnDK22YfSWwo/giphy.gif" alt=""/>
 
+</div>
             <div id="bg"></div>
 
   
@@ -100,7 +110,6 @@ export default class Community extends React.Component{
                     <input required value={this.state.comment} onChange={this.handleChange}type="text" name="comment" /><br/><br/>
                     
                     <button className="s-btn">submit</button>
-                    {/* <input type="submit"  /> */}
                 </form>
                 <form className="select">
                  <select name="sort" value={this.state.sort} onChange={this.handleChange}>
@@ -121,16 +130,52 @@ export default class Community extends React.Component{
                 <div className="box">
    <div className="comment-sec">
                         <div className="comment-box">
+                            
                 {post.map(comments=>{ 
                     return(
 
                  <>
+     
+                <div className="sec-c">
+                    <div className="sec-pic">
+                        {
+                            comments.animal==="elephant"?
+                            
+                     <img className="comment-avatar"src="https://i.pinimg.com/736x/1a/a9/b3/1aa9b35901178e0dd69d14369a6dad7d.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    :
+                    comments.animal==="orangutan"?
+                    
 
-                        <p><strong>User: </strong>{comments.username}</p> 
-                        {/* <h1>{comments.id}</h1> */}
-                        <p><strong>Topic:</strong>{comments.animal}</p>
-                        
-                        <p>{comments.comment}</p><br/>
+                    <img className="comment-avatar"src="https://www.pennlive.com/resizer/W6p-lWQjj5pGe6uHbtqUSH1jrps=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/VP6I3GOB4ZCTBNUNPYIJCGTTME.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    :
+                    comments.animal==="tiger"?
+                    
+
+                    <img className="comment-avatar"src="https://wp.nathabblog.com/wp-content/uploads/2011/03/19-baby-tiger.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    :
+                    comments.animal==="rhino"?
+                    
+
+                    <img className="comment-avatar"src="https://i.pinimg.com/originals/06/8e/23/068e23e76fa4a8309fe9f8ddad7c62e4.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    :
+                    comments.animal==="lemur"?
+
+                    <img className="comment-avatar"src="https://cdn.24.co.za/files/Cms/General/d/6949/fd1bf216449b4ab6992cc2901e952f68.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    :
+                    comments.animal==="gorilla"?
+
+                <img className="comment-avatar"src="https://i.pinimg.com/originals/ee/e5/74/eee574c3ebca283a2f676624dd2c03cb.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                :''
+                
+                        }
+                        <p className="username-c"><strong>User: </strong>{comments.username}</p> 
+                        <p className="topic"><strong>Topic:</strong>{comments.animal}</p>
+                        </div>
+                        </div>
+                       <div className="co-b">
+                        <p className="comment">{comments.comment}</p><br/>
+                        </div>
+                    <p className="posted-time"><strong>Posted:</strong> {moment(comments.created_at).format('LLL')}</p>
                         <hr/>
                       </>
 

@@ -219,8 +219,9 @@ iframe{
 
 }
 hr{
-  background-color:rgba(255, 255, 255, 0.267);
+  background-color:transparent;
 height: 1.5px;
+margin-top: -10%;
 
 border: none;
 }
@@ -228,7 +229,7 @@ border: none;
   position: fixed;
   margin-left:17%;
  margin-top: 5%;
- border: solid rgba(255, 255, 255, 0.267);
+ /* border: solid rgba(255, 255, 255, 0.267); */
  width: 35%;
  height: 73%;
  /* text-align: center; */
@@ -351,15 +352,18 @@ top: -20px;
 right: -20px;
 bottom: -20px;
 left: -20px;
-/* z-index: -999; */
+z-index: -999;
 }
+
 .iframe{
   position: relative;
   left: 6%;
   bottom: 2%;
   width:40%;
   height:40%;
-  box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);}
+  box-shadow: -2px 7px 40px 2px rgba(18, 31, 23, 0.938);
+}
+  
 .tiger-link{
   position: relative;
 top:10%;
@@ -376,7 +380,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:50%;
-  bottom:44%
+  bottom:35%
 
 
 }
@@ -388,7 +392,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:50%;
-  bottom:35%
+  bottom:15%
 
 
 }
@@ -399,7 +403,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:-1%;
-  bottom:65%
+  bottom:55%
 
 
 }
@@ -410,17 +414,22 @@ top:10%;
   background-color: rgba(0, 0, 0, 0.459);
   max-width: 40%;
   overflow: hidden;
-  bottom:55%;
+  bottom:30%;
   left:-1%;
 
 
 
 }
 .orangutan-link{
+  position: relative;
   border:solid transparent;
   background-color: rgba(0, 0, 0, 0.459);
   max-width: 40%;
   overflow: hidden;
+  bottom:45%;
+  left:50%;
+
+
 
 
 }
@@ -431,7 +440,7 @@ top:10%;
   max-width: 80%;
   height: 80%;
   text-align: center;
-  /* margin-left:15%; */
+  /* margin:0; */
   padding: 25px;
   overflow: scroll;
   margin-left: 10%;
@@ -443,4 +452,110 @@ top:10%;
 }
 .r-r{
   position: relative;
+}
+.Orangutan-l,.Lemur-l,.Tiger-l,.Elephant-l,.Rhino-l,.Gorilla-l{
+  position: relative;
+  z-index: -1;
+}
+.Tiger-l{
+ left: -10em;
+ top: 2em;
+}
+.Elephant-l{
+  left: 15%;
+  top: 30%;
+}
+.Lemur-l{
+  left: -30%;
+  top: 95%;
+}
+.Gorilla-l{
+  left: 15%;
+  top: 110%;
+}
+.Rhino-l{
+  left: -30%;
+  top: 130%;
+}
+.Orangutan-l{
+  left: 20%;
+  top: 130%;
+}
+.r-title{
+  position: relative;
+  top:-25%;
+  text-decoration: underline;
+}
+
+
+.comment-avatar{
+  
+  position: relative;
+  border-radius: 50%;
+  left:-4%;
+  height: 5em;
+  
+}
+.username-c
+{position: relative;
+  left:-3%
+
+}
+.topic{
+  position: relative;
+  left:-4%
+}
+/* .comment{
+  position: relative;
+  top:-18%;
+  left:4%
+} */
+.sec-c{
+  position: relative;
+  border: solid rgba(248, 242, 242, 0.267);
+  border-radius: 20px;
+}
+.sec-pic{
+  position: relative;
+  border: solid rgba(245, 240, 240, 0.267);
+  width: 25%;
+  overflow: scroll;
+  border-left: transparent;
+  border-bottom: transparent;
+  border-top: transparent;
+  border-radius: 30px;
+}
+.co-b{
+  position: relative;
+  /* border: solid; */
+  top: -22%;
+  width: 70%;
+  overflow: scroll;
+  left: 27%;
+  height: 21%;
+  
+}
+.posted-time{
+  position: relative;
+  top: -7em;
+}
+#container-b {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+}
+#bird {
+  height: 100px;
+  top: 1.5em;
+  position: absolute;
+  left:8em;
+  filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
+}
+#bird2 {
+  transform: scaleX(-1);
+  height: 100px;
+  top: 1.5em;
+  position: absolute;
+  left:79em;
+  filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
 }

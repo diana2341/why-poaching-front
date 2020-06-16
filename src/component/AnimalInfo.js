@@ -6,7 +6,7 @@ import MenuPop from './MenuPop'
 import {Howl, Howler} from 'howler';
 
 import beepMp3 from '../audio/beep.mp3'
-import Speech from 'react-speech';
+// import Speech from 'react-speech';
 
 
 
@@ -19,7 +19,8 @@ export default class AnimalInfo extends React.Component{
       filter:[],
       img:[],
       organizations:[],
-      news:[]
+      news:[],
+      play:false
 
     }
     componentDidMount(){
@@ -68,12 +69,75 @@ export default class AnimalInfo extends React.Component{
     }
     
 
+
     render(){
+   
+
+
+        var myTimeout;
+        function myTimer() {
+            window.speechSynthesis.pause();
+            window.speechSynthesis.resume();
+            
+            myTimeout = setTimeout(myTimer, 10000000);
+          
+        }
+        window.speechSynthesis.cancel();
+        myTimeout = setTimeout(myTimer, 10000000);
+        let voices = window.speechSynthesis.getVoices();
+        let toSpeak = this.state.animal.causes;
+      
+
+        let utt = new SpeechSynthesisUtterance(toSpeak);
+        utt.onend =  ()=> { clearTimeout(myTimeout); }
+  
+       let speack=()=>{
+        
+                    utt.voice = voices[7];
+                    utt.volume = 0.1
+                    utt.pitch = 0.8;
+                    // 37
+                    console.log("play")
+
+window.speechSynthesis.cancel()? 
+ window.speechSynthesis.resume()
+ 
+
+:
+ window.speechSynthesis.speak(utt);
+
+        // utt.onend =  ()=> { clearTimeout(myTimeout); }
+        document.getElementsByClassName('speak')[0].style.opacity="1"
+        document.getElementsByClassName('mute')[0].style.opacity="0"
+        document.getElementsByClassName('mute')[0].style.zIndex="-1"
+        document.getElementsByClassName('speak')[0].style.opacity="1"
+
+
+
+                    
+
+        }
+        let pause=()=>{
+
+
+
+                        window.speechSynthesis.pause() 
+                        utt.onend =  ()=> { clearTimeout(myTimeout); }
+
+            console.log("pause")
+            document.getElementsByClassName('speak')[0].style.opacity="0"
+            document.getElementsByClassName('mute')[0].style.opacity="1"
+            document.getElementsByClassName('mute')[0].style.zIndex="1"
+
+
+
+        }
+
         const butterflies=['one-b',"two-b",'three-b','four-b']
         const {Howl, Howler} = require('howler');
         const sound = new Howl({
             src: [beepMp3],
-            volume: 0.10
+            volume: 0
 
           });
         //   Howler.volume(0.5);
@@ -99,20 +163,7 @@ export default class AnimalInfo extends React.Component{
 
 let a=this.state.animal.help+ ''
 let basic=this.state.animal.basic_info+''
-const style = {
-    play: {
-      button: {
-        width: '28',
-        height: '28',
-        cursor: 'pointer',
-        pointerEvents: 'none',
-        outline: 'none',
-        backgroundColor: 'yellow',
-        border: 'solid 1px rgba(255,255,255,1)',
-        borderRadius: 6
-      },
-    }
-  };
+
         return(
             <>
          <MenuPop/>  
@@ -178,13 +229,16 @@ const style = {
                 <div className="bg-c"></div>
     
         <h1>Why is the {this.state.animal.name} being poached? </h1><br/>
-        <Speech 
- pause={true} 
- resume={true} 
- volume="0.1"
+        
+        
+        
+        <img alt="" src={require("../img/on.png")}className="talk speak" onClick={pause}/>
+        
+        <img alt="" src={require("../img/off.png")}className="talk mute" onClick={speack}/>
+        
+       
 
-  text={this.state.animal.causes}
-  voice="Google UK English Male" />
+      
                 <p className="p-i">{this.state.animal.causes}</p>
                 
          

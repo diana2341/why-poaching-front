@@ -872,7 +872,7 @@ left: 50%;
   left: 100%;
   overflow:auto;
 width: 70%;
-height:40%;
+height:55%;
 animation: fade-letters 1.5s forwards;
     animation-delay: 1s;
     opacity: 0
@@ -896,7 +896,8 @@ animation: fade-letters 1.5s forwards;
   width:260px;
 height:100px;
  object-fit:scale-down;
- margin-left:-15%
+ margin-left:-15%;
+
 }
 .news-grid{
   position: relative;
@@ -923,12 +924,16 @@ width: 80%;
 
 .news-box{
   /* cursor: pointer; */
+  box-shadow: -19px 14px 20px -3px rgba(0,0,0,0.75);
+
+  border-radius: 5%;
   display: table-cell;
-color: black;
-  border: solid;
+  border: solid transparent;
  width: 200px;
  max-height: 150%;
- background-image: url(https://previews.123rf.com/images/korolyok/korolyok1803/korolyok180300133/98408508-old-grunge-newspaper-paper-texture-background-blurred-vintage-newspaper-background-aged-blur-paper-t.jpg);
+ background-image: url(https://i.pinimg.com/originals/ef/8b/2a/ef8b2ad40498aa24ca1467590710c507.jpg);
+ /* background-image: url(https://image.freepik.com/free-photo/texture-beige-old-paper_113767-1396.jpg); */
+
 }
 .news-border{
   max-width: 80%;
@@ -948,6 +953,17 @@ margin-top: 50%;
   width: 40%;
   height: 14em;
 }
+.talk{
+  position: absolute;
+  width:5%;
+  left: 45em;
+  top: 1em
+  
+}
+.talk.speak{
+  opacity: 0;
+}
+
 .news-border-2{
   max-width: 70%;
 
