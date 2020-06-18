@@ -90,9 +90,9 @@ export default class Community extends React.Component{
 
                 <form onSubmit={this.handleSubmit}>
                 
-                    <label>   Choose topic:</label><br/>
+                    <label>   Choose Topic:</label><br/>
                  <select required name="animal"value={this.state.animal} onChange={this.handleChange}>
-                    <option >select</option>
+                    <option >Select</option>
                     <option value="gorilla">Gorilla</option>
                     <option value="tiger">Tiger</option>
                     <option value="lemur">Lemur</option>
@@ -103,19 +103,19 @@ export default class Community extends React.Component{
                 
                 
                    <label>Username:</label><br/>
-                  <input required value={this.state.username} onChange={this.handleChange}type="text" name="username" /><br/>
+                  <input required value={this.state.username} onChange={this.handleChange}type="text" name="username" /><br/><br/>
                  
                     
-                     <label> comment:</label><br/>
+                     <label> Comment:</label><br/>
                     <input required value={this.state.comment} onChange={this.handleChange}type="text" name="comment" /><br/><br/>
                     
-                    <button className="s-btn">submit</button>
+                    <button className="s-btn">Submit</button>
                 </form>
                 <form className="select">
                  <select name="sort" value={this.state.sort} onChange={this.handleChange}>
                     <option >Sort by</option>
-                    <option value="newest">newest</option>
-                    <option value="oldest">oldest</option>
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
                     <option value="gorillas">Gorilla</option>
                     <option value="tigers">Tiger</option>
                     <option value="lemurs">Lemur</option>
@@ -169,7 +169,7 @@ export default class Community extends React.Component{
                 
                         }
                         <p className="username-c"><strong>User: </strong>{comments.username}</p> 
-                        <p className="topic"><strong>Topic:</strong>{comments.animal}</p>
+                        <p className="topic"><strong>Topic: </strong>{comments.animal}</p>
                         </div>
                         </div>
                        <div className="co-b">

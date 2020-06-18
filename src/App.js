@@ -5,6 +5,8 @@ import MapChart from "./component/MapChart";
 import AnimalInfo from "./component/AnimalInfo";
 import Community from "./component/Community";
 import Poachers from "./component/Poachers";
+import Home from "./component/Home";
+
 
 import {
   BrowserRouter as Router,
@@ -42,7 +44,8 @@ function App() {
       <Route exact path='/login' render={(routerprops)=><UserLogin username={username}handleSubmit={handleSubmit} routerProps={routerprops}/>}/>
       <Route exact path='/community' render={(routerprops)=><Community routerProps={routerprops}/>}/>
       <Route exact path='/poachers' render={(routerprops)=><Poachers routerProps={routerprops}/>}/>
-      <Route exact path='/resources' render={(routerprops)=><Resources routerProps={routerprops}/>}/>
+      <Route exact path='/sources' render={(routerprops)=><Resources routerProps={routerprops}/>}/>
+      <Route exact path='/' render={(routerprops)=><Home routerProps={routerprops}/>}/>
 
     </Router>
     </>

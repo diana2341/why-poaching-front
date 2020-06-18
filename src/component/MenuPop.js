@@ -25,7 +25,7 @@ export default class menuPop extends React.Component{
 
                 <div className="thing"><p className="po"><Link onMouseOver={()=>sound.play()} to="/poachers">Poachers</Link></p></div>
 
-                <div className="thing"><p className="p"><Link onMouseOver={()=>sound.play()} to="/resources">Resources</Link></p></div>
+                <div className="thing"><p className="p-r"><Link onMouseOver={()=>sound.play()} to="/sources">Sources</Link></p></div>
         
              </div>
         )

@@ -92,8 +92,8 @@ export default class AnimalInfo extends React.Component{
         utt.onend =  ()=> { clearTimeout(myTimeout); }
   
        let speack=()=>{
-        
-                    utt.voice = voices[7];
+        //7
+                    utt.voice = voices[37];
                     utt.volume = 0.1
                     utt.pitch = 0.8;
                     // 37
@@ -257,10 +257,10 @@ let basic=this.state.animal.basic_info+''
             </section>
  
             <section className="help">
-                <h1 className="how t-t">How can you help {this.state.animal.name}'s</h1><br/>
+                <h1 className="how t-t">How Can You Help {this.state.animal.name}s</h1><br/>
        {a.split('.').map(line => <li className="line">{line}.</li> )}
        <div className="scroll">
-       <h1 className="t-t">organizations helping {this.state.animal.name}'s</h1><br/>
+       <h1 className="t-t">Organizations Helping {this.state.animal.name}s</h1><br/>
        {this.state.organizations.filter(organization=>organization.animal_id==this.props.routerProps.match.params.id).map(img=> 
       <> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </>)} 
   
@@ -299,12 +299,12 @@ let basic=this.state.animal.basic_info+''
         <span></span>
                 {this.props.routerProps.match.params.id==6? 
                 <>
-                  <h1 className="stat-title">statistical information</h1>
+                  <h1 className="stat-title">Statistical Information</h1>
 
                     <img className="oc"src={orangutan} alt="chart"/>
                     <p className="graph-info">Both Borneo and Sumatran orangutans populations have declined. A century ago their population was estimated at 230,000 orangutans in total. The Bornean orangutan population is now estimated to 104,700 and the Sumatran about 7,500 , this orangutan species is critically Endangered.There was another species of orangutan introduced in November, 2017. The Tapanuli orangutan that had a number of 800 individual apes and  is the most endangered of all great apes.</p> 
-                    <h1 className="stat-title">statistical information</h1>
-                    <h1 className="o-news">Recent News related to {this.state.animal.name}'s</h1>
+                    <h1 className="stat-title">Statistical Information</h1>
+                    <h1 className="o-news">Recent News Related To {this.state.animal.name}'s</h1>
 
                  <div className="news-border-orangutan">
 
@@ -325,9 +325,9 @@ let basic=this.state.animal.basic_info+''
                     // this.props.routerProps.match.params.id==4?
                     // "":
                     <>
-                 <h1 className="stat-title">statistical information</h1>
+                 <h1 className="stat-title">Statistical Information</h1>
                  <div className="news-border">
-                     <h1 className="t-news">Recent News related to {this.state.animal.name}'s</h1>
+                     <h1 className="t-news">Recent News Related To {this.state.animal.name}'s</h1>
                  <div className="news-grid">
                      {this.state.news.map(news=>
                  <div className="news-box">

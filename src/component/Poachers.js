@@ -14,17 +14,20 @@ export default class Poachers extends React.Component{
         return(
             <>
              <MenuPop/>
-            <div className="p-b">
-                   
+            <div className="p-b"></div>
+              <img className="fly"src='https://www.thelazyolive.com/img/dragonfly5.gif' alt=""/> 
+              <img className="fly2"src='https://www.thelazyolive.com/img/dragonfly5.gif' alt=""/> 
+
+
 
             <div className="poachers">
-                <h1 className="why-p">Why are people poaching animals?</h1>
+                <div className="poach-div">
+                <h1 className="why-p">Why Are People Poaching Animals?</h1>
 
             {this.state.poachers.map(info=>
             <div className="">
             <img className="poach-pic one"src={info.img} alt=""/><br/>
             {/* <img className="poach-pic two"src={info.img2} alt=""/> */}
-            <button className="poach-blur"></button>
             <iframe className="iframe poach"src={"https://www.youtube.com/embed/_nJ5xLvyaJ8"}//fixxxxxx
                  frameBorder='0'
                  allow='autoplay; encrypted-media'
@@ -36,6 +39,7 @@ export default class Poachers extends React.Component{
                 )}
             </div>
             </div>
+            
             </>
         )
     }

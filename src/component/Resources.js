@@ -26,9 +26,25 @@ export default class Resources extends React.Component{
            })
     }
     render(){
+      const butterflies=['one-b',"two-b",'three-b','four-b']
+
         const name=["Gorilla","Lemur","Elephant","Rhino","Orangutan","Tiger"]
         return(
             <>
+                    {butterflies.map(function(name, index){
+         return    <div class={`container ${name} butter`}>
+         <div class="butterfly-rotate">
+           <div class="butterfly-box">
+             <div class="butterfly">
+               <div class="wing wing-left"></div>
+               <div class="main"></div>
+               <div class="wing wing-right"></div>
+             </div>
+           </div>    
+         </div>
+         </div>
+                        
+                      })}
                     <MenuPop/>
 
             <div className="l-bg"></div>
@@ -36,7 +52,7 @@ export default class Resources extends React.Component{
             <div className="linkss">
                         {name.map((name,index)=><h1 key={index}className={`${name}-l`}>{name} information</h1>)}
 
-                <h1 className="r-title">Resources</h1>
+                <h1 className="r-title">Sources</h1>
             {this.state.links.map(link=>
             link.animal_id==1?
             <div className="tiger-link">
@@ -71,6 +87,7 @@ export default class Resources extends React.Component{
          
             
             )}
+     
             </div>
             </>
         )
