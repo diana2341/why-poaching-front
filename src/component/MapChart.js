@@ -117,7 +117,7 @@ const MapChart = (props) => {
 
   <AnmialList routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
     <div  className="Map">
-
+}
 
 
     <ComposableMap data-tip="" projectionConfig={{ scale: 120 }}>
