@@ -7,3 +7,10 @@ const port = process.env.PORT || '8080';
 app.set('port', port);
 const server = http.createServer(app);
 server.listen(port, () => console.log(`Running on localhost:${port}`));
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
