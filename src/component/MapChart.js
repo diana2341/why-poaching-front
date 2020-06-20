@@ -73,7 +73,7 @@ const MapChart = (props) => {
     useEffect(() => {
       const fetchData = async () => {
         await fetch(
-          'http://localhost:4000/locations',
+          'https://why-poaching-back.herokuapp.com/locations',
         )
         .then(resp=>resp.json())
           .then(data=>{ 
@@ -87,7 +87,7 @@ const MapChart = (props) => {
       };
       const fetchAnimals = async () => {
         await fetch(
-          'http://localhost:4000/animals',
+          'https://why-poaching-back.herokuapp.com/animals',
         )
         .then(resp=>resp.json())
           .then(data=>{ 
@@ -95,7 +95,7 @@ const MapChart = (props) => {
               
           })
           const fetchStats=async()=>{
-            fetch(`http://localhost:4000/statistics`)
+            fetch(`https://why-poaching-back.herokuapp.com/statistics`)
             .then(resp=>resp.json())
             .then(data=>{
              data.filter(stat=>  stat.animal_id===1).map(stat=>{ {this.setState({tiger:stat})}})
