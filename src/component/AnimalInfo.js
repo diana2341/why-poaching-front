@@ -347,12 +347,7 @@ let basic=this.state.animal.basic_info+''
             </section>
  
             {/* <section> */}
-               {/* <iframe src={this.state.animal.video_url}
-                 frameBorder='0'
-                 allow='autoplay; encrypted-media'
-                 allowFullScreen
-                 title='video'
-                />    */}
+             
          
                 
             {/* </section> */}
