@@ -7,7 +7,7 @@ export default class Resources extends React.Component{
         links:[]
     }
     componentDidMount(){
-        fetch('http://localhost:4000/links')
+        fetch('https://why-poaching-back.herokuapp.com/links')
         .then(resp=>resp.json())
         .then(data=>{
             this.setState({links:data})

@@ -6,7 +6,7 @@ export default class Poachers extends React.Component{
         poachers:[]
     }
     componentDidMount(){
-        fetch('http://localhost:4000/poachers')
+        fetch('https://why-poaching-back.herokuapp.com/poachers')
         .then(resp=>resp.json())
         .then(data=>this.setState({poachers:data}))
     }
