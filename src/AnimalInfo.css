@@ -658,8 +658,7 @@ h3 {
   
 }
 
- /*           {this.state.img.map(img=>  img.animal_id==this.props.routerProps.match.params.id?
-            <li class="carousel__item"><img src={img.image_url} alt=""/></li> :"")} */
+ 
             
 /* page edit overall */
 .animal-name{
@@ -987,36 +986,7 @@ margin-top: 50%;
 .text{
   color:black
 }
-/* particless */
-/* html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-} */
-/* @media (min-width: 420px) and (min-height: 350px) {
-  html, body {
-    font-size: 30px;
- }
-}
-@media (min-width: 620px) and (min-height: 450px) {
-  html, body {
-    font-size: 40px;
- }
-}
-@media (min-width: 768px) and (min-height: 530px) {
-  html, body {
-    font-size: 50px;
- }
-} */
-/* body {
-  width: 100vw;
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1524312966005-030e396636fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bc9f2082a75f7ca6757803125fb4277a&auto=format&fit=crop&w=1350&q=80") center/cover no-repeat rgba(183, 167, 143, 0.89);
-  background-blend-mode: multiply;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-} */
+
 .container {
   width: 9rem;
   height: 10rem;

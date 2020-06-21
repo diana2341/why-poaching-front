@@ -3,9 +3,7 @@ import '../AnimalInfo.css';
 import Graph from './Graph'
 import { Zoom } from 'react-slideshow-image';
 import MenuPop from './MenuPop'
-import {Howl, Howler} from 'howler';
 
-import beepMp3 from '../audio/beep.mp3'
 // import Speech from 'react-speech';
 
 
@@ -27,12 +25,13 @@ export default class AnimalInfo extends React.Component{
         fetch(`http://localhost:4000/animals/${this.props.routerProps.match.params.id}`)
         .then(resp=>resp.json())
         .then(data=>{
+
             this.setState({animal:data})
         })
         fetch(`http://localhost:4000/statistics`)
         .then(resp=>resp.json())
         .then(data=>{
-         data.filter(stat=>  stat.animal_id==this.props.routerProps.match.params.id).map(stat=>{ {this.setState({filter:stat})}})
+         data.filter(stat=>  parseInt(stat.animal_id)===parseInt(this.props.routerProps.match.params.id)).map(stat=>this.setState({filter:stat}))
   
         })
          fetch(`http://localhost:4000/images`)
@@ -134,13 +133,7 @@ window.speechSynthesis.cancel()?
         }
 
         const butterflies=['one-b',"two-b",'three-b','four-b']
-        const {Howl, Howler} = require('howler');
-        const sound = new Howl({
-            src: [beepMp3],
-            volume: 0
-
-          });
-        //   Howler.volume(0.5);
+   
 
         
         const zoomOutProperties = {
@@ -167,12 +160,12 @@ let basic=this.state.animal.basic_info+''
         return(
             <>
          <MenuPop/>  
-        <a id="information" title="Section 1 Anchor" className="s"></a>
-        <a id="why" title="Section 2 Anchor" className="s"></a>
-        <a id="how-to-help" title="Section 3 Anchor" className="s"></a>
-        <a id="statistics" title="Section 4 Anchor" className="s"></a>
+        <a href="/"id="information" title="Section 1 Anchor" className="s"> </a>
+        <a href="/"id="why" title="Section 2 Anchor" className="s"> </a>
+        <a href="/"id="how-to-help" title="Section 3 Anchor" className="s"> </a>
+        <a href="/"id="statistics" title="Section 4 Anchor" className="s"> </a>
 
-        <a id="s5" title="Section 5 Anchor" className="s"></a>
+        <a href="/"  id="s5" title="Section 5 Anchor" className="s"> </a>
         {/* <a id="s6" title="Section 6 Anchor" className="s"></a>
         <a id="s7" title="Section 7 Anchor" className="s"></a> */}
 
@@ -180,13 +173,13 @@ let basic=this.state.animal.basic_info+''
         <div id="background"></div>
 
         <nav className="prevnext" role="presentation">
-        <ul onMouseOver={()=>sound.play()} >
-            <li  className="p2"><a href="#information" accessKey="1" ></a></li>
-            <li className="p3n1 starter"><a href="#why" accessKey="2" ></a></li>
-            <li className="p4n2"><a href="#how-to-help" accessKey="3" ></a></li>
-            {this.props.routerProps.match.params.id==4? 
+        <ul  >
+            <li  className="p2"><a href="#information"  > </a></li>
+            <li className="p3n1 starter"><a href="#why"  > </a></li>
+            <li className="p4n2"><a href="#how-to-help"  > </a></li>
+            {this.props.routerProps.match.params.id==="4"? 
             null:
-            <li  className="p5n3"><a href="#statistics" accessKey="4" ></a></li>}
+            <li  className="p5n3"><a href="#statistics"  > </a></li>}
             {/* <li  className="p6n4" onClick={()=>{this.props.routerProps.history.push(`/map`)}}><a href="#s5" accessKey="5" ></a></li> */}
             {/* <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
             <li className="n6"><a href="#s7" accessKey="7" ></a></li> */}
@@ -201,27 +194,27 @@ let basic=this.state.animal.basic_info+''
 
                 <h1 className="animal-name"> {this.state.animal.name}</h1>
 
-                {this.props.routerProps.match.params.id==1?
+                {this.props.routerProps.match.params.id==="1"?
                   <img className="facetiger"src={frontigert} alt="chart"/>
                   :
-                  this.props.routerProps.match.params.id==2?
+                  this.props.routerProps.match.params.id==="2"?
                  <img className="elephant"src={elephantfront} alt="chart"/>  
                  :
-                 this.props.routerProps.match.params.id==3?
+                 this.props.routerProps.match.params.id==="3"?
                  <img className="gorilla"src={gorillafront} alt="chart"/> 
                  :
-                 this.props.routerProps.match.params.id==4?
+                 this.props.routerProps.match.params.id==="4"?
                 <img className="lemur"src={lemurfront} alt="chart"/> 
                 :
-                this.props.routerProps.match.params.id==5?
+                this.props.routerProps.match.params.id==="5"?
                 <img className="rhino"src={rhinofront} alt="chart"/> 
                 :
-                this.props.routerProps.match.params.id==6?
+                this.props.routerProps.match.params.id==="6"?
                 <img className="face"src={front} alt="chart"/>  
                 :null
             
             }
-             <p className="basic-info">{basic.split('/').map(line => <li className="line">{line}</li> )}</p>
+             <p className="basic-info">{basic.split('/').map((line,index) => <li key={index} className="line">{line}</li> )}</p>
      
             </section>
  
@@ -246,23 +239,23 @@ let basic=this.state.animal.basic_info+''
             <br/>  <br/>  <br/>
            <div className="slide-container">
         <Zoom {...zoomOutProperties}>
-       {this.state.img.filter(img=>img.animal_id==this.props.routerProps.match.params.id).map(img=> 
+       {this.state.img.filter(img=>parseInt(img.animal_id)===parseInt(this.props.routerProps.match.params.id)).map(img=> 
         <img className="img" key={img.id} style={{width: "100%"}}src={img.image_url} alt=""/> )} 
         </Zoom>
      
       </div>
       <img className="eye"src={eye} alt=""/>
       <p className="sensitive">Sensitive Content</p>
-   <button onMouseOver={()=>sound.play()}  onClick={this.reveal}className="reveal"> See Photos</button>
+   <button   onClick={this.reveal}className="reveal"> See Photos</button>
             </section>
  
             <section className="help">
                 <h1 className="how t-t">How Can You Help {this.state.animal.name}s</h1><br/>
-       {a.split('.').map(line => <li className="line">{line}.</li> )}
+       {a.split('.').map((line,index) => <li key={index} className="line">{line}.</li> )}
        <div className="scroll">
        <h1 className="t-t">Organizations Helping {this.state.animal.name}s</h1><br/>
-       {this.state.organizations.filter(organization=>organization.animal_id==this.props.routerProps.match.params.id).map(img=> 
-      <> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </>)} 
+       {this.state.organizations.filter(organization=>parseInt(organization.animal_id)===parseInt(this.props.routerProps.match.params.id)).map((img,index)=> 
+      <div key={index}> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </div>)} 
   
         </div>
         <iframe className="frame"src={this.state.animal.video_url}
@@ -271,13 +264,13 @@ let basic=this.state.animal.basic_info+''
                  allowFullScreen
                  title='video'
                 /> 
-        {this.props.routerProps.match.params.id==4? 
+        {this.props.routerProps.match.params.id==='4'? 
         <>
                <div className="news-border-2">
                <h1 className="t-t">Recent News related to {this.state.animal.name}'s</h1>
                <div className="news-grid">
-                   {this.state.news.map(news=>
-               <div className="news-box">
+                   {this.state.news.map((news,index)=>
+               <div key={index}className="news-box">
                    <a href={news.url}>  <p className="text">{news.title}</p><br/>
                     <img className="news-img"src={news.urlToImage} alt=""/></a>
                </div>
@@ -297,7 +290,7 @@ let basic=this.state.animal.basic_info+''
         <span></span>
         <span></span>
         <span></span>
-                {this.props.routerProps.match.params.id==6? 
+                {this.props.routerProps.match.params.id==='6'? 
                 <>
                   <h1 className="stat-title">Statistical Information</h1>
 
@@ -309,8 +302,8 @@ let basic=this.state.animal.basic_info+''
                  <div className="news-border-orangutan">
 
                  <div className="news-grid">
-                     {this.state.news.map(news=>
-                 <div className="news-box ">
+                     {this.state.news.map((news,index)=>
+                 <div key={index}className="news-box ">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
                  </div>
@@ -329,8 +322,8 @@ let basic=this.state.animal.basic_info+''
                  <div className="news-border">
                      <h1 className="t-news">Recent News Related To {this.state.animal.name}'s</h1>
                  <div className="news-grid">
-                     {this.state.news.map(news=>
-                 <div className="news-box">
+                     {this.state.news.map((news,index)=>
+                 <div key={index}className="news-box">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
                  </div>
@@ -351,7 +344,6 @@ let basic=this.state.animal.basic_info+''
                  allowFullScreen
                  title='video'
                 />  */}
-                <h1></h1>
             </section>
  
             {/* <section> */}
@@ -374,13 +366,13 @@ let basic=this.state.animal.basic_info+''
             
         </main>
         {butterflies.map(function(name, index){
-         return    <div class={`container ${name}`}>
-         <div class="butterfly-rotate">
-           <div class="butterfly-box">
-             <div class="butterfly">
-               <div class="wing wing-left"></div>
-               <div class="main"></div>
-               <div class="wing wing-right"></div>
+         return    <div key={index}className={`container ${name}`}>
+         <div className="butterfly-rotate">
+           <div className="butterfly-box">
+             <div className="butterfly">
+               <div className="wing wing-left"></div>
+               <div className="main"></div>
+               <div className="wing wing-right"></div>
              </div>
            </div>    
          </div>

@@ -8,7 +8,7 @@ export default class UserLogin extends React.Component{
     }
 
      handleChange=(event)=>{
-         const{name,value,type}=event.target
+         const{name,value}=event.target
          this.setState({[name]:value})
 
     }

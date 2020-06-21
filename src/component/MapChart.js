@@ -94,17 +94,7 @@ const MapChart = (props) => {
                 setAnimal(data)
               
           })
-          const fetchStats=async()=>{
-            fetch(`http://localhost:4000/statistics`)
-            .then(resp=>resp.json())
-            .then(data=>{
-             data.filter(stat=>  stat.animal_id===1).map(stat=>{ {this.setState({tiger:stat})}})
-             data.filter(stat=>  stat.animal_id===2).map(stat=>{ {this.setState({elephants:stat})}})
-             data.filter(stat=>  stat.animal_id===3).map(stat=>{ {this.setState({gorillas:stat})}})
-             data.filter(stat=>  stat.animal_id===5).map(stat=>{ {this.setState({rhinos:stat})}})
-      
-            })
-          }
+       
       };
       fetchData();
       fetchAnimals()
@@ -117,14 +107,15 @@ const MapChart = (props) => {
 
   <AnmialList routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
     <div  className="Map">
-}
+
 
 
     <ComposableMap data-tip="" projectionConfig={{ scale: 120 }}>
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
-          geographies.map(geo =>
+          geographies.map((geo,index) =>
              <Geography
+            //  key={index}
              stroke="white"
              strokeOpacity="0.02"
               key={geo.rsmKey}

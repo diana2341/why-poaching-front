@@ -19,7 +19,7 @@ import Resources from './component/Resources'
 
 function App() {
   const [content, setContent] = useState("");
-  const [username,setUsername]=useState('')
+  const [username]=useState('')
 
   const handleSubmit=(e)=>{
     e.preventDefault()

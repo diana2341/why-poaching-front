@@ -16,14 +16,12 @@
 }
 
 html body{ 
-  /* background: url(https://cluecentre.com/wp-content/uploads/2018/06/1920x1080-french-sky-blue-solid-color-background.jpg) no-repeat center center fixed;  */
   background-color: #0a193a;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
-  /* z-index: -999; */
   
 
 }
@@ -206,25 +204,14 @@ z-index: -999;
   border:solid rgba(255, 255, 255, 0.171);
   width: 80%;
   height: 90%;
-  /* height: auto; */
-  /* text-align: center; */
+
   margin-left:15%;
-  /* padding: 40%; */
-  /* padding-bottom: 40%; */
-  /* overflow: scroll; */
-  /* top:7%; */
+ 
   z-index: 1;
 
 
 }
-.comment-sec{
-  /* display: grid;
-  grid-template-columns: auto ;
-  z-index: 1; */
 
-
-  
-}
 iframe{
   border-radius: 13px;
  
@@ -243,10 +230,8 @@ border: none;
   position: fixed;
   margin-left:17%;
  margin-top: 5%;
- /* border: solid rgba(255, 255, 255, 0.267); */
  width: 35%;
  height: 73%;
- /* text-align: center; */
  border-radius: 10px;
 
  
@@ -255,11 +240,7 @@ border: none;
 
 
 } 
-/* .topic{
-    word-spacing: 30px;
 
-
-} */
 .form{
   position: absolute;
   left:20%;
@@ -374,9 +355,7 @@ bottom: -20px;
 left: -20px;
 z-index: -999;
 }
-.poach-div{
-  
-}
+
 .iframe{
   position: relative;
   left: 6%;
@@ -462,7 +441,6 @@ top:10%;
   max-width: 80%;
   height: 80%;
   text-align: center;
-  /* margin:0; */
   padding: 25px;
   overflow: scroll;
   margin-left: 10%;
@@ -474,7 +452,6 @@ top:10%;
 background-blend-mode: multiply;
 background-position: center;
 background-size: cover;
-/* filter: blur(1px); */
 position: fixed;
 z-index: -1;
 transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
@@ -539,11 +516,7 @@ z-index: -999;
   position: relative;
   left:-4%
 }
-/* .comment{
-  position: relative;
-  top:-18%;
-  left:4%
-} */
+
 .sec-c{
   position: relative;
   border: solid rgba(248, 242, 242, 0.267);

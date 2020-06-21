@@ -24,8 +24,8 @@ export default class Poachers extends React.Component{
                 <div className="poach-div">
                 <h1 className="why-p">Why Are People Poaching Animals?</h1>
 
-            {this.state.poachers.map(info=>
-            <div className="">
+            {this.state.poachers.map((info,index)=>
+            <div key={index}className="">
             <img className="poach-pic one"src={info.img} alt=""/><br/>
             {/* <img className="poach-pic two"src={info.img2} alt=""/> */}
             <iframe className="iframe poach"src={"https://www.youtube.com/embed/_nJ5xLvyaJ8"}//fixxxxxx

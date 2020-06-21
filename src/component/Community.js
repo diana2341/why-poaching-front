@@ -13,7 +13,7 @@ export default class Community extends React.Component{
     }
 
      handleChange=(event)=>{
-         const{name,value,type}=event.target
+         const{name,value}=event.target
          this.setState({[name]:value})
 
     }
@@ -131,10 +131,10 @@ export default class Community extends React.Component{
    <div className="comment-sec">
                         <div className="comment-box">
                             
-                {post.map(comments=>{ 
+                {post.map((comments,index)=>{ 
                     return(
 
-                 <>
+                 <div key={index}>
      
                 <div className="sec-c">
                     <div className="sec-pic">
@@ -177,7 +177,7 @@ export default class Community extends React.Component{
                         </div>
                     <p className="posted-time"><strong>Posted:</strong> {moment(comments.created_at).format('LLL')}</p>
                         <hr/>
-                      </>
+                      </div>
 
                 ) })}
                   </div>
