@@ -22,6 +22,7 @@ export default class AnimalInfo extends React.Component{
 
     }
     componentDidMount(){
+        console.log(this.props.routerProps.match.params.id)
         fetch(`https://why-poaching-back.herokuapp.com/animals/${this.props.routerProps.match.params.id}`)
         .then(resp=>resp.json())
         .then(data=>{
