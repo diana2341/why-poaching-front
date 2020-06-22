@@ -103,6 +103,7 @@ const MapChart = (props) => {
   return (
 
     <>
+    {console.log(animal)}
         <MenuPop/>
 
   <AnmialList routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
