@@ -10,7 +10,7 @@ import MenuPop from './MenuPop'
 
 
 
-let id=this.props.routerProps.match.params.id
+
 export default class AnimalInfo extends React.Component{
     state={
         animal:[],
@@ -21,9 +21,8 @@ export default class AnimalInfo extends React.Component{
       play:false
 
     }
-    
     componentDidMount(){
-        fetch(`https://why-poaching-back.herokuapp.com/animals/${id}`)
+        fetch(`https://why-poaching-back.herokuapp.com/animals/${this.props.routerProps.match.params.id}`)
         .then(resp=>resp.json())
         .then(data=>{
 
@@ -32,7 +31,7 @@ export default class AnimalInfo extends React.Component{
         fetch(`https://why-poaching-back.herokuapp.com/statistics`)
         .then(resp=>resp.json())
         .then(data=>{
-         data.filter(stat=>  parseInt(stat.animal_id)===parseInt(id)).map(stat=>this.setState({filter:stat}))
+         data.filter(stat=>  parseInt(stat.animal_id)===parseInt(this.props.routerProps.match.params.id)).map(stat=>this.setState({filter:stat}))
   
         })
          fetch(`https://why-poaching-back.herokuapp.com/images`)
@@ -43,7 +42,7 @@ export default class AnimalInfo extends React.Component{
 
   
         })
-        fetch(`https://why-poaching-back.herokuapp.com/`)
+        fetch(`https://why-poaching-back.herokuapp.com/organizations`)
         .then(resp=>resp.json())
         .then(data=>{
             this.setState({organizations:data})
