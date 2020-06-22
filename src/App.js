@@ -11,6 +11,7 @@ import Home from "./component/Home";
 import {
   BrowserRouter as Router,
   Route,
+  HashRouter
 } from "react-router-dom";
 import UserLogin from "./component/UserLogin";
 import Resources from './component/Resources'
@@ -36,7 +37,7 @@ function App() {
   return (
     <>
     {/* <MenuPop/> */}
-    <Router>
+    <HashRouter>
 
   <Route exact path='/map' render={ (routerProps)=><MapChart routerProps={routerProps} setTooltipContent={setContent} />}/>
       <ReactTooltip>{content}</ReactTooltip>
@@ -47,7 +48,7 @@ function App() {
       <Route exact path='/sources' render={(routerprops)=><Resources routerProps={routerprops}/>}/>
       <Route exact path='/' render={(routerprops)=><Home routerProps={routerprops}/>}/>
 
-    </Router>
+    </HashRouter>
     </>
 
   );
