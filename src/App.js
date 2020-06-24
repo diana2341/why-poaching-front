@@ -37,7 +37,7 @@ function App() {
   return (
     <>
     {/* <MenuPop/> */}
-    <HashRouter>
+    <Router>
 
   <Route exact path='/map' render={ (routerProps)=><MapChart routerProps={routerProps} setTooltipContent={setContent} />}/>
       <ReactTooltip>{content}</ReactTooltip>
@@ -48,7 +48,7 @@ function App() {
       <Route exact path='/sources' render={(routerprops)=><Resources routerProps={routerprops}/>}/>
       <Route exact path='/' render={(routerprops)=><Home routerProps={routerprops}/>}/>
 
-    </HashRouter>
+    </Router>
     </>
 
   );
