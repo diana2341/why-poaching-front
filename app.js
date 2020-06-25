@@ -12,3 +12,17 @@ server.listen(port, () => console.log(`Running on localhost:${port}`));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/client/build/index.html'));
   });
+  app.get('/map', (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+  
+  app.get('/community', (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+  app.get('/sources', (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+  
+  app.get('/poachers', (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
