@@ -534,12 +534,12 @@ z-index: -999;
 }
 .co-b{
   position: relative;
-  /* border: solid; */
-  top: -22%;
+  border: solid;
+  top: -8em;
   width: 70%;
   overflow: scroll;
   left: 27%;
-  height: 21%;
+  max-height: 7em;
   
 }
 .posted-time{
