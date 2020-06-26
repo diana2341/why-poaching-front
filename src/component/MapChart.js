@@ -73,7 +73,7 @@ const MapChart = (props) => {
     useEffect(() => {
       const fetchData = async () => {
         await fetch(
-          'http://localhost:4000/locations',
+          'https://why-poaching-back.herokuapp.com/locations',
         )
         .then(resp=>resp.json())
           .then(data=>{ 
@@ -87,7 +87,7 @@ const MapChart = (props) => {
       };
       const fetchAnimals = async () => {
         await fetch(
-          'http://localhost:4000/animals',
+          'https://why-poaching-back.herokuapp.com/animals',
         )
         .then(resp=>resp.json())
           .then(data=>{ 

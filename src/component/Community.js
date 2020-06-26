@@ -20,7 +20,7 @@ export default class Community extends React.Component{
     handleSubmit=(e)=>{
         e.preventDefault()
      const{username,animal,comment}=this.state
-        fetch('http://localhost:4000/communities',{
+        fetch('https://why-poaching-back.herokuapp.com/communities',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -40,7 +40,7 @@ export default class Community extends React.Component{
         .then(this.fetchComments)
     }
     fetchComments=()=>{
-        fetch('http://localhost:4000/communities')
+        fetch('https://why-poaching-back.herokuapp.com/communities')
         .then(resp=>resp.json())
         .then(data=>this.setState({posts:data}))
     }

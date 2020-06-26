@@ -22,19 +22,19 @@ export default class AnimalInfo extends React.Component{
 
     }
     componentDidMount(){
-        fetch(`http://localhost:4000/animals/${this.props.routerProps.match.params.id}`)
+        fetch(`https://why-poaching-back.herokuapp.com/animals/${this.props.routerProps.match.params.id}`)
         .then(resp=>resp.json())
         .then(data=>{
 
             this.setState({animal:data})
         })
-        fetch(`http://localhost:4000/statistics`)
+        fetch(`https://why-poaching-back.herokuapp.com/statistics`)
         .then(resp=>resp.json())
         .then(data=>{
          data.filter(stat=>  parseInt(stat.animal_id)===parseInt(this.props.routerProps.match.params.id)).map(stat=>this.setState({filter:stat}))
   
         })
-         fetch(`http://localhost:4000/images`)
+         fetch(`https://why-poaching-back.herokuapp.com/images`)
         .then(resp=>resp.json())
         .then(data=>{
             this.setState({img:data})
@@ -42,7 +42,7 @@ export default class AnimalInfo extends React.Component{
 
   
         })
-        fetch(`http://localhost:4000/organizations`)
+        fetch(`https://why-poaching-back.herokuapp.com/organizations`)
         .then(resp=>resp.json())
         .then(data=>{
             this.setState({organizations:data})
