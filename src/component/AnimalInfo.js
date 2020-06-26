@@ -50,9 +50,12 @@ export default class AnimalInfo extends React.Component{
 
   
         })
+        // fetch(`https://gnews.io/api/v3/search?q=${this.props.routerProps.match.params.animal}+poaching&token=7335a0a70d0243c2cef5b6c2cb843cde`)
+
         fetch(`https://newsapi.org/v2/everything?q=${this.props.routerProps.match.params.animal}+poaching&apiKey=d03a4c983eec491297a0525301ec3ec4`)
         .then(resp=>resp.json())
         .then(data=>
+            // console.log(data)
             this.setState({news:data.articles})
     )
 
@@ -269,15 +272,16 @@ let basic=this.state.animal.basic_info+''
                <div className="news-border-2">
                <h1 className="t-t">Recent News related to {this.state.animal.name}'s</h1>
                <div className="news-grid">
-                   {this.state.news.map((news,index)=>
+                   {/* {this.state.news.map((news,index)=>
                <div key={index}className="news-box">
                    <a href={news.url}>  <p className="text">{news.title}</p><br/>
                     <img className="news-img"src={news.urlToImage} alt=""/></a>
+                  
                </div>
                
               
                
-               )}  
+               )}   */}
                </div>
              </div>
              </>
@@ -302,15 +306,16 @@ let basic=this.state.animal.basic_info+''
                  <div className="news-border-orangutan">
 
                  <div className="news-grid">
-                     {this.state.news.map((news,index)=>
+                     {/* {this.state.news.map((news,index)=>
                  <div key={index}className="news-box ">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
+
                  </div>
                  
                 
                  
-                 )}  
+                 )}   */}
                  </div>
                </div>
                 </>
@@ -322,15 +327,17 @@ let basic=this.state.animal.basic_info+''
                  <div className="news-border">
                      <h1 className="t-news">Recent News Related To {this.state.animal.name}'s</h1>
                  <div className="news-grid">
-                     {this.state.news.map((news,index)=>
+                     {/* {this.state.news.map((news,index)=>
                  <div key={index}className="news-box">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
+
+
                  </div>
                  
                 
                  
-                 )}  
+                 )}   */}
                  </div>
                </div>
 
