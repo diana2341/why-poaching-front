@@ -25,17 +25,18 @@
   }
   
   .container-text {
+    position: relative;
     background-image:  url(https://static.wixstatic.com/media/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg/v1/fill/w_1000,h_663,al_c,q_90,usm_0.66_1.00_0.01/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg);
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color:  #FFFFFF;
-    font-size: 150px;
+    font-size: 950%;
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
-    margin-top: 14%;
-    margin-left: 15%;
+   top: 30%;
+    left: 15%;
     box-shadow: 5px 10px 18px black;
-    width: 78%;
+    max-width: 78%;
   
   }
   .home-bg{
