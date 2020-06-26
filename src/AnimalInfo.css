@@ -267,26 +267,8 @@ float: right;
  #why:target ~ .prevnext li[class*="n2"] a:after {
 content: "Next";
 }
-/* @media (min-width: 600px) {
 
-.p2,.p3n1{
-    position: absolute;
-    margin-left:-160%;
-    margin-top:-15%
 
-}
-}
-@media (min-width: 600px) {
-
-.p4n2,.p5n3{
-    position: absolute;
-
-    margin-left:220%;
-    margin-top:-15%
-
- 
-}
-} */
  #how-to-help:target ~ main section {
 opacity: 0;
 }
