@@ -130,21 +130,22 @@ z-index: -999;
 @import url(https://fonts.googleapis.com/css?family=Amaranth);
 
 .content {
+  position: absolute;
 	width: 100%;
-	display: flex;
+	/* display: flex; */
 	flex-direction: row;
 }
 .profilecard {
-  position: absolute;
-	width: 235px;
-	margin: 30px auto 0 auto;
+  position: fixed;
+	width: 17%;
+	/* margin: 30px auto 0 auto; */
 	border-radius: 15px;
 	border: 1px solid #23262a21;
 	background: #2f313648;
 	display: flex;
   flex-direction: column;
-  margin-top:-12.5em;
-  margin-left:-41em;
+  top:51%;
+  left:43%;
   background-image: url(https://image.freepik.com/free-photo/fern-leaves-dark-background-jungle-dense-dark-green-fern-leaves-garden-night-nature-abstract-background-fern-tropical-forest-exotic-plant_33867-774.jpg);
 
 }
