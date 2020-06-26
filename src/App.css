@@ -534,7 +534,7 @@ z-index: -999;
 }
 .co-b{
   position: relative;
-  border: solid;
+  /* border: solid; */
   top: -8em;
   width: 70%;
   overflow: scroll;
