@@ -376,7 +376,7 @@ z-index: -999;
   
 .tiger-link{
   position: relative;
-top:10%;
+top:-10%;
   border:solid transparent;
   background-color: rgba(0, 0, 0, 0.459);
   max-width: 40%;
@@ -390,7 +390,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:50%;
-  bottom:35%
+  bottom:52%
 
 
 }
@@ -402,7 +402,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:50%;
-  bottom:15%
+  bottom:20%
 
 
 }
@@ -424,7 +424,7 @@ top:10%;
   background-color: rgba(0, 0, 0, 0.459);
   max-width: 40%;
   overflow: hidden;
-  bottom:30%;
+  bottom:25%;
   left:-1%;
 
 
@@ -479,19 +479,19 @@ z-index: -999;
 }
 .Tiger-l{
  left: -10em;
- top: 2em;
+ top: -3em;
 }
 .Elephant-l{
   left: 15%;
-  top: 30%;
+  top: 7%;
 }
 .Lemur-l{
   left: -30%;
-  top: 95%;
+  top: 85%;
 }
 .Gorilla-l{
   left: 15%;
-  top: 110%;
+  top: 95%;
 }
 .Rhino-l{
   left: -30%;
@@ -503,10 +503,15 @@ z-index: -999;
 }
 .r-title{
   position: relative;
-  top:-25%;
+  top:1%;
   text-decoration: underline;
 }
-
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.007);
+  color: rgba(255, 255, 255, 0);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
 
 .comment-avatar{
   
@@ -564,14 +569,14 @@ z-index: -999;
 #bird {
   height: 100px;
   position: relative;
-  left:8em;
+  left:1.8%;
   filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
 }
 #bird2 {
   transform: scaleX(-1);
   height: 100px;
   position: relative;
-  left:73em;
+  left:16.2%;
   filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
 }
 .container.butter{
@@ -581,15 +586,20 @@ z-index: -999;
   position: absolute;
   max-width: 6%;
   top: 7%;
-  left: 130px;
   filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
   
+
+}
+.fly{
+    left: 9%;
+
 }
 .fly2{
+  position: absolute;
   top:39em;
-  left: 82em;
+  left: 88%;
   transform: rotateY(180deg);
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover2 1s infinite  alternate;
