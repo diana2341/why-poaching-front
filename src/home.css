@@ -30,7 +30,7 @@ html, body{
   }
   
   .container-text {
-    position: fixed;
+    position: relative;
     background-image:  url(https://static.wixstatic.com/media/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg/v1/fill/w_1000,h_663,al_c,q_90,usm_0.66_1.00_0.01/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg);
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -39,11 +39,18 @@ html, body{
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
    top: 30%;
-    left: 15%;
-    box-shadow: 5px 10px 18px black;
-    max-width: 78%;
-    min-height: 40%;
+    
+    
   
+  }
+  .box-text-c{
+    position: absolute;
+    max-width: 78%;
+    max-height: 50%;
+    box-shadow: 5px 10px 18px black;
+    left: 15%;
+    overflow: hidden;
+
   }
   .home-bg{
     background-image: url(https://latfusa.com/media/uploads/2018/04/25/1-1.jpg);
@@ -65,7 +72,7 @@ html, body{
   position: relative;
    max-width: 17%;   
    max-height: 23%;
-   top:12em;
+   top:-11em;
    left:49%;
    filter: brightness(50%);
    cursor: pointer;
@@ -111,7 +118,7 @@ html, body{
 @import url(https://fonts.googleapis.com/css?family=Coiny);
 .explore{
     position: relative;
-    top:17em;
+    top:-7em;
    left:53.4%;
     z-index: 1;
     font-family: 'Coiny';
