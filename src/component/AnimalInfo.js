@@ -269,7 +269,7 @@ let basic=this.state.animal.basic_info+''
                <div className="news-border-2">
                <h1 className="t-t">Recent News related to {this.state.animal.name}'s</h1>
                <div className="news-grid">
-                   {/* {this.state.news.map((news,index)=>
+                   {this.state.news.map((news,index)=>
                <div key={index}className="news-box">
                    <a href={news.url}>  <p className="text">{news.title}</p><br/>
                     <img className="news-img"src={news.urlToImage} alt=""/></a>
@@ -277,7 +277,7 @@ let basic=this.state.animal.basic_info+''
                
               
                
-               )}   */}
+               )}  
                </div>
              </div>
              </>
@@ -302,7 +302,7 @@ let basic=this.state.animal.basic_info+''
                  <div className="news-border-orangutan">
 
                  <div className="news-grid">
-                     {/* {this.state.news.map((news,index)=>
+                     {this.state.news.map((news,index)=>
                  <div key={index}className="news-box ">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
@@ -310,7 +310,7 @@ let basic=this.state.animal.basic_info+''
                  
                 
                  
-                 )}   */}
+                 )}  
                  </div>
                </div>
                 </>
@@ -322,7 +322,7 @@ let basic=this.state.animal.basic_info+''
                  <div className="news-border">
                      <h1 className="t-news">Recent News Related To {this.state.animal.name}'s</h1>
                  <div className="news-grid">
-                     {/* {this.state.news.map((news,index)=>
+                     {this.state.news.map((news,index)=>
                  <div key={index}className="news-box">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
@@ -330,7 +330,7 @@ let basic=this.state.animal.basic_info+''
                  
                 
                  
-                 )}   */}
+                 )}  
                  </div>
                </div>
 
