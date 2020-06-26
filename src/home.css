@@ -34,6 +34,7 @@
     font-size: 950%;
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
+    max-width: 100%;
     
     
   
@@ -52,15 +53,17 @@
     background-color: #3d361079;
   background-blend-mode: multiply;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 120%;
   position: fixed;
+  /* background-size: cover; */
   z-index: -1;
-  transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
+  /* transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms; */
   top: -5%;
   right: -5%;
   bottom: -5%;
   left: -5%;
   z-index: -999;
+ 
  
   }
   .world{
