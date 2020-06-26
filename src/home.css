@@ -30,7 +30,7 @@ html, body{
   }
   
   .container-text {
-    position: relative;
+    position: fixed;
     background-image:  url(https://static.wixstatic.com/media/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg/v1/fill/w_1000,h_663,al_c,q_90,usm_0.66_1.00_0.01/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg);
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -65,8 +65,8 @@ html, body{
   position: relative;
    max-width: 17%;   
    max-height: 23%;
-   top:24em;
-   left:-7%;
+   top:12em;
+   left:49%;
    filter: brightness(50%);
    cursor: pointer;
 
@@ -110,9 +110,9 @@ html, body{
 }
 @import url(https://fonts.googleapis.com/css?family=Coiny);
 .explore{
-    position: absolute;
-    left: 53%;
-    top:62%;
+    position: relative;
+    top:17em;
+   left:53.4%;
     z-index: 1;
     font-family: 'Coiny';
     filter: brightness(55%);
