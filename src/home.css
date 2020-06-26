@@ -32,10 +32,11 @@
     background-clip: text;
     color:  #FFFFFF;
     font-size: 10vw;
+    font-size: 21vh;
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
     max-width: 100vw;
-    max-height: 50vh;
+    height: 50vh;
     
 
     
@@ -140,7 +141,7 @@
 
 
 }
-@media only screen and (max-width:414px){
+/* @media only screen and (max-width:414px){
   .container-text {
 
     font-size: 350%;
@@ -199,5 +200,5 @@
 
 }
 
-}
+} */
 
