@@ -31,8 +31,7 @@
     box-shadow: 5px 10px 18px black;
     left: 15vw;
     display: grid;
-    /* display: block; */
-    overflow: auto;
+    line-height: 20vh;
 
 
   }
@@ -43,6 +42,7 @@
     background-clip: text;
     color:  #FFFFFF;
     font-size: 10vw;
+    font-size: 17vh;
     /* font-size: calc(5vw + 11vh); */
 
     font-family: 'Bungee', cursive;
@@ -52,7 +52,27 @@
     /* display: table-cell; */
   
   }
- 
+  @media only screen and (max-width:800px){
+    .container-text {
+      position: relative;
+      background-image:  url('./img/jungle.jpg');
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color:  #FFFFFF;
+      font-size: 6vw;
+      font-size: 17vh;
+      font-size: calc(3vw + 8vh);
+  
+      font-family: 'Bungee', cursive;
+      animation: filling 3s ease forwards;
+      width: 90vw;
+      height: 30vh;
+      /* display: table-cell; */
+    
+    }
+  
+  
+  }
  
   .home-bg{
     background-image: url(./img/ele.jpg);
@@ -126,7 +146,7 @@
 .explore{
     position: relative;
     top:-7vw;
-   left:40vw;
+   left:4vw;
     z-index: 1;
     font-family: 'Coiny';
 
