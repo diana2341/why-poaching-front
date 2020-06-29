@@ -40,10 +40,27 @@
     max-width: 100vw;
     height: 50vh;
     /* display: table-cell; */
-
+  
+  }
+  @media only screen and (max-width:800px){
+    .container-text {
+      position: relative;
+      background-image:  url('./img/jungle.jpg');
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color:  #FFFFFF;
+      font-size: 6vw;
+      font-size: 17vh;
+      font-size: calc(5vw + 11vh);
+  
+      font-family: 'Bungee', cursive;
+      animation: filling 3s ease forwards;
+      max-width: 90vw;
+      height: 30vh;
+      /* display: table-cell; */
     
-
-    
+    }
+  
   
   }
   .box-text-c{
