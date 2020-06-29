@@ -32,7 +32,7 @@
     left: 15vw;
     display: grid;
     display: block;
-overflow: auto;
+    overflow: auto;
 
 
   }
@@ -43,7 +43,6 @@ overflow: auto;
     background-clip: text;
     color:  #FFFFFF;
     font-size: 10vw;
-    font-size: 17vh;
     /* font-size: calc(5vw + 11vh); */
 
     font-family: 'Bungee', cursive;
@@ -147,7 +146,7 @@ overflow: auto;
 .explore{
     position: relative;
     top:-7vw;
-   left:4vw;
+   left:40vw;
     z-index: 1;
     font-family: 'Coiny';
 
