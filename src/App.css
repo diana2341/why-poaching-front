@@ -146,7 +146,7 @@ z-index: -999;
   flex-direction: column;
   top:51%;
   left:43%;
-  background-image: url(https://image.freepik.com/free-photo/fern-leaves-dark-background-jungle-dense-dark-green-fern-leaves-garden-night-nature-abstract-background-fern-tropical-forest-exotic-plant_33867-774.jpg);
+  background-image: url(./img/leaves.jpg);
 
 }
 
@@ -280,7 +280,7 @@ input,select,textarea{
   
 }
 #bg{
-  background-image: url(https://i.pinimg.com/originals/3a/bb/f3/3abbf3389d66b6995de002ac7fa70052.jpg);
+  background-image: url(./img/bridge.jpg);
   background-color: #3d3610;
 background-blend-mode: multiply;
 background-position: center;
@@ -351,7 +351,7 @@ background-color: rgba(12, 32, 12, 0.466);
   margin-top: 25%;
 } */
 .p-b{
-  background-image: url(https://cdn.cnn.com/cnnnext/dam/assets/160916143156-rhino-dehorning-6-super-169.jpg);
+  background-image: url(./img/poac.jpg);
   background-color: #3d3610;
 background-blend-mode: multiply;
 background-position: center;
@@ -457,7 +457,7 @@ top:-10%;
   z-index: 999;
 }
 .l-bg{
-  background-image: url(https://i.pinimg.com/originals/4b/d8/26/4bd8264b4c3eeaeb9b934bcc8b9df38f.jpg);
+  background-image: url(./img/sun.jpg);
   background-color: #3d3610;
 background-blend-mode: multiply;
 background-position: center;
@@ -668,7 +668,7 @@ width: 160%;
   flex-direction: column;
   top:-7em;
   left:7em;
-  background-image: url(https://image.freepik.com/free-photo/fern-leaves-dark-background-jungle-dense-dark-green-fern-leaves-garden-night-nature-abstract-background-fern-tropical-forest-exotic-plant_33867-774.jpg);
+  background-image: url(./img/leaves.jpg);
 overflow: scroll;
 }
 .profilecard .me {

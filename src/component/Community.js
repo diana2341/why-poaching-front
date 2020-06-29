@@ -92,7 +92,7 @@ export default class Community extends React.Component{
                 
                     <label>   Choose Topic:</label><br/>
                  <select required name="animal"value={this.state.animal} onChange={this.handleChange}>
-                    <option >Select</option>
+                    <option value="">Select</option>
                     <option value="gorilla">Gorilla</option>
                     <option value="tiger">Tiger</option>
                     <option value="lemur">Lemur</option>
@@ -141,30 +141,30 @@ export default class Community extends React.Component{
                         {
                             comments.animal==="elephant"?
                             
-                     <img className="comment-avatar"src="https://i.pinimg.com/736x/1a/a9/b3/1aa9b35901178e0dd69d14369a6dad7d.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                     <img className="comment-avatar"src={require("../img/elephant.jpg")} width="75" alt="Profile Avatar" title="Anie Silverston" />
                     :
                     comments.animal==="orangutan"?
                     
 
-                    <img className="comment-avatar"src="https://www.pennlive.com/resizer/W6p-lWQjj5pGe6uHbtqUSH1jrps=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/VP6I3GOB4ZCTBNUNPYIJCGTTME.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    <img className="comment-avatar"src={require("../img/monkey.jpg")} width="75" alt="Profile Avatar" title="Anie Silverston" />
                     :
                     comments.animal==="tiger"?
                     
 
-                    <img className="comment-avatar"src="https://wp.nathabblog.com/wp-content/uploads/2011/03/19-baby-tiger.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    <img className="comment-avatar"src={require("../img/tiger-baby.jpg")} width="75" alt="Profile Avatar" title="Anie Silverston" />
                     :
                     comments.animal==="rhino"?
                     
 
-                    <img className="comment-avatar"src="https://i.pinimg.com/originals/06/8e/23/068e23e76fa4a8309fe9f8ddad7c62e4.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    <img className="comment-avatar"src={require("../img/rhino-baby.jpg")} width="75" alt="Profile Avatar" title="Anie Silverston" />
                     :
                     comments.animal==="lemur"?
 
-                    <img className="comment-avatar"src="https://cdn.24.co.za/files/Cms/General/d/6949/fd1bf216449b4ab6992cc2901e952f68.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                    <img className="comment-avatar"src={require("../img/lem.jpeg")}width="75" alt="Profile Avatar" title="Anie Silverston" />
                     :
                     comments.animal==="gorilla"?
 
-                <img className="comment-avatar"src="https://i.pinimg.com/originals/ee/e5/74/eee574c3ebca283a2f676624dd2c03cb.jpg" width="75" alt="Profile Avatar" title="Anie Silverston" />
+                <img className="comment-avatar" src={require("../img/gor.jpg")}width="75" alt="Profile Avatar" title="Anie Silverston" />
                 :''
                 
                         }

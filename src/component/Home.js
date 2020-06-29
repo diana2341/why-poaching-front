@@ -3,9 +3,10 @@ import '../home.css';
 
 export default class Home extends React.Component{
     render(){
+      
         return(
             <>
-            <img alt=''src="https://i.ya-webdesign.com/images/bird-gif-png-8.gif"/>
+            <img alt=''src={require("../img/birdsgif.gif")}/>
             <div className="home-bg"></div> 
             <div className='box-text-c'>
             <div className="container-text">
