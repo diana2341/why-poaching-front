@@ -8,13 +8,15 @@ export default class AnmialList extends React.Component{
     render(){
     
 
-
+            
         return(
+            this.props.background?<div>Loading .....</div>:
             <>
+            
           <h3 className="headlines">Endangered Animals Being Poached</h3>
           <div className="animal-list">
           {this.props.animal.map((animal,index)=>{return <div  key={index}> <p onClick={this.props.mapFilter}id={animal.name} className=" box-text ">{animal.name}</p><br/></div>})}
-           
+            
         {this.props.animal.map((animal,index)=>{
         return(
             this.props.show===animal.id?
@@ -45,8 +47,10 @@ export default class AnmialList extends React.Component{
         )})}   
     
     </div>
+    
 
             </>
+        
 
         )
     }
