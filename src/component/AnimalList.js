@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactLoading from 'react-loading';
 
 
 
@@ -10,11 +11,13 @@ export default class AnmialList extends React.Component{
 
             
         return(
-            this.props.background?<div>Loading .....</div>:
             <>
             
-          <h3 className="headlines">Endangered Animals Being Poached</h3>
+            {this.props.background?'':<h3 className="headlines">Endangered Animals Being Poached</h3>}
+          
           <div className="animal-list">
+          {this.props.background?<div className="loading">Loading list     <ReactLoading className="load" type='spokes'height={'20%'} width={'20%'} />
+</div>:""}
           {this.props.animal.map((animal,index)=>{return <div  key={index}> <p onClick={this.props.mapFilter}id={animal.name} className=" box-text ">{animal.name}</p><br/></div>})}
             
         {this.props.animal.map((animal,index)=>{
