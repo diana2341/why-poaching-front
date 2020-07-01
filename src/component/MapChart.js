@@ -94,9 +94,9 @@ const MapChart = (props) => {
         .then(resp=>resp.json())
           .then(data=>{ 
                 setAnimal(data)
-              
+                setbackground(false)
           })
-          .then(setbackground(false))
+          // .then(setbackground(false))
        
       };
       fetchData();
