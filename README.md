@@ -36,4 +36,3 @@ This was a 3 week long project built during my fifth module at Flatiron School .
 -[Simple maps](https://www.react-simple-maps.io/)
 -[react-slideshow-image](https://www.npmjs.com/package/react-slideshow-image)
 -[recharts](https://bit.dev/recharts/recharts)
-
