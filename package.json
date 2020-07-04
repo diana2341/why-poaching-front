@@ -4,9 +4,11 @@
   "private": true,
   "engines": {
     "node": "13.8.0",
-    "npm":"6.14.5"
+    "npm": "6.14.5"
   },
+  "proxy": "https://endangered-lives.herokuapp.com/",
   "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -14,6 +16,7 @@
     "moment": "^2.26.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-simple-maps": "^2.1.2",

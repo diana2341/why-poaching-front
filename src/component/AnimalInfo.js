@@ -50,9 +50,12 @@ export default class AnimalInfo extends React.Component{
 
   
         })
+        // fetch(`https://gnews.io/api/v3/search?q=${this.props.routerProps.match.params.animal}+poaching&token=7335a0a70d0243c2cef5b6c2cb843cde`)
+
         fetch(`https://newsapi.org/v2/everything?q=${this.props.routerProps.match.params.animal}+poaching&apiKey=d03a4c983eec491297a0525301ec3ec4`)
         .then(resp=>resp.json())
         .then(data=>
+            // console.log(data)
             this.setState({news:data.articles})
     )
 
@@ -273,6 +276,7 @@ let basic=this.state.animal.basic_info+''
                <div key={index}className="news-box">
                    <a href={news.url}>  <p className="text">{news.title}</p><br/>
                     <img className="news-img"src={news.urlToImage} alt=""/></a>
+                  
                </div>
                
               
@@ -306,6 +310,7 @@ let basic=this.state.animal.basic_info+''
                  <div key={index}className="news-box ">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
+
                  </div>
                  
                 
@@ -326,6 +331,8 @@ let basic=this.state.animal.basic_info+''
                  <div key={index}className="news-box">
                      <a href={news.url}>  <p className="text">{news.title}</p><br/>
                       <img className="news-img"src={news.urlToImage} alt=""/></a>
+
+
                  </div>
                  
                 
@@ -338,12 +345,7 @@ let basic=this.state.animal.basic_info+''
                     <Graph routerProps={this.props.routerProps} state={this.state}/>
                     </>
                 }
-                  {/* <iframe className="frame"src={this.state.animal.video_url}
-                 frameBorder='0'
-                 allow='autoplay; encrypted-media'
-                 allowFullScreen
-                 title='video'
-                />  */}
+              
             </section>
  
             {/* <section> */}

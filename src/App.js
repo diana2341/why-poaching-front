@@ -11,6 +11,7 @@ import Home from "./component/Home";
 import {
   BrowserRouter as Router,
   Route,
+  HashRouter
 } from "react-router-dom";
 import UserLogin from "./component/UserLogin";
 import Resources from './component/Resources'

@@ -22,6 +22,7 @@ html body{
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  margin: 0; max-height: 100%; max-width: 100%;
   
 
 }
@@ -88,6 +89,21 @@ z-index: -999;
   -webkit-transform: translate(-50%,-50%);
  
 }
+.loading{
+  position: relative;
+  font-family: 'Dosis', sans-serif;
+  font-size: 2em;
+  left:-50% ;
+  top:10vh
+
+
+}
+.load{
+  position: relative;
+
+  left:30% ;
+  top:4vh
+}
 .box-text:after,
 .box-text:before {
 	content: '';
@@ -129,22 +145,23 @@ z-index: -999;
 @import url(https://fonts.googleapis.com/css?family=Amaranth);
 
 .content {
+  position: absolute;
 	width: 100%;
-	display: flex;
+	/* display: flex; */
 	flex-direction: row;
 }
 .profilecard {
-  position: absolute;
-	width: 235px;
-	margin: 30px auto 0 auto;
+  position: fixed;
+	width: 17%;
+	/* margin: 30px auto 0 auto; */
 	border-radius: 15px;
 	border: 1px solid #23262a21;
 	background: #2f313648;
 	display: flex;
   flex-direction: column;
-  margin-top:-10em;
-  margin-left:-41em;
-  background-image: url(https://image.freepik.com/free-photo/fern-leaves-dark-background-jungle-dense-dark-green-fern-leaves-garden-night-nature-abstract-background-fern-tropical-forest-exotic-plant_33867-774.jpg);
+  top:51%;
+  left:43%;
+  background-image: url(./img/leaves.jpg);
 
 }
 
@@ -226,6 +243,14 @@ margin-top: -10%;
 
 border: none;
 }
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
 .comment-box{
   position: fixed;
   margin-left:17%;
@@ -270,7 +295,7 @@ input,select,textarea{
   
 }
 #bg{
-  background-image: url(https://i.pinimg.com/originals/3a/bb/f3/3abbf3389d66b6995de002ac7fa70052.jpg);
+  background-image: url(./img/bridge.jpg);
   background-color: #3d3610;
 background-blend-mode: multiply;
 background-position: center;
@@ -341,7 +366,7 @@ background-color: rgba(12, 32, 12, 0.466);
   margin-top: 25%;
 } */
 .p-b{
-  background-image: url(https://cdn.cnn.com/cnnnext/dam/assets/160916143156-rhino-dehorning-6-super-169.jpg);
+  background-image: url(./img/poac.jpg);
   background-color: #3d3610;
 background-blend-mode: multiply;
 background-position: center;
@@ -367,7 +392,7 @@ z-index: -999;
   
 .tiger-link{
   position: relative;
-top:10%;
+top:-10%;
   border:solid transparent;
   background-color: rgba(0, 0, 0, 0.459);
   max-width: 40%;
@@ -381,7 +406,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:50%;
-  bottom:35%
+  bottom:52%
 
 
 }
@@ -393,7 +418,7 @@ top:10%;
   max-width: 40%;
   overflow: hidden;
   left:50%;
-  bottom:15%
+  bottom:20%
 
 
 }
@@ -415,7 +440,7 @@ top:10%;
   background-color: rgba(0, 0, 0, 0.459);
   max-width: 40%;
   overflow: hidden;
-  bottom:30%;
+  bottom:25%;
   left:-1%;
 
 
@@ -447,7 +472,7 @@ top:10%;
   z-index: 999;
 }
 .l-bg{
-  background-image: url(https://i.pinimg.com/originals/4b/d8/26/4bd8264b4c3eeaeb9b934bcc8b9df38f.jpg);
+  background-image: url(./img/sun.jpg);
   background-color: #3d3610;
 background-blend-mode: multiply;
 background-position: center;
@@ -470,19 +495,19 @@ z-index: -999;
 }
 .Tiger-l{
  left: -10em;
- top: 2em;
+ top: -3em;
 }
 .Elephant-l{
   left: 15%;
-  top: 30%;
+  top: 7%;
 }
 .Lemur-l{
   left: -30%;
-  top: 95%;
+  top: 85%;
 }
 .Gorilla-l{
   left: 15%;
-  top: 110%;
+  top: 95%;
 }
 .Rhino-l{
   left: -30%;
@@ -494,10 +519,15 @@ z-index: -999;
 }
 .r-title{
   position: relative;
-  top:-25%;
+  top:1%;
   text-decoration: underline;
 }
-
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.007);
+  color: rgba(255, 255, 255, 0);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
 
 .comment-avatar{
   
@@ -544,26 +574,25 @@ z-index: -999;
 }
 .posted-time{
   position: relative;
-  top: -7em;
+  top: -4em;
 }
 #container-b {
-  width: 500px;
-  height: 500px;
+  width: 500%;
+  height: 10%;
   position: absolute;
+  top: 1.5em;
 }
 #bird {
   height: 100px;
-  top: 1.5em;
-  position: absolute;
-  left:8em;
+  position: relative;
+  left:1.8%;
   filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
 }
 #bird2 {
   transform: scaleX(-1);
   height: 100px;
-  top: 1.5em;
-  position: absolute;
-  left:79em;
+  position: relative;
+  left:16.2%;
   filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
 }
 .container.butter{
@@ -573,15 +602,20 @@ z-index: -999;
   position: absolute;
   max-width: 6%;
   top: 7%;
-  left: 130px;
   filter: grayscale(0.31) hue-rotate(230deg) opacity(0.6) saturate(2.17) sepia(0.57) ;
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover 1s infinite  alternate;
   
+
+}
+.fly{
+    left: 9%;
+
 }
 .fly2{
+  position: absolute;
   top:39em;
-  left: 82em;
+  left: 88%;
   transform: rotateY(180deg);
   -webkit-animation: mover 1s infinite  alternate;
   animation: mover2 1s infinite  alternate;
@@ -599,3 +633,165 @@ z-index: -999;
   0% { transform: translateY(0); transform: scaleX(-1) }
   100% { transform: translateY(-15px); transform: scaleX(-1) }
 }
+
+@media only screen and (max-width:414px){
+  .Map{
+    position: absolute;
+    top: 26em;
+   left: 2em;
+    z-index: -999;
+    width: 310%;
+    
+    
+    }
+
+}
+@media only screen and (max-width:414px){
+  .headlines{
+    top: -14em;
+    left: -33em;
+    z-index: 999;
+    font-size: 1em;
+  
+  
+  
+  }
+
+}
+@media only screen and (max-width:414px){
+
+.animal-list{
+  position: absolue;
+  top: -35em;
+  left: -75em;
+  font-size: small;
+  
+
+
+}
+}
+@media only screen and (max-width:414px){
+.profilecard {
+  position: absolute;
+width: 160%;
+  max-height: 100%;
+	margin: 30px auto 0 auto;
+	border-radius: 15px;
+	border: 1px solid #23262a21;
+	background: #2f313648;
+	display: flex;
+  flex-direction: column;
+  top:-7em;
+  left:7em;
+  background-image: url(./img/leaves.jpg);
+overflow: scroll;
+}
+.profilecard .me {
+	padding-top: 3px;
+	margin: 0 auto;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	background: #2022258f;
+  color: #fff;
+  border-radius: 11px;
+}
+
+.profilecard .me .avatar {
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 70px;
+	height: 70px;
+}
+
+
+.profilecard .me .username {
+	margin:2px auto 2px auto;
+	font-size: 10px;
+}
+
+.profilecard .role, .profilecard .note {
+	padding: 0.1rem 0.1rem 1rem 0.4rem;
+	color: white;
+	font-size: 12px;
+	display: flex;
+  flex-direction: column;
+  font-family: 'Amaranth';
+}
+.box{
+  position: absolute;
+  border:solid rgba(255, 255, 255, 0.171);
+  max-width: 80%;
+  max-height: 60%;
+
+  left:1%;
+ top: 7%;
+  z-index: 1;
+
+
+}
+.comment-box{
+  position: relative;
+  left:40%;
+ top: 2em;
+ width: 50%;
+ height: 50%;
+ border-radius: 10px;
+
+ 
+ overflow: scroll;
+ z-index: 1;
+
+
+} 
+.comment-avatar{
+  
+  position: relative;
+  border-radius: 50%;
+  left:-4%;
+  height: 5em;
+  
+}
+.username-c
+{position: relative;
+  left:-3%
+
+}
+.topic{
+  position: relative;
+  left:-4%
+}
+
+.sec-c{
+  position: relative;
+  border: solid rgba(248, 242, 242, 0.267);
+  border-radius: 20px;
+}
+.sec-pic{
+  position: relative;
+  border: solid rgba(245, 240, 240, 0.267);
+  width: 25%;
+  overflow: scroll;
+  border-left: transparent;
+  border-bottom: transparent;
+  border-top: transparent;
+  border-radius: 30px;
+}
+.co-b{
+  position: relative;
+  /* border: solid; */
+  top: -10em;
+  width: 80%;
+  overflow: scroll;
+  left: 27%;
+  max-height: 7em;
+  
+}
+.posted-time{
+  position: relative;
+  top: -7em;
+}
+}
+
+  

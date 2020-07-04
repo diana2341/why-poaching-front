@@ -40,9 +40,10 @@ export default class Resources extends React.Component{
             <div className="l-bg"></div>
             
             <div className="linkss">
-                        {name.map((name,index)=><h1 key={index}className={`${name}-l`}>{name} information</h1>)}
 
                 <h1 className="r-title">Sources</h1>
+                {name.map((name,index)=><h1 key={index}className={`${name}-l`}>{name} information</h1>)}
+
             {this.state.links.map((link,index)=>
             link.animal_id==='1'?
             <div key={index}className="tiger-link">

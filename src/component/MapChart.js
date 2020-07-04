@@ -32,6 +32,8 @@ const MapChart = (props) => {
   const [orangatan,setOrangatan]=useState([])
   const [animal,setAnimal]=useState([])
   const [show,setShow]=useState(0)
+  const [background,setbackground]=useState(true)
+
 
   const [filter,setFilter]=useState([])
 
@@ -92,8 +94,9 @@ const MapChart = (props) => {
         .then(resp=>resp.json())
           .then(data=>{ 
                 setAnimal(data)
-              
+                setbackground(false)
           })
+          // .then(setbackground(false))
        
       };
       fetchData();
@@ -103,9 +106,10 @@ const MapChart = (props) => {
   return (
 
     <>
+    {console.log(animal)}
         <MenuPop/>
 
-  <AnmialList routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
+  <AnmialList background ={background}routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
     <div  className="Map">
 
 

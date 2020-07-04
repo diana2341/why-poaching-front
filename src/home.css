@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Bungee);
+ 
 @keyframes filling {
     from{
       background-position: center 1%;
@@ -7,45 +8,101 @@
       background-position: center 70%;
     }
   }
-  
+  @-webkit-keyframes filling {
+    from{
+      -webkit-background-position: center 1%;
+    }
+    to {
+      -webkit-background-position: center 70%;
+    }
+  }
+  @-moz-keyframes filling {
+    from{
+      -moz-background-position: center 1%;
+    }
+    to {
+      -moz-background-position: center 70%;
+    }
+  }
+  .box-text-c{
+    position: fixed;
+    width: 78vw;
+    height: 50vh;
+    box-shadow: 5px 10px 18px black;
+    left: 15vw;
+    display: grid;
+    line-height: 20vh;
+
+
+  }
   .container-text {
-    background-image:  url(https://static.wixstatic.com/media/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg/v1/fill/w_1000,h_663,al_c,q_90,usm_0.66_1.00_0.01/5e7eec_72022d9a421d4beeb10dfc2a94ba9be5~mv2.jpg);
+    position: relative;
+    background-image:  url('./img/jungle.jpg');
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color:  #FFFFFF;
-    font-size: 150px;
+    font-size: 10vw;
+    font-size: 17vh;
+    /* font-size: calc(5vw + 11vh); */
+
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
-    margin-top: 14%;
-    margin-left: 15%;
-    box-shadow: 5px 10px 18px black;
-    width: 78%;
+   width: 75vw;
+    /* height: 50vh; */
+    /* display: table-cell; */
   
   }
+  @media only screen and (max-width:800px){
+    .container-text {
+      position: relative;
+      background-image:  url('./img/jungle.jpg');
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color:  #FFFFFF;
+      font-size: 6vw;
+      font-size: 17vh;
+      font-size: calc(3vw + 8vh);
+  
+      font-family: 'Bungee', cursive;
+      animation: filling 3s ease forwards;
+      width: 90vw;
+      height: 30vh;
+      /* display: table-cell; */
+    
+    }
+  
+  
+  }
+ 
   .home-bg{
-    background-image: url(https://latfusa.com/media/uploads/2018/04/25/1-1.jpg);
+    background-image: url(./img/ele.jpg);
     background-color: #3d361079;
   background-blend-mode: multiply;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 120%;
   position: fixed;
+  /* background-size: cover; */
   z-index: -1;
-  transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms;
-  top: -20px;
-  right: -20px;
-  bottom: -20px;
-  left: -20px;
+  /* transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms; */
+  top: -5%;
+  right: -5%;
+  bottom: -5%;
+  left: -5%;
   z-index: -999;
+ 
  
   }
   .world{
-      position: absolute;
-   width: 250px;   
-   height: 160px;
-   margin-top:360px;
-   margin-left:-100px;
+  position: relative;
+   max-width: 17vw;   
+   max-height: 23vh;
+   top:-13vw;
+   left:4vw;
    filter: brightness(50%);
    cursor: pointer;
+   display: inline-block;
+   margin: auto;
+   display: block;
 
 
    
@@ -63,17 +120,108 @@
 		transform: rotate(360deg);
 	}
 }
+@-webkit-keyframes rotate-animation {
+	0% {
+		-webkit-transform: rotate(0deg);
+  }
+  50% {
+		-webkit-transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes rotate-animation {
+	0% {
+		-moz-transform: rotate(0deg);
+  }
+  50% {
+		-moz-transform: rotate(180deg);
+	}
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
 @import url(https://fonts.googleapis.com/css?family=Coiny);
 .explore{
-    position: absolute;
-    left: 48em;
-    top: 26.5em;
+    position: relative;
+    top:-7vw;
+   left:4vw;
     z-index: 1;
     font-family: 'Coiny';
+
+
+    font-size: 1vw;
     filter: brightness(55%);
     cursor: pointer;
     text-shadow: 2px 2px 4px #000000;
-    border-radius: 15%;
+    border-radius: 15vw;
+    display: inline-block;
+   margin: auto;
+   display: block;
+
+
 
 
 }
+/* @media only screen and (max-width:414px){
+  .container-text {
+
+    font-size: 350%;
+    animation: filling2 3s ease forwards;
+    
+    
+  
+  }
+
+}
+@keyframes filling2 {
+  from{
+    background-position: center 2%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+@media only screen and (max-width:414px){
+  .box-text-c{
+    position: absolute;
+    top: 35%;
+    max-width: 97%;
+    max-height: 20%;
+    left: 1%;
+
+  }
+
+}
+@media only screen and (max-width:414px){
+  .world{
+    position: relative;
+     max-width: 27%;   
+     max-height: 33%;
+     top:-5em;
+     left:49%;
+     filter: brightness(50%);
+     cursor: pointer;
+  
+  
+     
+  
+     animation: rotate-animation 10s infinite linear;
+    }
+
+}
+@media only screen and (max-width:414px){
+  .explore{
+    top:-16em;
+   left:55%;
+    z-index: 1;
+    font-family: 'Coiny';font-size: 16%;
+    filter: brightness(55%);
+    cursor: pointer;
+
+
+}
+
+} */
+

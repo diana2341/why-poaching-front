@@ -12,6 +12,9 @@ ul{
     padding:0;
     z-index: 1;
 }
+ul{
+  
+}
 
 #container{
     width: 100%;
@@ -187,7 +190,7 @@ left: 0%;
 
  #information:target ~ #background {
 /* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
-background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+background-image: url(./img/leav.jpeg);
 background-color: #4d4620;
 }
  #information:target ~ #progress {
@@ -236,7 +239,7 @@ left: 100%;
 }
 
  #why:target ~ #background {
-background-image: url(https://static.seattletimes.com/wp-content/uploads/2020/03/AFRICA_PARKS_DRILLING_5-1560x1040.jpg);
+background-image: url(./img/hunt.jpg);
 background-color: #3c73268f;
 }
  #why:target ~ #progress {
@@ -264,26 +267,8 @@ float: right;
  #why:target ~ .prevnext li[class*="n2"] a:after {
 content: "Next";
 }
-/* @media (min-width: 600px) {
 
-.p2,.p3n1{
-    position: absolute;
-    margin-left:-160%;
-    margin-top:-15%
 
-}
-}
-@media (min-width: 600px) {
-
-.p4n2,.p5n3{
-    position: absolute;
-
-    margin-left:220%;
-    margin-top:-15%
-
- 
-}
-} */
  #how-to-help:target ~ main section {
 opacity: 0;
 }
@@ -309,7 +294,7 @@ left: 200%;
  
  #how-to-help:target ~ #background {
 /* background-image: url(https://images3.alphacoders.com/691/thumb-1920-691924.jpg); */
-background-image: url(https://images.hdqwalls.com/download/forest-photography-2048x1152.jpg);
+background-image: url(./img/glow.jpg);
 
 background-color: #0c0f0e9a;
 }
@@ -362,7 +347,7 @@ left: 300%;
 
 
  #statistics:target ~ #background {
-background-image: url(https://www.itsjustlight.com/wp-content/uploads/2014/05/costa-rica-rainforest-cerro-chato-770x513.jpg);
+background-image: url(./img/railea.jpg);
 background-color: #1a2731c5;
 }
  #statistics:target ~ #progress {
@@ -410,7 +395,7 @@ left: 400%;
 }
 
  #s5:target ~ #background {
-    background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+    background-image: url(./img/dro.png);
     background-color: #05160d91;
 }
  #s5:target ~ #progress {
@@ -458,7 +443,7 @@ left: 500%;
 }
  
  #s6:target ~ #background {
-background-image: url(https://cdn.pixabay.com/photo/2018/01/22/05/53/forest-waterfall-3098200_1280.jpg);
+background-image: url(./img/flow.jpg);
 background-color: #6f8a3c;
 }
  #s6:target ~ #progress {
@@ -507,7 +492,7 @@ left: 600%;
 }
 
  #s7:target ~ #background {
-background-image: url(https://i.pinimg.com/originals/c7/96/1c/c7961cd51a82e5b97607b039e4b33274.png);
+background-image: url(./img/dro.png);
 background-color: #05160d91;
 }
  #s7:target ~ #progress {
@@ -532,7 +517,7 @@ float: right;
 content: "Next";
 }
  #background {
-    background-image: url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url(./img/leav.jpeg);
     background-color: #4d4620;
 background-blend-mode: multiply;
 background-position: center;
@@ -932,7 +917,7 @@ width: 80%;
   border: solid transparent;
  width: 200px;
  max-height: 150%;
- background-image: url(https://i.pinimg.com/originals/ef/8b/2a/ef8b2ad40498aa24ca1467590710c507.jpg);
+ background-image: url(./img/pap.jpg);
 filter:brightness(80%)
 }
 .news-border{
