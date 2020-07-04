@@ -1,4 +1,5 @@
 # Endangered Lives
+
 ![Screenshot](./img/readme.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -32,7 +33,7 @@ To Visit App:
 This was a 3 week long project built during my fifth module at Flatiron School . In this application for the front end , I used React.js  and pure CSS was used for the frontend and Rails API with postgres was used for the [Backend](https://github.com/diana2341/why-poaching-back)
 
 
-#libraries used
+# libraries used
 -[Simple maps](https://www.react-simple-maps.io/)
 -[react-slideshow-image](https://www.npmjs.com/package/react-slideshow-image)
 -[recharts](https://bit.dev/recharts/recharts)
