@@ -1,6 +1,6 @@
 # Endangered Lives
 
-![Screenshot](why-poaching-front/src/img/readme.png)
+![Screenshot](/img/readme.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
