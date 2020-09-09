@@ -224,4 +224,63 @@
 }
 
 } */
+.message{
+  visibility: hidden;
+}
+@media only screen and (max-width:1024px){
+  .home-bg,.box-text-c{
+    display: none;
+  }
+  .container-text,.explore,.world{
+    display: none;
+  }
+  .message{
+    position: relative;
+    visibility: visible;
+    left: 10%;
+    top: 250px;
+    font-size: 55px;
+  }
+  .bird{
+    display: none;
 
+  }
+}
+@media only screen and (max-width:414px){
+  .home-bg,.box-text-c{
+    display: none;
+  }
+  .container-text,.explore,.world{
+    display: none;
+  }
+  .message{
+    position: relative;
+    visibility: visible;
+    left: 5%;
+    top: 250px;
+    font-size: 25px;
+  }
+  .bird{
+    display: none;
+
+  }
+}
+@media only screen and (max-width:375px){
+  .home-bg,.box-text-c{
+    display: none;
+  }
+  .container-text,.explore,.world{
+    display: none;
+  }
+  .message{
+    position: relative;
+    visibility: visible;
+    left: 5%;
+    top: 250px;
+    font-size: 20px;
+  }
+  .bird{
+    display: none;
+
+  }
+}

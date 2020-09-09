@@ -6,7 +6,8 @@ export default class Home extends React.Component{
       
         return(
             <>
-            <img alt=''src={require("../img/birdsgif.gif")}/>
+            <div  className='message'>This site has been designed with a high resolution desktop monitor setting!</div>
+            <img className='bird'alt=''src={require("../img/birdsgif.gif")}/>
             <div className="home-bg"></div> 
             <div className='box-text-c'>
             <div className="container-text">
