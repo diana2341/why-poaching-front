@@ -26,12 +26,12 @@
   }
   .box-text-c{
     position: fixed;
-    width: 78vw;
-    height: 50vh;
+    width: 1078px;
+    height: 350px;
     box-shadow: 5px 10px 18px black;
-    left: 15vw;
+    left: 105px;
     display: grid;
-    line-height: 20vh;
+    line-height: 150px;
 
 
   }
@@ -41,15 +41,10 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color:  #FFFFFF;
-    font-size: 10vw;
-    font-size: 17vh;
-    /* font-size: calc(5vw + 11vh); */
-
+    font-size: 150px;
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
-   width: 75vw;
-    /* height: 50vh; */
-    /* display: table-cell; */
+ 
   
   }
   @media only screen and (max-width:800px){
@@ -79,7 +74,7 @@
     background-color: #3d361079;
   background-blend-mode: multiply;
   background-position: center;
-  background-size: 100% 120%;
+  background-size: 1440px 750px;
   position: fixed;
   /* background-size: cover; */
   z-index: -1;
@@ -94,8 +89,8 @@
   }
   .world{
   position: relative;
-   max-width: 17vw;   
-   max-height: 23vh;
+   max-width: 230px;   
+   /* max-height: 23vh; */
    top:-13vw;
    left:4vw;
    filter: brightness(50%);
@@ -164,68 +159,16 @@
 
 
 }
-/* @media only screen and (max-width:414px){
-  .container-text {
-
-    font-size: 350%;
-    animation: filling2 3s ease forwards;
-    
-    
-  
-  }
-
-}
-@keyframes filling2 {
-  from{
-    background-position: center 2%;
-  }
-  to {
-    background-position: center 50%;
-  }
-}
-@media only screen and (max-width:414px){
-  .box-text-c{
-    position: absolute;
-    top: 35%;
-    max-width: 97%;
-    max-height: 20%;
-    left: 1%;
-
-  }
-
-}
-@media only screen and (max-width:414px){
-  .world{
-    position: relative;
-     max-width: 27%;   
-     max-height: 33%;
-     top:-5em;
-     left:49%;
-     filter: brightness(50%);
-     cursor: pointer;
-  
-  
-     
-  
-     animation: rotate-animation 10s infinite linear;
-    }
-
-}
-@media only screen and (max-width:414px){
-  .explore{
-    top:-16em;
-   left:55%;
-    z-index: 1;
-    font-family: 'Coiny';font-size: 16%;
-    filter: brightness(55%);
-    cursor: pointer;
 
 
-}
 
-} */
+
+
 .message{
   visibility: hidden;
+}
+html body{
+  background: #D02627;
 }
 @media only screen and (max-width:1024px){
   .home-bg,.box-text-c{
@@ -237,16 +180,32 @@
   .message{
     position: relative;
     visibility: visible;
-    left: 10%;
-    top: 250px;
-    font-size: 55px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: 270px;
+    left: -320px;
   }
   .bird{
     display: none;
 
   }
 }
-@media only screen and (max-width:414px){
+@media only screen and (max-width:768px){
+  .message{
+    position: relative;
+    visibility: visible;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    top: 250px;
+    left: -170px;
+    width: 150%;
+  }
+}
+@media only screen and (max-width:540px){
   .home-bg,.box-text-c{
     display: none;
   }
@@ -256,16 +215,18 @@
   .message{
     position: relative;
     visibility: visible;
-    left: 5%;
+  
     top: 250px;
-    font-size: 25px;
+    left: -100px;
+    width: 150%;
   }
   .bird{
     display: none;
 
   }
 }
-@media only screen and (max-width:375px){
+@media only screen and (max-width:411px){
+ 
   .home-bg,.box-text-c{
     display: none;
   }
@@ -275,8 +236,28 @@
   .message{
     position: relative;
     visibility: visible;
-    left: 5%;
+    left: -21%;
     top: 250px;
+    font-size: 20px;
+  }
+  .bird{
+    display: none;
+
+  }
+}
+@media only screen and (max-width:411px){
+ 
+  .home-bg,.box-text-c{
+    display: none;
+  }
+  .container-text,.explore,.world{
+    display: none;
+  }
+  .message{
+    position: relative;
+    visibility: visible;
+    left: -21%;
+    top: 200px;
     font-size: 20px;
   }
   .bird{
