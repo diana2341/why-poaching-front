@@ -167,8 +167,58 @@
 .message{
   display: none;
 }
-
 @media only screen and (max-width:1024px){
+  .Map{
+
+    margin-top: -10px;
+  }
+  .cir-menu{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    top: 1080px;
+    margin-left: 200px;
+  
+
+  }
+  .thing{
+    width: 100px;
+    height: 100px;
+    border-radius:150px ;
+  }
+  .m{
+    font-weight: 700;
+    top: 30px;
+    left: 28px;
+
+  }
+  .p{
+    font-size: 22px;
+    font-weight: 700;
+    top: 30px;
+
+  }
+  .m{
+    font-size: 25px;
+
+
+  }
+  .po{
+    font-size: 25px;
+    font-weight: 700;
+    top: 30px;
+    left: 4px;
+
+
+  }
+  .p-r{
+    font-size: 25px;
+    font-weight: 700;
+    top: 25px;
+  }
+
+}
+@media only screen and (max-width:768px){
   html body{
     background: #D02627;
   }
@@ -190,8 +240,6 @@
     display: none;
 
   }
-}
-@media only screen and (max-width:768px){
   .message{
 
     top: 250px;
