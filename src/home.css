@@ -170,14 +170,15 @@
 @media only screen and (max-width:1024px){
   .Map{
 
-    margin-top: -10px;
+    margin-top: 5px;
   }
   .cir-menu{
     display: grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
-    top: 1080px;
-    margin-left: 200px;
+    top: 10px;
+    margin-left: 350px;
+    animation:none
   
 
   }
@@ -216,6 +217,23 @@
     font-weight: 700;
     top: 25px;
   }
+  .headlines{
+    left: 300px;
+    top: 1100px;
+  }
+  .animal-list{
+    left: -1080px;
+    top: 750px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 45px;
+
+  }
+  .profilecard{
+    left: 35px;
+    top: 550px;
+  }
+
 
 }
 @media only screen and (max-width:768px){
