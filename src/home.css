@@ -237,33 +237,7 @@
 
 }
 @media only screen and (max-width:768px){
-  html body{
-    background: #D02627;
-  }
 
-  .home-bg,.box-text-c{
-    display: none;
-  }
-  .container-text,.explore,.world{
-    display: none;
-  }
-  .message{
-    position: relative;
-    display: inline;
-   width: 130%;
-    top: 170px;
-    left: -200px;
-  }
-  .bird{
-    display: none;
-
-  }
-  .message{
-
-    top: 250px;
-    left: -170px;
-    width: 150%;
-  }
 }
 @media only screen and (max-width:540px){
   .home-bg,.box-text-c{
@@ -284,41 +258,8 @@
 
   }
 }
-@media only screen and (max-width:411px){
- 
-  .home-bg,.box-text-c{
-    display: none;
-  }
-  .container-text,.explore,.world{
-    display: none;
-  }
-  .message{
-  
-    left: -21%;
-    top: 250px;
-    font-size: 20px;
-  }
-  .bird{
-    display: none;
-
-  }
-}
-@media only screen and (max-width:411px){
- 
-  .home-bg,.box-text-c{
-    display: none;
-  }
-  .container-text,.explore,.world{
-    display: none;
-  }
-  .message{
-
-    left: -21%;
-    top: 200px;
-    font-size: 20px;
-  }
-  .bird{
-    display: none;
-
+@media only screen and (max-width:414px){
+  body{
+    background:#8f3c3c;
   }
 }
