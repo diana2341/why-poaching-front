@@ -24,6 +24,9 @@
       -moz-background-position: center 70%;
     }
   }
+  .mobile{
+    display: none;
+  }
   .box-text-c{
     position: fixed;
     width: 1078px;
@@ -259,7 +262,23 @@
   }
 }
 @media only screen and (max-width:414px){
-  body{
-    background:#8f3c3c;
+ html body{
+    /* background-color:#8f3c3c; */
+    /* background-size: cover; */
+
+  }
+  .mobile{
+    display:block;
+    position: relative;
+    top: 210px;
+    text-align: center;
+    font-size: 30px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .com{
+
+    width: 100%;
   }
 }
