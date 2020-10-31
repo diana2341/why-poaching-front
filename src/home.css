@@ -236,7 +236,32 @@
     left: 35px;
     top: 550px;
   }
+  .home-bg{
+    background: url(./img/ele.jpg)no-repeat center center fixed;
+    background-color: #3d361079;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
+  z-index: -999;
+ 
+ 
+  }
+  .box-text-c{
+    top: 400px;
+    left: 20px;
+  }
+  .container-text{
+      font-size: 140px;
+
+  }
+  .explore{
+    font-size: 20px;
+  }
+  .world{
+    top: -160px;
+  }
 
 }
 @media only screen and (max-width:768px){

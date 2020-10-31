@@ -8,7 +8,7 @@ export default class Home extends React.Component{
             <>
         <div className="mobile">
              <h5 className="mobile-title">
-            <span className="titl" >Get the full Endangered Lives experience </span>  <span class="titl">on your laptop!</span> </h5>
+            <span className="titl" >Get the full Endangered Lives experience </span>  <span className="titl">on your laptop!</span> </h5>
             <img className='com'alt=''src={require("../img/mobile.png")}/>
 
          </div>
