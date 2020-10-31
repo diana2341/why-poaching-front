@@ -6,7 +6,14 @@ export default class Home extends React.Component{
       
         return(
             <>
-            <img alt=''src={require("../img/birdsgif.gif")}/>
+        <div className="mobile">
+             <h5 className="mobile-title">
+            <span className="titl" >Get the full Endangered Lives experience </span>  <span className="titl">on your laptop!</span> </h5>
+            <img className='com'alt=''src={require("../img/mobile.png")}/>
+
+         </div>
+
+            <img className='bird'alt=''src={require("../img/birdsgif.gif")}/>
             <div className="home-bg"></div> 
             <div className='box-text-c'>
             <div className="container-text">
