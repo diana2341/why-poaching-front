@@ -268,7 +268,11 @@
   .world{
     top: -160px;
   }
-
+.comment-box{
+  left: -300px;
+  width: 520px;
+  height: 800px;
+}
 }
 @media only screen and (max-width:768px){
 
