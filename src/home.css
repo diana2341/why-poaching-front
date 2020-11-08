@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Bungee);
- 
+
 @keyframes filling {
     from{
       background-position: center 1%;
@@ -171,6 +171,7 @@
   display: none;
 }
 @media only screen and (max-width:1024px){
+ 
   .Map{
 
     margin-top: 5px;
@@ -272,6 +273,15 @@
   left: -300px;
   width: 520px;
   height: 800px;
+}
+.box{
+  top: 100px;
+}
+.community{
+  top: 150px;
+}
+.form{
+  top: 450px;
 }
 }
 @media only screen and (max-width:768px){
