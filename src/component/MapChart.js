@@ -123,7 +123,7 @@ const MapChart = (props) => {
 
 
 
-    <ComposableMap data-tip="" projectionConfig={{ scale: 120 }}>
+    <ComposableMap data-tip="" >
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map((geo,index) =>

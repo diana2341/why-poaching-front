@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Bungee);
- 
+
 @keyframes filling {
     from{
       background-position: center 1%;
@@ -24,14 +24,17 @@
       -moz-background-position: center 70%;
     }
   }
+  .mobile{
+    display: none;
+  }
   .box-text-c{
     position: fixed;
-    width: 78vw;
-    height: 50vh;
+    width: 1078px;
+    height: 350px;
     box-shadow: 5px 10px 18px black;
-    left: 15vw;
+    left: 105px;
     display: grid;
-    line-height: 20vh;
+    line-height: 150px;
 
 
   }
@@ -41,15 +44,10 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color:  #FFFFFF;
-    font-size: 10vw;
-    font-size: 17vh;
-    /* font-size: calc(5vw + 11vh); */
-
+    font-size: 150px;
     font-family: 'Bungee', cursive;
     animation: filling 3s ease forwards;
-   width: 75vw;
-    /* height: 50vh; */
-    /* display: table-cell; */
+ 
   
   }
   @media only screen and (max-width:800px){
@@ -79,7 +77,7 @@
     background-color: #3d361079;
   background-blend-mode: multiply;
   background-position: center;
-  background-size: 100% 120%;
+  background-size: 1460px 790px;
   position: fixed;
   /* background-size: cover; */
   z-index: -1;
@@ -94,8 +92,8 @@
   }
   .world{
   position: relative;
-   max-width: 17vw;   
-   max-height: 23vh;
+   max-width: 230px;   
+   /* max-height: 23vh; */
    top:-13vw;
    left:4vw;
    filter: brightness(50%);
@@ -164,64 +162,168 @@
 
 
 }
-/* @media only screen and (max-width:414px){
-  .container-text {
 
-    font-size: 350%;
-    animation: filling2 3s ease forwards;
-    
-    
+
+
+
+
+.message{
+  display: none;
+}
+@media only screen and (max-width:1024px){
+ 
+  .Map{
+
+    margin-top: 5px;
+  }
+  .cir-menu{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    top: 10px;
+    margin-left: 350px;
+    animation:none
   
-  }
-
-}
-@keyframes filling2 {
-  from{
-    background-position: center 2%;
-  }
-  to {
-    background-position: center 50%;
-  }
-}
-@media only screen and (max-width:414px){
-  .box-text-c{
-    position: absolute;
-    top: 35%;
-    max-width: 97%;
-    max-height: 20%;
-    left: 1%;
 
   }
-
-}
-@media only screen and (max-width:414px){
-  .world{
+ 
+  .thing{
+    width: 100px;
+    height: 100px;
+    border-radius:150px ;
+  }
+  .thing p{
     position: relative;
-     max-width: 27%;   
-     max-height: 33%;
-     top:-5em;
-     left:49%;
-     filter: brightness(50%);
-     cursor: pointer;
-  
-  
-     
-  
-     animation: rotate-animation 10s infinite linear;
-    }
+    left: 10px;
 
+  }
+  .m{
+    font-weight: 700;
+    top: 30px;
+    left: 28px;
+
+  }
+  .p{
+    font-size: 22px;
+    font-weight: 700;
+    top: 30px;
+
+  }
+  .m{
+    font-size: 25px;
+
+
+  }
+  .po{
+    font-size: 25px;
+    font-weight: 700;
+    top: 30px;
+    left: 4px;
+
+
+  }
+  .p-r{
+    font-size: 25px;
+    font-weight: 700;
+    top: 25px;
+  }
+  .headlines{
+    left: 300px;
+    top: 1100px;
+  }
+  .animal-list{
+    left: -1080px;
+    top: 750px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 45px;
+
+  }
+  .profilecard{
+    left: 35px;
+    top: 550px;
+  }
+  .home-bg{
+    background: url(./img/ele.jpg)no-repeat center center fixed;
+    background-color: #3d361079;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  z-index: -999;
+ 
+ 
+  }
+  .box-text-c{
+    top: 400px;
+    left: 20px;
+  }
+  .container-text{
+      font-size: 140px;
+
+  }
+  .explore{
+    font-size: 20px;
+  }
+  .world{
+    top: -160px;
+  }
+.comment-box{
+  left: -300px;
+  width: 520px;
+  height: 800px;
+}
+.box{
+  top: 100px;
+}
+.community{
+  top: 150px;
+}
+.form{
+  top: 450px;
+}
+}
+@media only screen and (max-width:768px){
+
+}
+@media only screen and (max-width:540px){
+  .home-bg,.box-text-c{
+    display: none;
+  }
+  .container-text,.explore,.world{
+    display: none;
+  }
+  .message{
+   
+  
+    top: 250px;
+    left: -100px;
+    width: 150%;
+  }
+  .bird{
+    display: none;
+
+  }
 }
 @media only screen and (max-width:414px){
-  .explore{
-    top:-16em;
-   left:55%;
-    z-index: 1;
-    font-family: 'Coiny';font-size: 16%;
-    filter: brightness(55%);
-    cursor: pointer;
+ html body{
+    /* background-color:#8f3c3c; */
+    /* background-size: cover; */
 
+  }
+  .mobile{
+    display:block;
+    position: relative;
+    top: 210px;
+    text-align: center;
+    font-size: 30px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .com{
 
+    width: 100%;
+  }
 }
-
-} */
-
