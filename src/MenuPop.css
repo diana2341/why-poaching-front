@@ -1,12 +1,13 @@
 .cir-menu{
     position: absolute;
     top: 24%;
-    left:-10%;
+    left:10px;
     animation: fade-menu 1.5s forwards;
     animation-delay: 1.5s;
     z-index: 999;
 
 }
+
 
   
   .thing {
@@ -20,12 +21,12 @@
     margin-top: 10px;
     margin-right: 10px;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 17px;
     
     transition: all .2s ease-in-out; 
     background-color: #25242448;
   }
-  
+ 
   
   .thing:hover { 
     
