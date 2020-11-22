@@ -177,12 +177,12 @@
     margin-top: 5px;
   }
   .cir-menu{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+   
     align-items: center;
-    top: 10px;
-    margin-left: 350px;
-    animation:none
+    margin-left: 150px;
+    animation:none;
+    border: solid red;
+
   
 
   }
