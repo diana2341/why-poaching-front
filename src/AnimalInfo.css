@@ -19,8 +19,7 @@ ul{
 #container{
     width: 100%;
     height: 100vh;
-    /* scroll-behavior: smooth; */
-    /* overflow-y:scroll ; */
+ 
     
 
 }
@@ -29,21 +28,7 @@ ul{
     width: 100%;
     height: 100vh;
 }
-/* #container div#about{
-background:red;
-} */
-/* #container div#why{
-    background:blue;
-    } */
- /* #container div#help{
-background:green;
- } */
- /* #container div#watch{
-    background:yellow;
-    } */
-/* #container div#purple{
- background:purple;
- } */
+
  .btn{
      position: fixed;
      margin-top: -10em;
@@ -659,14 +644,12 @@ h3 {
 .face{
     height: auto;
     width: 300px;
-    /* overflow: hidden;  */
     margin-left:30%;
     margin-top: 10%;
     border-radius:27% ;
     opacity: 0.6;
 
 
-    /* border: 1px solid #000000; */
 
 }
 .face,.facetiger,.lemur,.gorilla,.rhino,.elephant{
@@ -676,7 +659,6 @@ h3 {
 .facetiger{
     height: auto;
     width: 350px;
-    /* overflow: hidden;  */
     margin-left:30%;
     margin-top: 10%;
     opacity: 0.5;
@@ -686,7 +668,6 @@ h3 {
 .elephant{
     height: auto;
     width: 450px;
-    /* overflow: hidden;  */
     margin-left:30%;
     margin-top: 5%;
     opacity: 0.7;
@@ -696,7 +677,6 @@ h3 {
 .rhino{
     height: auto;
     width: 450px;
-    /* overflow: hidden;  */
     margin-left:30%;
     margin-top: 5%;
     opacity: 0.47;
@@ -707,7 +687,6 @@ h3 {
 .gorilla{
     height: auto;
     width: 450px;
-    /* overflow: hidden;  */
     margin-left:30%;
     margin-top: 5%;
     opacity: 0.6;
@@ -716,7 +695,6 @@ h3 {
 .lemur{
     height: auto;
     width: 550px;
-    /* overflow: hidden;  */
     margin-left:24%;
     margin-top: 13%;
     opacity: 0.49;
@@ -738,7 +716,6 @@ h3 {
   }
   .causes,.help{
       position: absolute;
-      /* border:solid rgb(92, 89, 89); */
       max-width: 70%;
       height: 90%;
       text-align: center;
@@ -779,8 +756,7 @@ h3 {
 
   }
   .line{
-    /* ask siss */
-      /* border:solid thin; */
+  
     width: 36%;
     margin-top:4%
   }
@@ -803,14 +779,11 @@ h3 {
 .logos{
 width:100px;
 height:100px;
-
-/*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
  object-fit:scale-down;
 }
 /* organizations  */
 .scroll{
 position: absolute;
-/* border:solid black; */
 overflow:auto;
 width: 40%;
 height:80%;
@@ -909,7 +882,6 @@ width: 80%;
 }
 
 .news-box{
-  /* cursor: pointer; */
   box-shadow: -19px 14px 20px -3px rgba(0,0,0,0.75);
 
   border-radius: 5%;
