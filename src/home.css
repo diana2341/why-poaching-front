@@ -50,6 +50,7 @@
  
   
   }
+
   @media only screen and (max-width:800px){
     .container-text {
       position: relative;
@@ -322,3 +323,4 @@
     width: 100%;
   }
 }
+

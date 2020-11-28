@@ -37,6 +37,7 @@ function App() {
   return (
     <>
     {/* <MenuPop/> */}
+
     <Router>
 
   <Route exact path='/map' render={ (routerProps)=><MapChart routerProps={routerProps} setTooltipContent={setContent} />}/>
