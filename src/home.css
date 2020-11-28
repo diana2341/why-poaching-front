@@ -50,7 +50,7 @@
  
   
   }
-  @media only screen and (max-width:800px){
+  /* @media only screen and (max-width:800px){
     .container-text {
       position: relative;
       background-image:  url('./img/jungle.jpg');
@@ -65,7 +65,6 @@
       animation: filling 3s ease forwards;
       width: 90vw;
       height: 30vh;
-      /* display: table-cell; */
     
     }
   
@@ -79,9 +78,7 @@
   background-position: center;
   background-size: 1460px 790px;
   position: fixed;
-  /* background-size: cover; */
   z-index: -1;
-  /* transition: background-image 500ms ease-in-out 500ms, background-color 500ms ease-in-out 1000ms; */
   top: -5%;
   right: -5%;
   bottom: -5%;
@@ -93,7 +90,6 @@
   .world{
   position: relative;
    max-width: 230px;   
-   /* max-height: 23vh; */
    top:-13vw;
    left:4vw;
    filter: brightness(50%);
@@ -308,8 +304,7 @@
 }
 @media only screen and (max-width:414px){
  html body{
-    /* background-color:#8f3c3c; */
-    /* background-size: cover; */
+
 
   }
   .mobile{
@@ -326,4 +321,4 @@
 
     width: 100%;
   }
-}
+} */
