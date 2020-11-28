@@ -50,7 +50,7 @@
  
   
   }
-  /* @media only screen and (max-width:800px){
+  @media only screen and (max-width:800px){
     .container-text {
       position: relative;
       background-image:  url('./img/jungle.jpg');
@@ -321,4 +321,4 @@
 
     width: 100%;
   }
-} */
+}
