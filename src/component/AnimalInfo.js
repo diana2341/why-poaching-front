@@ -38,7 +38,6 @@ export default class AnimalInfo extends React.Component{
         .then(data=>{
             this.setState({organizations:data})
     })
-        // fetch(`https://gnews.io/api/v3/search?q=${this.props.routerProps.match.params.animal}+poaching&token=7335a0a70d0243c2cef5b6c2cb843cde`)
 
     fetch(`https://newsapi.org/v2/everything?q=${this.props.routerProps.match.params.animal}+poaching&apiKey=d03a4c983eec491297a0525301ec3ec4`)
         .then(resp=>resp.json())
@@ -70,16 +69,15 @@ export default class AnimalInfo extends React.Component{
         let utt = new SpeechSynthesisUtterance(toSpeak);
         utt.onend =  ()=> { clearTimeout(myTimeout); }
   
-       let speack=()=>{
+       let speak=()=>{
 
-            utt.voice = voices[2];
-            utt.volume = 0.1
-            utt.pitch = 0.8;
+        utt.voice = voices[2];
+        utt.volume = 0.1
+        utt.pitch = 0.8;
         window.speechSynthesis.cancel()? 
         window.speechSynthesis.resume()
         :
         window.speechSynthesis.speak(utt);
-        // utt.onend =  ()=> { clearTimeout(myTimeout); }
         document.getElementsByClassName('speak')[0].style.opacity="1"
         document.getElementsByClassName('mute')[0].style.opacity="0"
         document.getElementsByClassName('mute')[0].style.zIndex="-1"
@@ -118,8 +116,6 @@ export default class AnimalInfo extends React.Component{
         <a href="/"id="statistics" title="Section 4 Anchor" className="s"> </a>
 
         <a href="/"  id="s5" title="Section 5 Anchor" className="s"> </a>
-        {/* <a id="s6" title="Section 6 Anchor" className="s"></a>
-        <a id="s7" title="Section 7 Anchor" className="s"></a> */}
         <div id="progress"></div>
         <div id="background"></div>
         <nav className="prevnext" role="presentation">
@@ -130,9 +126,6 @@ export default class AnimalInfo extends React.Component{
                 {this.props.routerProps.match.params.id==="4"? 
                 null:
                 <li  className="p5n3"><a href="#statistics"  > </a></li>}
-                {/* <li  className="p6n4" onClick={()=>{this.props.routerProps.history.push(`/map`)}}><a href="#s5" accessKey="5" ></a></li> */}
-                {/* <li className="p7n5"><a href="#s6 "accessKey="6" ></a></li>
-                <li className="n6"><a href="#s7" accessKey="7" ></a></li> */}
             </ul>
         </nav>
 
@@ -166,7 +159,7 @@ export default class AnimalInfo extends React.Component{
                 <div className="bg-c"></div>
                 <h1>Why is the {this.state.animal.name} being poached? </h1><br/> 
                 <img alt="" src={require("../img/on.png")}className="talk speak" onClick={pause}/>  
-                <img alt="" src={require("../img/off.png")}className="talk mute" onClick={speack}/>
+                <img alt="" src={require("../img/off.png")}className="talk mute" onClick={speak}/>
                 <p className="p-i">{this.state.animal.causes}</p>
                 <br/><br/><br/>
                 <div className="slide-container">
@@ -194,20 +187,6 @@ export default class AnimalInfo extends React.Component{
                         allowFullScreen
                         title='video'
                 /> 
-                {this.props.routerProps.match.params.id==='4'? 
-                <>
-            <div className="news-border-2">
-               {/* <h1 className="t-t">Recent News related to {this.state.animal.name}'s</h1> */}
-                <div className="news-grid">
-                {/* {this.state.news.map((news,index)=>
-                <div key={index}className="news-box">
-                <a href={news.url}>  <p className="text">{news.title}</p><br/>
-                <img className="news-img"src={news.urlToImage} alt=""/></a>           
-               </div> )} */}
-               </div>
-             </div>
-             </>
-             :''}
             </section>
  
             <section className="help">
@@ -221,32 +200,30 @@ export default class AnimalInfo extends React.Component{
                 <img className="oc"src={orangutan} alt="chart"/>
                 <p className="graph-info">Both Borneo and Sumatran orangutans populations have declined. A century ago their population was estimated at 230,000 orangutans in total. The Bornean orangutan population is now estimated to 104,700 and the Sumatran about 7,500 , this orangutan species is critically Endangered.There was another species of orangutan introduced in November, 2017. The Tapanuli orangutan that had a number of 800 individual apes and  is the most endangered of all great apes.</p> 
                 <h1 className="stat-title">Statistical Information</h1>
-                {/* <h1 className="o-news">Recent News Related To {this.state.animal.name}'s</h1> */}
+                <h1 className="o-news">Recent News Related To {this.state.animal.name}'s</h1>
                 <div className="news-border-orangutan">
                     <div className="news-grid">
-                        {/* {this.state.news.map((news,index)=>
+                        {this.state.news.map((news,index)=>
                             <div key={index}className="news-box ">
                                 <a href={news.url}>  <p className="text">{news.title}</p><br/>
                                 <img className="news-img"src={news.urlToImage} alt=""/></a>
                             </div>        
-                            )}   */}
+                            )}  
                     </div>
                 </div>
                 </>
                 :
-                    // this.props.routerProps.match.params.id==4?
-                    // "":
                 <>
                     <h1 className="stat-title">Statistical Information</h1>
                     <div className="news-border">
-                    {/* <h1 className="t-news">Recent News Related To {this.state.animal.name}'s</h1> */}
+                    <h1 className="t-news">Recent News Related To {this.state.animal.name}'s</h1>
                         <div className="news-grid">
-                            {/* {this.state.news.map((news,index)=>
+                            {this.state.news.map((news,index)=>
                             <div key={index}className="news-box">
                             <a href={news.url}>  <p className="text">{news.title}</p><br/>
-                            <img className="news-img"src={news.urlToImage} alt=""/></a>
+                            <img className="news-img"src={news.urlToImage} alt={this.state.animal.name}/></a>
                             </div>
-                            )}   */}
+                            )}  
                         </div>
                     </div>
                     <p className="graph-info rest">{this.state.filter.info}</p>
@@ -254,12 +231,7 @@ export default class AnimalInfo extends React.Component{
                 </>
                 }
               
-            </section>
-            {/* <section> */}        
-            {/* </section> */}
-            {/* <section>  
-            <h1>Section 6</h1>
-            </section> */}    
+            </section>    
         </main>
         {butterflies.map(function(name, index){
          return<div key={index}className={`container ${name}`}>
