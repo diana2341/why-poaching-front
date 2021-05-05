@@ -71,11 +71,10 @@ export default class AnimalInfo extends React.Component{
         utt.onend =  ()=> { clearTimeout(myTimeout); }
   
        let speack=()=>{
-            utt.voice = voices[37];
+
+            utt.voice = voices[2];
             utt.volume = 0.1
             utt.pitch = 0.8;
-            console.log("play")
-
         window.speechSynthesis.cancel()? 
         window.speechSynthesis.resume()
         :
