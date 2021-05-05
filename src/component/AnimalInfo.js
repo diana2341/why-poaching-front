@@ -1,17 +1,27 @@
-import React from 'react'
+import React,{ useRef }  from 'react'
 import '../AnimalInfo.css';
 import Graph from './Graph'
 import { Zoom } from 'react-slideshow-image';
 import MenuPop from './MenuPop'
 
 export default class AnimalInfo extends React.Component{
+
     state={
         animal:[],
         filter:[],
         img:[],
         organizations:[],
         news:[],
-        play:false
+        play:false,
+        slideContainer : React.createRef(),
+        reveal : React.createRef(),
+        eye : React.createRef(),
+        sensitive : React.createRef(),
+        speak : React.createRef(),
+        mute : React.createRef()
+
+
+
 
     }
     componentDidMount(){
@@ -47,10 +57,10 @@ export default class AnimalInfo extends React.Component{
 
     reveal=(event)=>{
        if( event.target.className==="reveal")
-        document.getElementsByClassName("slide-container")[0].style.filter='none'
-        document.getElementsByClassName("reveal")[0].style.display='none'
-        document.getElementsByClassName("eye")[0].style.display='none'
-        document.getElementsByClassName("sensitive")[0].style.display='none'
+       this.state.slideContainer.current.style.filter='none'
+       this.state.reveal.current.style.display='none'
+       this.state.eye.current.style.display='none'
+       this.state.sensitive.current.style.display='none'
     }
     
     render(){
@@ -78,18 +88,17 @@ export default class AnimalInfo extends React.Component{
         window.speechSynthesis.resume()
         :
         window.speechSynthesis.speak(utt);
-        document.getElementsByClassName('speak')[0].style.opacity="1"
-        document.getElementsByClassName('mute')[0].style.opacity="0"
-        document.getElementsByClassName('mute')[0].style.zIndex="-1"
-        document.getElementsByClassName('speak')[0].style.opacity="1"
+        this.state.speak.current.style.opacity="1"
+        this.state.mute.current.style.opacity="0"
+        this.state.mute.current.style.zIndex="-1"
+        this.state.speak.current.style.opacity="1"
        }
         let pause=()=>{
            window.speechSynthesis.pause() 
             utt.onend =  ()=> { clearTimeout(myTimeout); }
-            console.log("pause")
-            document.getElementsByClassName('speak')[0].style.opacity="0"
-            document.getElementsByClassName('mute')[0].style.opacity="1"
-            document.getElementsByClassName('mute')[0].style.zIndex="1"
+            this.state.speak.current.style.opacity="0"
+            this.state.mute.current.style.opacity="1"
+            this.state.mute.current.style.zIndex="1"
         }
 
         const butterflies=['one-b',"two-b",'three-b','four-b']  
@@ -107,6 +116,7 @@ export default class AnimalInfo extends React.Component{
         let eye=require("../img/eye.png")
         let a=this.state.animal.help+ ''
         let basic=this.state.animal.basic_info+''
+
         return(
         <>
         <MenuPop/>  
@@ -129,7 +139,6 @@ export default class AnimalInfo extends React.Component{
             </ul>
         </nav>
 
-      
 
         <main role="main">
             <section>
@@ -158,22 +167,24 @@ export default class AnimalInfo extends React.Component{
             <section className="causes">
                 <div className="bg-c"></div>
                 <h1>Why is the {this.state.animal.name} being poached? </h1><br/> 
-                <img alt="" src={require("../img/on.png")}className="talk speak" onClick={pause}/>  
-                <img alt="" src={require("../img/off.png")}className="talk mute" onClick={speak}/>
+                <img ref={this.state.speak}alt="" src={require("../img/on.png")}className="talk speak" onClick={pause}/>  
+                <img ref={this.state.mute}alt="" src={require("../img/off.png")}className="talk mute" onClick={speak}/>
                 <p className="p-i">{this.state.animal.causes}</p>
                 <br/><br/><br/>
-                <div className="slide-container">
+                <div ref={this.state.slideContainer}className="slide-container">
+
                     <Zoom {...zoomOutProperties}>
                      {this.state.img.filter(img=>parseInt(img.animal_id)===parseInt(this.props.routerProps.match.params.id)).map(img=> 
                     <img className="img" key={img.id} style={{width: "100%"}}src={img.image_url} alt=""/> )} 
                     </Zoom>
                   </div>
-                <img className="eye"src={eye} alt=""/>
-                <p className="sensitive">Sensitive Content</p>
-                <button  onClick={this.reveal}className="reveal"> See Photos</button>
+                <img ref={this.state.eye}className="eye"src={eye} alt=""/>
+                <p ref={this.state.sensitive}className="sensitive">Sensitive Content</p>
+                <button  ref={this.state.reveal}onClick={this.reveal}className="reveal"> See Photos</button>
             </section>
  
             <section className="help">
+                {/* {console.log('myRef',this.state.myRef)} */}
                 <h1 className="how t-t">How Can You Help {this.state.animal.name}s</h1><br/>
                 {a.split('.').map((line,index) => <li key={index} className="line">{line}.</li> )}
                 <div className="scroll">
@@ -182,10 +193,10 @@ export default class AnimalInfo extends React.Component{
                     <div key={index}> <img className="logos" key={img.id} style={{width: "100%"}}src={img.logo} alt=""/><a href={img.website}><p>{img.name}</p> </a> </div>)} 
                 </div>
                 <iframe className="frame"src={this.state.animal.video_url}
-                        frameBorder='0'
-                        allow='autoplay; encrypted-media'
-                        allowFullScreen
-                        title='video'
+                    frameBorder='0'
+                    allow='autoplay; encrypted-media'
+                    allowFullScreen
+                    title='video'
                 /> 
             </section>
  
