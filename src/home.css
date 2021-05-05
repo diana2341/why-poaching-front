@@ -53,6 +53,9 @@
   .dropdown-item{
     color: white;
   }
+  .dropdown-toggle.nav-link{
+    width: 0px;
+  }
   .dropdown-item:hover{
     color: white;
     background-color: grey;
