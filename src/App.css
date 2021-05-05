@@ -59,7 +59,7 @@ width: 1600px;
 @import url(https://fonts.googleapis.com/css?family=Dosis:300,400);
 .animal-list{
   position: absolute;
-  margin-top: 30em;
+  margin-top: 15em;
   margin-left: 80em;
   z-index: 999;
   animation: fade-letters-headlines 1.5s forwards;

@@ -1,11 +1,6 @@
-.cir-menu{
-    position: absolute;
-    top: 24%;
-    left:10px;
-    animation: fade-menu 1.5s forwards;
-    animation-delay: 1.5s;
-    z-index: 999;
-
+.dropdown-menu.show{
+  background-color: black;
+  color: white;
 }
 
 
