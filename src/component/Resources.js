@@ -10,18 +10,16 @@ export default class Resources extends React.Component{
         fetch('https://why-poaching-back.herokuapp.com/links')
         .then(resp=>resp.json())
         .then(data=>{
-            this.setState({links:data})
-
-     
-           })
+            this.setState({links:data})  
+         })
     }
     render(){
       const butterflies=['one-b',"two-b",'three-b','four-b']
 
         const name=["Gorilla","Lemur","Elephant","Rhino","Orangutan","Tiger"]
         return(
-            <>
-                    {butterflies.map(function(name, index){
+         <>
+         {butterflies.map(function(name, index){
          return    <div key={index}className={`container ${name} butter`}>
          <div className="butterfly-rotate">
            <div className="butterfly-box">
@@ -32,18 +30,12 @@ export default class Resources extends React.Component{
              </div>
            </div>    
          </div>
-         </div>
-                        
-                      })}
-                    <MenuPop/>
-
-            <div className="l-bg"></div>
-            
+         </div>})}
+         <MenuPop/>
+         <div className="l-bg"></div>   
             <div className="linkss">
-
-                <h1 className="r-title">Sources</h1>
-                {name.map((name,index)=><h1 key={index}className={`${name}-l`}>{name} information</h1>)}
-
+            <h1 className="r-title">Sources</h1>
+            {name.map((name,index)=><h1 key={index}className={`${name}-l`}>{name} information</h1>)}
             {this.state.links.map((link,index)=>
             link.animal_id==='1'?
             <div key={index}className="tiger-link">
@@ -73,14 +65,11 @@ export default class Resources extends React.Component{
             link.animal_id==='6'?
             <div key={index}className="orangutan-link">
                <a href={link.website}><p >{link.website}</p></a> 
-            </div>:''
-            
-         
-            
+            </div>:''   
             )}
      
-            </div>
-            </>
+         </div>
+         </>
         )
     }
 }

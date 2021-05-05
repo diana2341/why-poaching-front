@@ -7,43 +7,38 @@ export default class UserLogin extends React.Component{
         username:'',
     }
 
-     handleChange=(event)=>{
+    handleChange=(event)=>{
          const{name,value}=event.target
          this.setState({[name]:value})
-
     }
     handleSubmit=(e)=>{
         e.preventDefault()
-        // const username=this.state.username 
         fetch("https://why-poaching-back.herokuapp.com/users",{
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username:this.state.username})
         })
-        .then(this.props.routerProps.history.push('/community'))
-       
+        .then(this.props.routerProps.history.push('/community')) 
     }
     render(){
         return(
             <>
-             <form onSubmit={this.handleSubmit}>
-                 <label>
-                   Username:
-                  <input value={this.state.username} onChange={this.handleChange}type="text" name="username" />
-                 </label>
-                 <input type="submit" value="Submit" />
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                    Username:
+                    <input value={this.state.username} onChange={this.handleChange}type="text" name="username" />
+                    </label>
+                    <input type="submit" value="Submit" />
 
-            </form>
+                </form>
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                    Username:
+                    <input value={this.state.username} onChange={this.handleChange}type="text" name="username" />
+                    </label>
+                    <input type="submit" value="Submit" />
 
-            
-            <form onSubmit={this.handleSubmit}>
-                 <label>
-                   Username:
-                  <input value={this.state.username} onChange={this.handleChange}type="text" name="username" />
-                 </label>
-                 <input type="submit" value="Submit" />
-
-            </form>
+                </form>
             </>
         )
     }

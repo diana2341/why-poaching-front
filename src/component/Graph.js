@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,ResponsiveContainer} from 'recharts';
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer
+} from 'recharts';
 import PropTypes from 'prop-types';
-
-
-
 
 
   export default class graph extends Component {
@@ -43,21 +47,21 @@ import PropTypes from 'prop-types';
           C${x + width / 2},${y + height / 3} ${x + 2 * width / 3},${y + height} ${x + width}, ${y + height}
           Z`;
 
-const TriangleBar = (props) => {
-  const {
-    fill, x, y, width, height,
-  } = props;
+    const TriangleBar = (props) => {
+      const {
+        fill, x, y, width, height,
+      } = props;
 
-  return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
-};
+    return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+    }   ;
 
-TriangleBar.propTypes = {
-  fill: PropTypes.string,
-  x: PropTypes.number,
-  y: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
-};
+    TriangleBar.propTypes = {
+      fill: PropTypes.string,
+      x: PropTypes.number,
+      y: PropTypes.number,
+      width: PropTypes.number,
+      height: PropTypes.number,
+    };
     
   
       return (
@@ -65,23 +69,21 @@ TriangleBar.propTypes = {
         <div className="chart"style={{ width: '50%', height: 300 }}>
           <ResponsiveContainer>
             <AreaChart
-        width={400}
-        height={300}
-        data={data}
-        margin={{
-          top: 10, right: 30, left: 0, bottom: 0,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Area type="monotone" dataKey="pop" stroke="#8884d8" fill="#8884d8" />
-      </AreaChart>
+            width={400}
+            height={300}
+            data={data}
+            margin={{
+              top: 10, right: 30, left: 0, bottom: 0,
+            }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area type="monotone" dataKey="pop" stroke="#8884d8" fill="#8884d8" />
+            </AreaChart>
           </ResponsiveContainer>
         </div>
         </>
-      );
-
-}
+      )}
 }

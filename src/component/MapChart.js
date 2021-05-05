@@ -33,10 +33,7 @@ const MapChart = (props) => {
   const [animal,setAnimal]=useState([])
   const [show,setShow]=useState(0)
   const [background,setbackground]=useState(true)
-
-
   const [filter,setFilter]=useState([])
-
 
   const mapFilter=(event)=>{
   
@@ -115,14 +112,9 @@ const MapChart = (props) => {
   return (
 
     <>
-    {console.log(animal)}
-        <MenuPop/>
-
-  <AnmialList background ={background}routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
+    <MenuPop/>
+    <AnmialList background ={background}routerProps={props.routerProps}animal={animal}mapFilter={mapFilter} show={show}/>
     <div  className="Map">
-
-
-
     <ComposableMap data-tip="" >
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
@@ -171,7 +163,7 @@ const MapChart = (props) => {
            </text>
          </Marker>
       ))}
-    </ComposableMap>
+      </ComposableMap>
     </div>
     
     </>
